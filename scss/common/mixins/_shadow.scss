@@ -1,0 +1,15 @@
+@mixin shadow_org() {
+    box-shadow: 0px 0px 20px #000;
+    // @include rwd(null, null, $xl) {
+    // }
+    // @include rwd($lg, $xl - 1px) {
+    // }
+    // @include rwd($md, $lg - 1px) {
+    // }
+    // @include rwd($sm, $md - 1px) {
+    // }
+    // @include rwd($xs, $sm - 1px) {
+    // }
+    // @include rwd(0, $xs - 1px) {
+    // }
+}

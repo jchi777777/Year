@@ -1,0 +1,139 @@
+// Loop over each breakpoint
+@each $breakpoint in map-keys($grid-breakpoints) {
+  // Generate media query if needed
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    // Loop over each utility property
+    @each $key, $utility in $utilities {
+      // The utility can be disabled with `false`, thus check if the utility is a map first
+      // Only proceed if responsive media queries are enabled or if it's the base media query
+      @if type-of($utility) == "map" and (map-get($utility, responsive) or $infix == "") {
+        @include generate-utility($utility, $infix);
+      }
+    }
+  }
+}
+
+// shadow
+.shadow-org {
+  @include shadow_org();
+}
+
+// breadcrumb
+.breadcrumb-org {
+  @include breadcrumb-org();
+}
+
+// full width in conainter
+
+.full-width {
+  @include full-width();
+}
+
+// Typography
+h1,
+.h1 {
+  @include h1;
+}
+h2,
+.h2 {
+  @include h2;
+}
+h3,
+.h3 {
+  @include h3;
+}
+h4,
+.h4 {
+  @include h4;
+}
+h5,
+.h5 {
+  @include h5;
+}
+h6,
+.h6 {
+  @include h6;
+}
+.btn1 {
+  @include btn1;
+}
+.btn2 {
+  @include btn2;
+}
+.btn3 {
+  @include btn3;
+}
+.btn3-b {
+  @include btn3-b;
+}
+.btn3-400 {
+  @include btn3-400;
+}
+.btn3-600 {
+  @include btn3-600;
+}
+.btn4 {
+  @include btn4;
+}
+.btn4-400 {
+  @include btn4-400;
+}
+.bd1-n {
+  @include bd1-n;
+}
+
+.bd1-l {
+  @include bd1-l;
+}
+.bd1-b {
+  @include bd1-b;
+}
+.bd2-n {
+  @include bd2-n;
+}
+.bd2-l {
+  @include bd2-l;
+}
+.bd2-b {
+  @include bd2-b;
+}
+.bd3-n {
+  @include bd3-n;
+}
+.bd3-b {
+  @include bd3-b;
+}
+.bd4-n {
+  @include bd4-n;
+}
+.bd4-b {
+  @include bd4-b;
+}
+.bd5-n {
+  @include bd5-n;
+}
+.bd5-b {
+  @include bd5-b;
+}
+.bd6-n {
+  @include bd6-n;
+}
+.bd6-b {
+  @include bd6-b;
+}
+
+.pc {
+  @include pc;
+}
+.mo {
+  @include mo;
+}
+
+.pc-f {
+  @include pc-f;
+}
+.mo-f {
+  @include mo-f;
+}

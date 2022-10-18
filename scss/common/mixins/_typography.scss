@@ -1,0 +1,226 @@
+// Typography
+//
+// 1. Remove top margins from headings
+//    By default, `<h1>`-`<h6>` all receive top and bottom margins. We nuke the top
+//    margin for easier control within type scales as it avoids margin collapsing.
+@mixin h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 120%;
+    font-size: 40px;
+}
+
+@mixin h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: 0;
+    font-size: 32px;
+}
+
+@mixin h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 500;
+    line-height: 120%;
+    letter-spacing: 0;
+    font-size: $h3-font-size;
+}
+
+@mixin h4 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: 0;
+    font-size: 24px;
+}
+
+@mixin h5 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 700;
+    line-height: 120%;
+    font-size: 16px;
+}
+
+@mixin h6 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 500;
+    line-height: 120%;
+    font-size: $h6-font-size;
+
+}
+
+@mixin btn1 {
+    line-height: 120%;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 1.25px;
+}
+
+@mixin btn2 {
+    line-height: 120%;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    letter-spacing: 1.25px;
+}
+
+@mixin btn3 {
+    line-height: 120%;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1.25px;
+}
+
+@mixin btn3-b {
+    line-height: 120%;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1.25px;
+}
+
+@mixin btn3-400 {
+    line-height: 120%;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1.25px;
+}
+
+@mixin btn3-600 {
+    line-height: 120%;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1.25px;
+}
+
+@mixin btn4 {
+    line-height: 120%;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 1.25px;
+}
+
+@mixin btn4-400 {
+    line-height: 120%;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+@mixin bd1-n {
+    line-height: 120%;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.8px;
+}
+
+@mixin bd1-l {
+    line-height: 120%;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.8px;
+}
+
+@mixin bd1-b {
+    line-height: 120%;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.8px;
+}
+
+@mixin bd2-n {
+    line-height: 120%;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0.8px;
+}
+
+@mixin bd2-l {
+    line-height: 120%;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0.8px;
+}
+
+@mixin bd2-b {
+    line-height: 120%;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 180%;
+    letter-spacing: 0.8px;
+}
+
+@mixin bd3-n {
+    line-height: 120%;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 23px;
+    letter-spacing: 0.25px;
+}
+
+@mixin bd3-b {
+    line-height: 120%;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 23px;
+    letter-spacing: 0.25px;
+}
+
+@mixin bd4-n {
+    line-height: 120%;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.25px;
+}
+
+@mixin bd4-b {
+    line-height: 120%;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 120%;
+    letter-spacing: 0.25px;
+}
+
+@mixin bd5-n {
+    line-height: 120%;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 34px;
+    letter-spacing: 0.5px;
+}
+
+@mixin bd5-b {
+    line-height: 120%;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 34px;
+    letter-spacing: 0.5px;
+}
+
+@mixin bd6-n {
+    line-height: 120%;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 46px;
+    letter-spacing: 0.5px;
+}
+
+@mixin bd6-b {
+    line-height: 120%;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 46px;
+    letter-spacing: 0.5px;
+}

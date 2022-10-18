@@ -1,0 +1,35 @@
+
+// <div class="breadcrumb-org">
+//     <p>Home</p>
+//     <span>/</span>
+//     <p>新聞</p>
+//     <span>/</span>
+//     <p class="act">NFT</p>
+// </div>
+@mixin breadcrumb-org() {
+    > p {
+        display: inline;
+        color: $silver;
+        .act {
+            color: $grey;
+        }
+    }
+    > span {
+        color: $light-grey;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    // @include rwd(0, $xs - 1px) {
+    // }
+    // @include rwd($xs, $sm - 1px) {
+    // }
+    // @include rwd($sm, $md - 1px) {
+    // }
+    // @include rwd($md, $lg - 1px) {
+    // }
+    // @include rwd($lg, $xl - 1px) {
+    // }
+    // @include rwd(null, null, $xl) {
+    // }
+}

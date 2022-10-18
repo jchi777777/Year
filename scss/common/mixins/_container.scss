@@ -1,0 +1,24 @@
+// Container mixins
+
+// @mixin make-container($gutter: $container-padding-x) {
+@mixin make-container() {
+  width: 100%;
+  // padding-right: var(--#{$variable-prefix}gutter-x, #{$gutter});
+  // padding-left: var(--#{$variable-prefix}gutter-x, #{$gutter});
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@mixin full-width($isPc: true) {
+  @if ($isPc) {
+    width: calc(100vw - 17px);
+    position: relative;
+    margin-left: calc(-50vw + 8.5px);
+    left: 50%;
+  } @else {
+    width: 100vw;
+    position: relative;
+    margin-left: -50vw;
+    left: 50%;
+  }
+}

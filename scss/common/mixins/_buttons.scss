@@ -1,0 +1,99 @@
+@mixin btn_more() {
+    // @include rwd(null, null, $xl) {
+    // }
+    // @include rwd($lg, $xl - 1px) {
+    // }
+    // @include rwd($md, $lg - 1px) {
+    // }
+    // @include rwd($sm, $md - 1px) {
+    // }
+    // @include rwd($xs, $sm - 1px) {
+    // }
+    // @include rwd(0, $xs - 1px) {
+    // }
+    border: 1px solid $light-grey;
+    background-color: transparent;
+    border-radius: 4px;
+    padding: 14px 37px 15px;
+    transition: 0.3s ease-out;
+    color: $white;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    &:hover {
+        border: 1px solid $sea-foam;
+        background-color: $sea-foam;
+    }
+}
+
+// hover: 文字變色$sea-foam
+@mixin hover_basic {
+    transition: 0.3s ease-out;
+    &:hover {
+        color: $sea-foam;
+    }
+}
+// hover: svg變色$sea-foam
+@mixin hover_basic_svg {
+    transition: 0.3s ease-out;
+    &:hover {
+        filter: $filter-sea-foam;
+    }
+}
+
+// hover: 透明度改為0.8
+@mixin hover_fade {
+    transition: 0.3s ease-out;
+    &:hover {
+        opacity: 0.8;
+    }
+}
+// 檢舉按鈕
+@mixin report_btn {
+    padding: 0;
+    text-align: right;
+    color: $crimson;
+    width: 50px;
+}
+
+// 各區塊控制按鈕
+@mixin ctlBoxBtn {
+    .ctl-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .btn-box {
+        width: 100px;
+        @include rwd($md) {
+            display: none;
+        }
+    }
+    button {
+        margin-right: 10px;
+        color: $sea-foam;
+        span {
+            margin-left: 5px;
+        }
+        &:hover {
+            opacity: 0.8;
+            transition: 0.3s;
+        }
+    }
+}
+
+// 全寬按鈕
+@mixin wholeWidthBtn {
+    width: 100%;
+    height: 40px;
+    border: 1px solid $light-grey;
+    padding: 11px 0;
+    text-align: center;
+    color: $dark-grey;
+    background-color: $light-grey;
+    border-radius: 4px;
+    @include sprfs("btn1", "btn1", "btn1", "btn1", "btn1", "btn1");
+    &:hover {
+        color: $white;
+        background-color: $sea-foam;
+        transition: 0.3s ease-out;
+    }
+}

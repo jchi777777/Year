@@ -1,0 +1,82 @@
+// ============== Next architecture for img ==============
+// <div className="img-box">
+//     <Image
+//         src="/test/slider_001.png"
+//         alt="news"
+//         layout="fill"
+//         objectFit="cover"
+//         objectPosition="center"
+//         priority={true}
+//     />
+// </div>
+// ============== Next architecture for img ==============
+
+// ============== html architecture for img ==============
+// <div class="xxxx   ">
+//     <img src="/images/icons/facebook_white.svg" alt="facebook_white">
+// </div>
+// ============== html architecture for img ==============
+
+// ============== Next architecture for img ==============
+// <div className="animate-box">
+//     <Lottie
+//         loop
+//         animationData={test}
+//         play
+//         style={{ width: '100%', height: '100%' }}
+//     />
+// </div>
+// ============== Next architecture for img ==============
+
+// ============== html architecture for img ==============
+// <div class="animate-box">
+//     <lottie-player src="animate/test.json" background="transparent" speed="1"
+//         style="position:absolute; width: 100%; height: 100%;" loop autoplay></lottie-player>
+// </div>
+// ============== html architecture for img ==============
+
+// width height set
+// set same size
+// whset(10px, 20px)
+
+// set all breakpoint size
+// whset($xlw, $xlh, $lgw, $lgh, $mdw, $mdh, $smw, $smh, $xsw, $xsh, $xxsw, $xxsh)
+@mixin whset($args...) {
+    position: relative;
+    > img {
+        position: absolute;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+    }
+    @if length($args) == 2 {
+        width: nth($args, 1);
+        height: nth($args, 2);
+    }
+    @if length($args) == 12 {
+        @include rwd(null, null, $xl) {
+            width: nth($args, 1);
+            height: nth($args, 2);
+        }
+        @include rwd($lg, $xl - 1px) {
+            width: nth($args, 3);
+            height: nth($args, 4);
+        }
+        @include rwd($md, $lg - 1px) {
+            width: nth($args, 5);
+            height: nth($args, 6);
+        }
+        @include rwd($sm, $md - 1px) {
+            width: nth($args, 7);
+            height: nth($args, 8);
+        }
+        @include rwd($xs, $sm - 1px) {
+            width: nth($args, 9);
+            height: nth($args, 10);
+        }
+        @include rwd(0, $xs - 1px) {
+            width: nth($args, 11);
+            height: nth($args, 12);
+        }
+    }
+}

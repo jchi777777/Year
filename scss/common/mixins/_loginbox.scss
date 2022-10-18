@@ -1,0 +1,161 @@
+// 外層容器遮罩
+// <div class="login-box">
+//     內層容器 logo 內容
+//     <div>
+//         logo
+//         <div class="img-box"></div>
+//         內容
+//         <div></div>
+//     </div>
+// </div>
+@mixin  loginBox{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    height: 100vh;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    //內層container
+    .login-container{
+        > *{
+            flex-basis: 100%;
+        }
+        > div{
+            max-width: 480px;
+            border-radius: 4px;
+            background: $white;
+            overflow: hidden;
+            @include rwd($xs + 55px){
+                margin: 50px auto;
+                height: 100%;
+                max-width: 100%;
+                margin: 0 auto;
+                border-radius: 0;
+            }
+            // 起始頁 logo
+            .logo-box{
+                @include whset(100%,240px);
+                @include rwd($xs + 39px){
+                    @include whset(100%,258px);
+                }
+                @include rwd($xs - 25px){
+                    @include whset(100%,232px);
+                }
+                img{
+                    object-fit:cover;
+                    object-position: top;
+                    @include rwd($xs - 25px){
+                        object-fit: contain;
+                    }
+                }
+                 // 小於430 換背景  
+                .bg-bg{
+                    @include rwd($xs + 39px){
+                        display: none;
+                    }
+                }
+                .bg-sm{
+                    display: none;
+                    @include rwd($xs + 39px){
+                        display: block;
+                    }
+                }
+            }
+            // 其他頁logo
+            .img-box{
+                @include whset(100%,57px);
+                img{
+                    left: 0;
+                }
+            }
+            //空白頭像
+            .head-box{
+                @include whset(140px,140px);
+                margin: 19px auto 7px;
+            }
+            //ctmax頭像
+            .ctman-box{
+                @include whset(164px,140px);
+                margin: 13px auto;
+            }
+            //logo下方內容
+            > div:nth-of-type(2){
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                p.continue{
+                    margin-bottom: 18px;
+                }
+                //第三方登入
+                .icons-container{
+                    margin-bottom: 18px;
+                    @include rwd($xs + 55px){
+                        padding: 0 15px;
+                    }
+                    div{
+                        display: flex;
+                        margin: 0 10px ;
+                        justify-content: center;
+                        align-items: center;
+                        width: 70px;
+                        height: 70px;
+                        border-radius: 50%;
+                        border:1px solid $light-grey;
+                        transition: .2s linear;
+                        cursor: pointer;
+                        @include rwd($xs){
+                            width: 58px;
+                            height: 58px;
+                            margin: 0 3px ;
+                        }
+                        &:hover{
+                            transform: scale(0.9);
+                        }
+                        img{
+                            height: 24px;
+                        }
+                    }
+                }
+                //或使用 or
+                h5.or-use{
+                    flex-basis: 100%;
+                    text-align: center;
+                    margin-bottom: 18px;
+                    @include rwd($xs + 55px){
+                        padding: 0;
+                    }
+                    span{
+                        z-index: 2;
+                        padding: 0 12px;
+                        position: relative;
+                        margin: 0;
+                        background: $white;
+                    }
+                    hr{
+                        position: relative;
+                        bottom: 50%;
+                        transform: translateY(-50%);
+                        z-index: 0;
+                        border-top: 1px solid $light-grey;
+                    }
+                }
+            }
+        }
+        // 返回
+        .return{
+            color: $grey;
+            text-align: center;
+            flex-basis: 100%;
+        }
+        //暫時略過
+        .skip{
+            margin-top: 17px;
+            color: $grey;
+            flex-basis: 100%;
+        }
+    }
+}

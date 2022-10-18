@@ -1,0 +1,206 @@
+@import './system.scss';
+
+footer#f-index{
+    background: $citron;
+    position: relative;
+    z-index: 1;
+    div{
+        width: 1156px;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;        
+        @include rwd($xl - 1px){
+            position: relative;
+            width: 833px;
+            height: 230px;
+            justify-content: flex-end;
+        }
+        @include rwd($lg - 1px){
+            width: 636px;
+            flex-wrap: wrap;
+            height: unset;
+        }
+        @include rwd($md - 1px){
+            width: 100%;
+            padding: 0 20px;
+        }
+
+        a{
+            position: relative;
+            bottom: 150px;
+            @include rwd($xl - 1px){
+                position: absolute;
+                left: 0;
+                top: -130px
+            }
+            @include rwd($md - 1px){
+                left: 20px;
+            }
+            @include rwd($sm - 1px){
+                top:-80px;
+                height: 144px;
+                img{
+                    width: 163px;
+                }
+            }
+        }
+        .one{
+            @include rwd($xl - 1px){
+                width: 522px;
+                right: 20px;
+                bottom: 100px;
+            }
+            @include rwd($lg - 1px){
+                display: none;
+            }
+        }
+        .two{
+            display: none;
+            @include rwd($lg - 1px){
+                display: block;
+                width: 636px;
+                margin: 230px auto 50px;
+            }
+            @include rwd($md - 1px){
+                width: 100%;
+                margin-top: 100px;
+            }
+        }
+    }
+}
+
+footer#f-list{
+    width: 100%;
+    > div {
+        width: 1156px;
+        margin: 0 auto;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        @include rwd($xl - 1px){
+            width: 753px;
+        }
+        @include rwd($lg - 1px){
+            width: 700px;
+            flex-wrap: wrap;
+        }
+        @include rwd($md - 1px){
+            width: 352px;
+        }
+        @include rwd($sm - 1px){
+            width: 100%;
+            padding: 0 13px;
+        }
+        div{
+            bottom: 80px;
+            position: relative;
+            @include rwd($md - 1px){
+                bottom: 200px;
+            }
+            @include rwd($sm - 1px){
+                bottom: 100px;
+                img{
+                    width: 163px;
+                }
+            }
+        }
+        .img1{
+            @include rwd($xl - 1px){
+                width: 446px;
+                position: absolute;
+                right: 0;
+                top: 85px;
+            }
+            @include rwd($lg - 1px){
+                display: none;
+            }
+        }
+        .img2{
+            display: none;
+            @include rwd($lg - 1px){
+                width: 636px;
+                display: block;
+                margin-bottom: 80px;
+            }
+            @include rwd($md - 1px){
+                width: 100%;
+                margin-bottom: 0;
+                position: relative;
+                bottom: 150px
+            }
+            @include rwd($sm - 1px){
+                bottom: 60px;
+            }
+        }
+    }
+}
+
+footer#f-news{
+    width: 100%;
+    > div {
+        position: relative;
+        z-index: 1;
+        width: 1156px;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        @include rwd($xl - 1px){
+            width: 753px;
+        }
+        @include rwd($lg - 1px){
+            width: 700px;
+            flex-wrap: wrap;
+        }
+        @include rwd($md - 1px){
+            width: 352px;
+        }
+        @include rwd($sm - 1px){
+            width: 100%;
+            padding: 0 13px;
+        }
+        div{
+            bottom: 80px;
+            position: relative;
+            width: fit-content;
+            margin: 0 ;
+            z-index: -1;
+            @include rwd($md - 1px){
+                bottom: 200px;
+            }
+            @include rwd($sm - 1px){
+                bottom: 100px;
+                img{
+                    width: 163px;
+                }
+            }
+        }
+        .img1{
+            @include rwd($xl - 1px){
+                width: 446px;
+                position: absolute;
+                right: 0;
+                top: 85px;
+            }
+            @include rwd($lg - 1px){
+                display: none;
+            }
+        }
+        .img2{
+            display: none;
+            @include rwd($lg - 1px){
+                width: 636px;
+                display: block;
+                margin-bottom: 80px;
+            }
+            @include rwd($md - 1px){
+                width: 100%;
+                margin-bottom: 0;
+                position: relative;
+                bottom: 150px
+            }
+            @include rwd($sm - 1px){
+                bottom: 60px;
+            }
+        }
+    }
+}

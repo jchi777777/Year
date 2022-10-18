@@ -1,0 +1,446 @@
+@import './system.scss';
+
+header{
+    position: fixed;
+    top: 24px;
+    right: 19px;
+    z-index: 18;
+    transition: .3s linear;
+    @include rwd($lg - 1px){
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 60px;
+        background: $yellow;
+    }
+    nav{
+        display: flex;
+        // 漢堡選單
+        position: relative;
+        .ham-btn{
+            display: none;
+            cursor: pointer;
+            @include rwd($lg - 1px){
+                display: block;
+                padding: 0 15px 0 24px;
+            }
+        }
+        @include rwd($lg - 1px){
+            width: 100%;       
+            height: 100%; 
+            align-items: center;
+            justify-content: space-between;
+        }
+        ul{
+            display: flex;
+            align-items: center;
+            padding: 8px 40px 7px 26px;
+            background-color: #FFEB00;
+            @include rwd($xl - 1px){
+                padding: 8px 10px 7px;
+            }
+            @include rwd($lg - 1px){
+                display: none;
+            }
+            > img{
+                width: 16px;
+                height: 16px;
+                margin: 0 20px;
+                @include rwd($xl - 1px){
+                    display: none
+                }
+            }
+            li{
+                @include sprfs('h6');
+                @include rwd($xl - 1px){
+                    margin: 0 10px;
+                }
+                @include rwd($lg - 1px){
+                    @include sprfs('h2');
+                    margin: 0 0 20px;
+                }
+                a{
+                    transition: .3s ease-out;
+                    color: $black;
+                    &:hover{
+                        color: $rose;
+                    }
+                }
+            }
+            // 手機版社群分享
+            .func-box{
+                display: none;
+                @include rwd($lg - 1px){
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    margin: 28px 0 40px;
+                }
+                 // 社群分享
+                .share-box{
+                    width: 166px;
+                    height: 34px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: linear-gradient(92.01deg, #0EB4A5 0%, #FF7C00 36.14%, #FC5F54 66.25%, #F653C2 105.13%);
+                    a{
+                        margin: 0 15px;
+                        img{
+                            position: relative;
+                            &:first-of-type{
+                                width: 15px;
+                            }
+                            &:nth-of-type(2),
+                            &:nth-of-type(3){
+                                width: 16px;
+                            }
+                        }
+                    }
+                }
+                // 中英切換
+                .language-box{
+                    display: flex;
+                    justify-content: flex-start;
+                    button{
+                        width: 71px;
+                        height: 34px;
+                        color: $white;
+                        margin: 0;
+                        @include sprfs('h6');
+                    }
+                    .zh{
+                        background: #FF50C8;
+                    }
+                    .en{
+                        background: #00B9AF;
+                    }
+                }
+            }
+            button{
+                padding: 0;
+                display: none;
+                @include rwd($lg - 1px){
+                    display: block;
+                }
+            }
+            .top,
+            .bot{
+                display: none;
+                @include rwd($lg - 1px){
+                    display: block;
+                    position: absolute;
+                    left: 50%;
+                    height: unset;
+                    transform: translateX(-50%);
+                    width: 100%;
+                    margin: 0;
+                }
+            }
+            .top{
+                top: 0;
+            }
+            .bot{
+                bottom: 0;
+            }
+            .logo{
+                display: none;
+                @include rwd($lg - 1px){
+                    display: block;
+                    width: 100%;
+                    height: unset;
+                    margin: 0;
+                }
+            }
+        }
+        // 社群分享
+        > .share-box{
+            width: 166px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(92.01deg, #0EB4A5 0%, #FF7C00 36.14%, #FC5F54 66.25%, #F653C2 105.13%);
+            @include rwd($lg - 1px){
+                display: none;
+            }
+            a{
+                margin: 0 15px;
+                img{
+                    position: relative;
+                    bottom: 1px;
+                    &:first-of-type{
+                        width: 15px;
+                    }
+                    &:nth-of-type(2),
+                    &:nth-of-type(3){
+                        width: 16px;
+                    }
+                }
+            }
+        }
+        // 中英切換
+        > .language-box{
+            display: flex;
+            justify-content: flex-start;
+            @include rwd($lg - 1px){
+                height: 100%;
+            }
+            button{
+                width: 71px;
+                height: 34px;
+                color: $white;
+                margin: 0;
+                @include sprfs('h6');
+                @include rwd($lg - 1px){
+                    height: 100%;
+                }
+                @include rwd($sm - 1px){
+                    width: 51px;
+                }
+            }
+            .zh{
+                background: #FF50C8;
+            }
+            .en{
+                background: #00B9AF;
+            }
+        }
+        .hide{
+            transition: .2s ease-out;
+            position: fixed;
+            top: 0;
+            left: 36px;
+            opacity: 0;
+            z-index: -3;
+            @include rwd($xl - 1px){
+                position: absolute !important;
+                left: -172px;
+                top: -7px;
+                width:175px;
+                img{
+                    width: 100%;
+                }
+            }
+            @include rwd($lg - 1px){
+                left: 68px;
+                opacity: 1 !important;
+                z-index: 5 !important;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            @include rwd($sm - 1px){
+                width: 97px;
+            }
+            @include rwd($xxs - 1px){
+                display: none;
+            }
+            &.act{
+                opacity: 1;
+                z-index: 10;
+            }
+        }
+    }
+}
+
+// 手機選單
+.mb-menu{
+    display: none;
+    overflow: hidden;
+    @include rwd($lg - 1px) {
+        display: block;
+        position: fixed;
+        width: 398px !important;
+        height: 100vh !important;
+        transition: .3s linear;
+        align-items: flex-start;
+        top: 0;
+        left: 0;
+        z-index: -2;
+        opacity: 0;
+        &.act{
+            opacity: 1;
+            z-index: 20;
+            ul{
+                transform: translateX(0);
+            }
+            .shadow{
+                opacity: 1;
+            }
+        }
+    }
+    @include rwd($sm - 1px) {
+        width: 100vw !important;
+    }
+    ul{
+        display: flex;
+        align-items: flex-start;
+        padding: 8px 40px 7px 26px;
+        background-color: #FFEB00;
+        @include rwd($xl - 1px){
+            padding: 8px 10px 7px;
+        }
+        @include rwd($lg - 1px){
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            flex-direction: column;
+            transition: .3s linear;
+            padding: 65px 43px;
+            transform: translateX(-100%);
+        }
+        @include rwd($sm - 1px) {
+            padding: 40px 35px;
+        }
+        > img{
+            width: 16px;
+            height: 16px;
+            margin: 0 20px;
+            @include rwd($xl - 1px){
+                display: none
+            }
+        }
+        li{
+            @include sprfs('h6');
+            width: 100%;
+            text-align: left;
+            @include rwd($xl - 1px){
+                margin: 0 10px;
+            }
+            @include rwd($lg - 1px){
+                @include sprfs('h2');
+                margin: 0 0 20px;
+            }
+            @media screen and (max-width:600px){
+                @include sprfs('h4');
+                margin-bottom: 15px;
+            }
+            @include rwd($sm - 1px){
+                margin-bottom: 10px;
+            }
+            a{
+                transition: .3s ease-out;
+                color: $black;
+                &:hover{
+                    color: $rose;
+                }
+            }
+        }
+        // 手機版社群分享
+        .func-box{
+            display: none;
+            @include rwd($lg - 1px){
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                margin: 28px 0 40px;
+            }
+            @include rwd($md - 1px) {
+                margin: 20px 0;
+            }
+            @include rwd($sm - 1px) {
+                flex-wrap: wrap;
+            }
+            // 社群分享
+            .share-box{
+                width: 166px;
+                height: 34px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: linear-gradient(92.01deg, #0EB4A5 0%, #FF7C00 36.14%, #FC5F54 66.25%, #F653C2 105.13%);
+                a{
+                    margin: 0 15px;
+                    img{
+                        position: relative;
+                        &:first-of-type{
+                            width: 15px;
+                        }
+                        &:nth-of-type(2),
+                        &:nth-of-type(3){
+                            width: 16px;
+                        }
+                    }
+                }
+            }
+            // 中英切換
+            .language-box{
+                display: flex;
+                justify-content: flex-start;
+                button{
+                    width: 71px;
+                    height: 34px;
+                    color: $white;
+                    margin: 0;
+                    @include sprfs('h6');
+                }
+                .zh{
+                    background: #FF50C8;
+                }
+                .en{
+                    background: #00B9AF;
+                }
+            }
+        }
+        button{
+            padding: 0;
+            display: none;
+            @include rwd($lg - 1px){
+                display: block;
+            }
+            @include rwd($md - 1px) {
+                width: 100px;
+                img{
+                    width: 100px;
+                }
+            }
+        }
+        .top,
+        .bot{
+            display: none;
+            @include rwd($lg - 1px){
+                display: block;
+                position: absolute;
+                left: 50%;
+                height: unset;
+                transform: translateX(-50%);
+                width: 100%;
+                margin: 0;
+            }
+        }
+        .top{
+            top: 0;
+        }
+        .bot{
+            bottom: 0;
+        }
+        .logo{
+            display: none;
+            @include rwd($lg - 1px){
+                display: block;
+                width: 100%;
+                height: unset;
+                margin: 0;
+            }
+            @include rwd($md - 1px) {
+                width: 80%;
+            }
+        }
+    }
+    .shadow{
+        display: none;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        position: fixed;
+        z-index: -1;
+        transition: .3s linear;
+        opacity: 0;
+        background: rgba($black,.7);
+        @include rwd($lg - 1px){
+            display: block;
+        }
+    }
+}

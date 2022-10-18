@@ -1,0 +1,160 @@
+// Variables
+//
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+
+// ----- Color 顏色 -----
+// scss-docs-start color-variables
+// USE:scss 中直接只用$變數
+// gray scale
+$black: #111111 !default;
+$grey: #696969 !default;
+$white: #fff !default;
+$silver: #8e8e8e !default;
+$light-grey: #e5e5e5 !default;
+$gainsbor: #f5f5f5 !default;
+$pearl: #f8f8f8 !default;
+// system color
+$aqua: #3bdbbf !default;
+$sea-foam: #29afcb !default;
+$cerulean-blue: #0049e7 !default;
+$pale-lilac: #717cff !default;
+$tomato: #be4949 !default;
+$dark-grey: #3E3A39 !default;
+$crimson: #ec5760 !default;
+$gainsboro: #f1f5f8 !default;
+
+
+$rose: #FF50C8;
+$citron: #00B9AF;
+$yellow: #FFEB00;
+$orange: #FF7E00;
+$purple:#6B61C4;
+
+$filter-black: invert(7%) sepia(9%) saturate(2%) hue-rotate(314deg) brightness(89%) contrast(87%) !default;
+$filter-grey: invert(44%) sepia(0%) saturate(0%) hue-rotate(322deg) brightness(90%) contrast(89%) !default;
+$filter-white: invert(100%) sepia(0%) saturate(589%) hue-rotate(35deg) brightness(113%) contrast(100%) !default;
+$filter-silver: invert(58%) sepia(0%) saturate(0%) hue-rotate(354deg) brightness(96%) contrast(97%) !default;
+$filter-light-grey: invert(97%) sepia(4%) saturate(123%) hue-rotate(129deg) brightness(113%) contrast(80%) !default;
+$filter-gainsbor: invert(99%) sepia(3%) saturate(249%) hue-rotate(249deg) brightness(114%) contrast(92%) !default;
+$filter-pearl: invert(100%) sepia(16%) saturate(103%) hue-rotate(320deg) brightness(114%) contrast(95%) !default;
+// system color
+$filter-aqua: invert(66%) sepia(77%) saturate(369%) hue-rotate(118deg) brightness(98%) contrast(88%) !default;
+$filter-sea-foam: invert(55%) sepia(41%) saturate(754%) hue-rotate(143deg) brightness(98%) contrast(92%) !default;
+$filter-cerulean-blue: invert(12%) sepia(88%) saturate(7498%) hue-rotate(222deg) brightness(97%) contrast(100%) !default;
+$filter-pale-lilac: invert(42%) sepia(72%) saturate(548%) hue-rotate(198deg) brightness(106%) contrast(101%) !default;
+$filter-tomato: invert(38%) sepia(39%) saturate(2044%) hue-rotate(328deg) brightness(82%) contrast(77%) !default;
+$filter-dark-grey: invert(59%) sepia(14%) saturate(0%) hue-rotate(265deg) brightness(93%) contrast(90%) !default;
+$filter-crimson: invert(37%) sepia(93%) saturate(791%) hue-rotate(318deg) brightness(102%) contrast(85%) !default;
+$filter-gainsboro: invert(89%) sepia(3%) saturate(1012%) hue-rotate(192deg) brightness(111%) contrast(95%) !default;
+// scss-docs-end color-variables
+
+// scss-docs-start colors-map
+// USE:html中class加入色票名稱 視同定義color ex: black => color:block;
+// USE:html中class加入bg-色票名稱 視同定義bg-color ex: bg-block => background-color:block;
+$colors: (
+  "black": $black,
+  "grey": $grey,
+  "white": $white,
+  "silver": $silver,
+  "light-grey": $light-grey,
+  "gainsbor": $gainsbor,
+  "pearl": $pearl,
+  "aqua": $aqua,
+  "sea-foam": $sea-foam,
+  "cerulean-blue": $cerulean-blue,
+  "pale-lilac": $pale-lilac,
+  "tomato": $tomato,
+  "dark-grey": $dark-grey,
+  "crimson": $crimson,
+  "gainsboro": $gainsboro,
+);
+// // scss-docs-end colors-map
+
+// link color
+$link-color: $aqua;
+$link-decoration: none;
+$link-hover-color: $aqua;
+$link-hover-decoration: none;
+
+// font system
+$font-weight-lighter: lighter !default;
+$font-weight-light: 300 !default;
+$font-weight-normal: 600 !default;
+$font-weight-bold: 700 !default;
+$font-weight-bolder: bolder !default;
+
+$font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
+$h1-font-size: $font-size-base * 2.5 !default;
+$h2-font-size: $font-size-base * 2 !default;
+$h3-font-size: $font-size-base * 1.75 !default;
+$h4-font-size: $font-size-base * 1.5 !default;
+$h5-font-size: $font-size-base * 1.25 !default;
+$h6-font-size: $font-size-base !default;
+
+// scss-docs-start font-sizes
+$font-sizes: (
+  1: $h1-font-size,
+  2: $h2-font-size,
+  3: $h3-font-size,
+  4: $h4-font-size,
+  5: $h5-font-size,
+  6: $h6-font-size,
+) !default;
+// scss-docs-end font-sizes
+
+// scss-docs-start position-map
+$position-values: (
+  0: 0,
+  50: 50%,
+  100: 100%,
+) !default;
+// scss-docs-end position-map
+
+// Body
+
+// Spacing
+//
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the $spacers map, should you need more variation.
+
+// scss-docs-start spacer-variables-maps
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+) !default;
+$negative-spacers: if($enable-negative-margins, negativify-map($spacers), null) !default;
+// scss-docs-end spacer-variables-maps
+
+// Prefix for :root CSS variables
+$variable-prefix: cc- !default;
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+
+// scss-docs-start font-variables
+$font-family-main:  "Helvetica","PingFang TC", "Arial", "LiHei Pro", "黑體-繁", "微軟正黑體", sans-serif !default;
+$font-size-root: 16px;
+// $font-size-root affects the value of `rem`, which is used for as well font sizes, paddings, and margins
+// $font-size-base affects the font size of the body text
+$line-height-base: 1.5 !default;
+$line-height-sm: 1.25 !default;
+$line-height-lg: 2 !default;
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+$grid-columns: 12 !default;
+// $grid-gutter-width: 1.5rem !default;
+$grid-row-columns: 6 !default;
+// $gutters: $spacers !default;
+
+// Container padding
+
+// $container-padding-x: $grid-gutter-width * 0.5 !default;

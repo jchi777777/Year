@@ -1,0 +1,118 @@
+// 控制行數(行數)
+@mixin wordrow($limt-row) {
+    @if ($limt-row == 1) {
+        overflow: hidden;
+        list-style-position: inside;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    } @else {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: $limt-row;
+    }
+}
+
+// for sprfs
+@mixin swtich-include($var) {
+    @if ($var == "h1") {
+        @include h1;
+    } @else if ($var == "h2") {
+        @include h2;
+    } @else if ($var == "h3") {
+        @include h3;
+    } @else if ($var == "h4") {
+        @include h4;
+    } @else if ($var == "h5") {
+        @include h5;
+    } @else if ($var == "h6") {
+        @include h6;
+    } @else if ($var == "btn1") {
+        @include btn1;
+    } @else if ($var == "btn2") {
+        @include btn2;
+    } @else if ($var == "btn3") {
+        @include btn3;
+    } @else if ($var == "btn3-b") {
+        @include btn3-b;
+    } @else if ($var == "btn3-400") {
+        @include btn3-400;
+    } @else if ($var == "btn3-600") {
+        @include btn3-600;
+    } @else if ($var == "btn4") {
+        @include btn4;
+    } @else if ($var == "btn4-400") {
+        @include btn4-400;
+    } @else if ($var == "bd1-n") {
+        @include bd1-n;
+    } @else if ($var == "bd1-l") {
+        @include bd1-l;
+    } @else if ($var == "bd1-b") {
+        @include bd1-b;
+    } @else if ($var == "bd2-n") {
+        @include bd2-n;
+    } @else if ($var == "bd2-l") {
+        @include bd2-l;
+    } @else if ($var == "bd2-b") {
+        @include bd2-b;
+    } @else if ($var == "bd3-n") {
+        @include bd3-n;
+    } @else if ($var == "bd3-l") {
+        @include bd3-l;
+    } @else if ($var == "bd3-b") {
+        @include bd3-b;
+    } @else if ($var == "bd4-n") {
+        @include bd4-n;
+    } @else if ($var == "bd4-l") {
+        @include bd4-l;
+    } @else if ($var == "bd4-b") {
+        @include bd4-b;
+    } @else if ($var == "bd5-n") {
+        @include bd5-n;
+    } @else if ($var == "bd5-l") {
+        @include bd5-l;
+    } @else if ($var == "bd5-b") {
+        @include bd5-b;
+    } @else if ($var == "bd6-n") {
+        @include bd6-n;
+    } @else if ($var == "bd6-l") {
+        @include bd6-l;
+    } @else if ($var == "bd6-b") {
+        @include bd6-b;
+    }
+}
+
+// RFS 定義各尺寸字體 super rfs
+// sprfs('h1','bd1-n','bd3-n','bd2-n','bd4-n','bd5-n')
+// @mixin sprfs($fxl,$flg,$fmd,$fsm,$fxs,$fxxs) {
+@mixin sprfs($fztypes...) {
+    @if length($fztypes) == 1 {
+        @include swtich-include(nth($fztypes, 1));
+    } @else {
+        @include rwd(null, null, $xl) {
+            // @include swtich-include($fxl);
+            @include swtich-include(nth($fztypes, 1));
+        }
+        @include rwd($lg, $xl - 1px) {
+            // @include swtich-include($flg);
+            @include swtich-include(nth($fztypes, 2));
+        }
+        @include rwd($md, $lg - 1px) {
+            // @include swtich-include($fmd);
+            @include swtich-include(nth($fztypes, 3));
+        }
+        @include rwd($sm, $md - 1px) {
+            // @include swtich-include($fsm);
+            @include swtich-include(nth($fztypes, 4));
+        }
+        @include rwd($xs, $sm - 1px) {
+            // @include swtich-include($fxs);
+            @include swtich-include(nth($fztypes, 5));
+        }
+        @include rwd(0, $xs - 1px) {
+            // @include swtich-include($fxxs);
+            @include swtich-include(nth($fztypes, 6));
+        }
+    }
+}

@@ -1,0 +1,49 @@
+// 點擊時放大縮小
+@mixin dongdong() {
+    transform: scale(1);
+    transition: 0.3s;
+    &:active {
+        transform: scale(1.2);
+    }
+}
+
+// 淡入顯示　include之後 於標籤加入 class="show"
+// @mixin fadein {
+//     opacity: 0;
+//     &.fadein {
+//         animation: fadein 0.3s 1;
+//         animation-fill-mode: forwards;
+//     }
+// }
+
+@keyframes show {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@mixin fadein {
+    &.show {
+        animation: show 0.2s 1 ;
+        animation-fill-mode: forwards;
+    }
+}
+
+@keyframes unshow {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@mixin fadeout {
+    &.unshow {
+        animation: unshow 0.2s 1 ;
+        animation-fill-mode: forwards;
+    }
+}

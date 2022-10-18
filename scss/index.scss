@@ -1,0 +1,2094 @@
+@import './system.scss';
+
+body{
+    width: 100%;
+    overflow-x: hidden;
+    background: $yellow;
+    @include rwd($md - 1px){
+        background: $citron;
+    }
+    #index{
+        width: 100%;
+        margin: 0 auto;
+        overflow-x: hidden;
+        @include rwd($lg - 1px){
+            margin-top: 60px;
+        }
+        // 第一屏
+        .section1{
+            position: relative;   
+            background: linear-gradient(180deg, #9845C4 0%, #B74EC3 35.42%, #FF61C4 53.65%, #9845C4 75.52%, #00B5AE 100%);         
+            @include rwd($md - 1px){
+                background: none;
+            }
+            // 大背景
+            .bg{ 
+                width: 99%;
+                margin: 0 auto;
+                position: relative;
+                z-index: 1;
+                @media screen and (max-width:1919px){
+                    top: 10px;
+                }
+                @include rwd($lg - 1px){
+                    display: none;
+                }
+            }
+            .bg-md{
+                display: none;
+                @include rwd($lg - 1px){
+                    display: block;
+                    position: relative;
+                    width: 100%;
+                    z-index: 1;
+                }
+                @include rwd($md - 1px){
+                    display: none;
+                }
+            }
+            .bg-sm{
+                display: none;
+                @include rwd($md - 1px){
+                    display: block;
+                    position: relative;
+                    width: 100%;
+                    z-index: 1;
+                    top: -55px;
+                }
+                @include rwd($sm - 1px){
+                    display: none;
+                }
+            }
+            .bg-xs{
+                display: none;
+                @include rwd($sm - 1px){
+                    display: block;
+                    position: relative;
+                    width: 100%;
+                    z-index: 1;
+                    top: -60px;
+                }
+            }
+            .stars{
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index:0;
+                background-size: contain;
+                background-position: center;
+                background-image: url(../images/index/s1-bg.svg);
+                animation-name: stars;
+                animation-timing-function: linear;
+                animation-duration: 5s;
+                animation-iteration-count: infinite;
+                animation-fill-mode: backwards;
+                animation-direction: alternate;
+                
+            }
+        }
+        
+        // 第二屏 最新消息
+        .section2{
+            padding-top: 166px;
+            position: relative;
+            background: linear-gradient(to bottom,$citron 50%, $yellow 50%);
+            @media screen and (max-width:1919px){
+                padding-top: 90px;
+            }
+            @include rwd($md - 1px){
+                margin-top: -40px;
+                padding-top: 0;
+            }
+            // 背景
+            .bg{
+                position: absolute;
+                width: 100%;
+                z-index: 0;
+                left: 0;
+                top:260px;
+                @media screen and (max-width: 1919px) {
+                    top:198px;
+                    height: 112%;
+                    object-fit: cover;
+                    object-position: center;
+                }
+                @include rwd($lg - 1px){
+                    display: none;
+                }
+            }
+            // 左星
+            .left-star{
+                position: absolute;
+                z-index: 0;
+                left: 0;
+                top: 0;
+                @include rwd($md - 1px){
+                    display: none;
+                }
+                .one{
+                    width: 31px;
+                    position: absolute;
+                    left: 47px;
+                    top: 50px;
+                }
+                .two{
+                    width: 51px;
+                    left: 150px;
+                    top: 200px;
+                    position: absolute;
+                }
+            }
+            // 右星
+            .right-star{
+                position: absolute;
+                z-index: 0;
+                right: 0;
+                top: 0;
+                @include rwd($md - 1px){
+                    display: none;
+                }
+                .one{
+                    position: absolute;
+                    width: 41px;
+                    right: 120px;
+                    top: 100px;
+                }
+            }
+            .fire{
+                position: absolute;
+                right: -150px;
+                z-index: 0;
+                width: 750px;
+                bottom: -340px;
+                @include rwd($xl - 1px){
+                    display: none;
+                }
+            }
+            .inner{
+                width: 1156px;
+                margin: 0 auto;
+                position: relative;
+                z-index: 1;
+                @include rwd($xl - 1px){
+                    width: 100%;
+                    padding-top: 30px;
+                    margin-top: 100px;
+                    background: $yellow;
+                }
+                @include rwd($lg - 1px){
+                    background: none;
+                    margin-top: 50px;
+                }
+                .title-box{
+                    text-align: center;
+                    span:first-of-type{
+                        position: relative;
+                        z-index: 1;
+                        top: 10px;
+                        font-size: 64px;
+                        &::after{
+                            position: absolute;
+                            content: '';
+                            width: 98%;
+                            height:65%;
+                            left: 50%;
+                            top: 50%;
+                            transform: translateY(-50%) translateX(-50%);
+                            z-index: -1;
+                            background: $yellow;
+                        }
+                    }
+                    span:last-of-type{
+                        display: inline-block;
+                        background: $orange;
+                        border-top: 8px solid $purple;
+                    }
+                    @include rwd($xl - 1px){
+                        position: absolute;
+                        top: -95px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                    @include rwd($lg - 1px){
+                        top: -15px;
+                        z-index: 2;
+                    }
+                }
+                // 最新消息
+                .news-wrapper{
+                    > div {
+                        display: flex;
+                        align-items: center;
+                        @include rwd($xl - 1px){
+                            width: 942px;
+                            margin: 0 auto;
+                        }
+                    }
+                    // 新聞專區
+                    .top-wrapper{
+                        position: relative;
+                        justify-content: flex-end;
+                        margin-bottom: 22px;
+                        @include rwd($xl - 1px){
+                            justify-content: space-between;
+                            align-items: flex-start;
+                            padding-top: 30px;
+                        }
+                        @include rwd($lg - 1px){
+                            flex-wrap: wrap;
+                            width: 697px;
+                        }
+                        @include rwd($md - 1px){
+                            width: 353px;
+                        }
+                        @include rwd($sm - 1px){
+                            width: 250px;
+                        }
+                        .right{
+                            width: 686px;
+                            height: 520px;
+                            background: $yellow;
+                            padding: 58px 42px 64px 76px;
+                            @include rwd($xl - 1px){
+                                width: 460px;
+                                height: unset;
+                                padding: 0;
+                            }
+                            @include rwd($lg - 1px){
+                                width: 100%;
+                                position: relative;
+                                z-index: 1;
+                            }
+                            h2{
+                                font-size: 40px;
+                                display: flex;
+                                align-items: center;
+                                margin-bottom: 4px;
+                                justify-content: space-between;
+                                a{
+                                    display: flex;
+                                    width: 80px;
+                                    height: 24px;
+                                    align-items: center;
+                                    justify-content: center;
+                                    color: $black;
+                                    transition: .3s ease-out;
+                                    position: relative;
+                                    &:hover{
+                                        background: $orange;
+                                        .img1{
+                                            opacity: 0;
+                                        }
+                                        .img2{
+                                            opacity: 1;
+                                        }
+                                    }
+                                    .img1{
+                                        width: 16px;
+                                        transition: .3s ease-out;
+                                        margin-right: 6px;
+                                    }
+                                    .img2{
+                                        width: 16px;
+                                        transition: .3s ease-out;
+                                        opacity: 0;
+                                        position: absolute;
+                                        left: 7px;
+                                    }
+                                }
+                            }
+                            & a:last-of-type{
+                                div{
+                                    border-bottom: 0;
+                                }
+                            }
+                            // 一則新聞
+                            .single-news{
+                                vertical-align: middle;
+                                padding: 20px 0 16px;
+                                border-bottom: 1px solid rgba($orange,.4);
+                                &:hover{
+                                    p{
+                                        color: $rose;
+                                    }
+                                    span{
+                                        background-color: $citron;
+                                    }
+                                }
+                                // 標題
+                                p{
+                                    @include wordrow(2);
+                                    width: 100%;
+                                    color: $black;
+                                    transition: .3s ease-out;
+                                    @include rwd($lg - 1px){
+                                        margin-bottom: 7px;
+                                    }
+                                }
+                                span{
+                                    transition: .3s ease-out;
+                                    display: inline-block;
+                                    color: $white;
+                                    background: $rose;
+                                    padding: 0 10px;
+                                    position: relative;
+                                    bottom: 4px;
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+
+                        .left{
+                            width: 517px;
+                            position: absolute;
+                            left: 0;
+                            top: 58px;
+                            @include rwd($xl - 1px){
+                                position: relative;
+                                top: unset;
+                                width: 427px;
+                            }
+                            @include rwd($lg - 1px){
+                                width: 100%;
+                                margin-bottom: 60px;
+                                &::after{
+                                    content: '';
+                                    position: absolute;
+                                    width: 102vw;
+                                    left: 50%;
+                                    z-index: -1;
+                                    transform: translateX(-50%);
+                                    height: 200%;
+                                    background: $yellow;
+                                    top:250px;
+                                }
+                            }
+                            @include rwd($md - 1px){
+                                margin-bottom: 25px;
+                                &::after{
+                                    top: 120px;
+                                    height: 250%;
+                                }
+                            }
+                            @include rwd($sm - 1px){
+                                &::after{
+                                    top: 100px;
+                                    height: 300%;
+                                }
+                            }
+                            &:hover{
+                                .img-box{
+                                    img{
+                                        transform: scale(1.2);
+                                    }
+                                }
+                                h5{
+                                    &::before{
+                                        opacity: 1;
+                                    }
+                                    &::after{
+                                        opacity: 0;
+                                    }
+                                }
+                            }
+                            .img-box{
+                                width: 517px;
+                                height: 315px;
+                                overflow: hidden;
+                                border-radius: 2px;
+                                @include rwd($xl - 1px){
+                                    width: 427px;
+                                    height: 260px;
+                                }
+                                @include rwd($lg - 1px){
+                                    width: 100%;
+                                    height: 425px;
+                                }
+                                @include rwd($md - 1px){
+                                    height: 215px;
+                                }
+                                @include rwd($sm - 1px){
+                                    height: 153px;
+                                }
+                                img{
+                                    transition: .3s ease-out;
+                                    width: 100%;
+                                    height: 100%;
+                                    object-position: center;
+                                    object-fit: cover;
+                                }
+                            }
+                            h5{
+                                font-size: 20px;
+                                @include wordrow(2);
+                                position: relative;
+                                z-index: 1;
+                                &::before,
+                                &::after{
+                                    position: absolute;
+                                    transition: .3s ease-out;
+                                    left: 0;
+                                    top: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                    z-index: -1;
+                                    content: '';
+                                }
+                                &::before{
+                                    opacity: 0;
+                                    background: linear-gradient(90.57deg, #FFEB00 0%, #00B8AE 100.15%);
+                                }
+                                &::after{
+                                    opacity: 1;
+                                    background: linear-gradient(90.57deg, #00B8AE 0%, #FFEB00 100.15%);
+                                }
+                            }
+                            span{
+                                transition: .3s ease-out;
+                                font-size: 14px;
+                                background: $orange;
+                                border-top: 7px solid #F80000;
+                                color: $black;
+                                padding: 0 10px;
+                                display: inline-block;
+                            }
+                        }
+                    }
+
+                    // 影音專區
+                    .bot-wrapper{
+                        position: relative;
+                        justify-content: flex-start;
+                        @include rwd($xl - 1px){
+                            justify-content: space-between;
+                            align-items: flex-start;
+                            padding-top: 30px;
+                        }
+                        @include rwd($lg - 1px){
+                            width: 697px;
+                            flex-wrap: wrap;
+                        }
+                        @include rwd($md - 1px){
+                            width: 353px;
+                        }
+                        @include rwd($sm - 1px){
+                            width: 250px;
+                        }
+                        .fire2{
+                            position: absolute;
+                            display: none;                        
+                            right: -233px;
+                            bottom: -177px;
+                            z-index: -1;
+                            @include rwd($xl - 1px){
+                                display:block;
+                                width: 452px;
+                                box-shadow: -102px -100px #ffeb00
+                            }
+                            @include rwd($lg - 1px){
+                                display: none;
+                            }
+                        }
+                        .right{
+                            width: 686px;
+                            height: 513px;
+                            background: $yellow;
+                            padding: 41px 83px 50px 42px;
+                            @include rwd($xl - 1px){
+                                width: 460px;
+                                height: unset;
+                                padding: 0;
+                                padding-bottom: 40px;
+                            }
+                            @include rwd($lg - 1px){
+                                width: 100%;
+                                padding-bottom: 0;
+                                padding-bottom: 90px;
+                            }
+                            @include rwd($sm - 1px){
+                                background: none;
+                                padding-bottom: 40px;
+                            }
+                            & a:last-of-type{
+                                div{
+                                    border-bottom: 0;
+                                }
+                            }
+                            h2{
+                                font-size: 40px;
+                                display: flex;
+                                align-items: center;
+                                margin-bottom: 4px;
+                                justify-content: space-between;
+                                a{
+                                    display: flex;
+                                    width: 80px;
+                                    height: 24px;
+                                    align-items: center;
+                                    justify-content: center;
+                                    color: $black;
+                                    transition: .3s ease-out;
+                                    position: relative;
+                                    &:hover{
+                                        background: $orange;
+                                        .img1{
+                                            opacity: 0;
+                                        }
+                                        .img2{
+                                            opacity: 1;
+                                        }
+                                    }
+                                    .img1{
+                                        width: 16px;
+                                        transition: .3s ease-out;
+                                        margin-right: 6px;
+                                    }
+                                    .img2{
+                                        width: 16px;
+                                        transition: .3s ease-out;
+                                        opacity: 0;
+                                        position: absolute;
+                                        left: 7px;
+                                    }
+                                }
+                            }
+                            // 一則新聞
+                            .single-news{
+                                vertical-align: middle;
+                                padding: 20px 0 16px;
+                                border-bottom: 1px solid rgba($orange,.4);
+                                &:hover{
+                                    p{
+                                        color: $rose;
+                                    }
+                                    span{
+                                        background-color: $citron;
+                                    }
+                                }
+                                // 標題
+                                p{
+                                    @include wordrow(2);
+                                    width: 100%;
+                                    color: $black;
+                                    transition: .3s ease-out;
+                                }
+                                span{
+                                    transition: .3s ease-out;
+                                    display: inline-block;
+                                    color: $white;
+                                    background: $rose;
+                                    padding: 0 10px;
+                                    position: relative;
+                                    bottom: 4px;
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+                        .left{
+                            width: 517px;
+                            position: absolute;
+                            right: 0;
+                            @include rwd($xl - 1px){
+                                position: relative;
+                                width: 427px;
+                            }
+                            @include rwd($lg - 1px){
+                                width: 100%;
+                                order: -1;
+                                margin-bottom: 50px;
+                            }
+                            @include rwd($md - 1px){
+                                margin-bottom: 25px;
+                            }
+                            &:hover{
+                                .video-box{
+                                    > img{
+                                        transform: scale(1.2);
+                                    }
+                                    .blur{
+                                        opacity: 1;
+                                    }
+                                    .play{
+                                        .second{
+                                            opacity: 1;
+                                            max-width: 165px;
+                                        }
+                                    }
+                                }
+                                h5{
+                                    &::before{
+                                        opacity: 1;
+                                    }
+                                    &::after{
+                                        opacity: 0;
+                                    }
+                                }
+                            }
+                            .video-box{
+                                width: 517px;
+                                height: 315px;
+                                overflow: hidden;
+                                position: relative;
+                                @include rwd($xl - 1px){
+                                    width: 427px;
+                                    height: 260px;
+                                }
+                                @include rwd($lg - 1px){
+                                    width: 100%;
+                                    height:426px;
+                                }
+                                @include rwd($md - 1px){
+                                    height: 216px;
+                                }
+                                @include rwd($sm - 1px){
+                                    width: 250px;
+                                    height: 153px;
+                                }
+                                .blur{
+                                    position: absolute;
+                                    transition: .3s ease-out;
+                                    top: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    z-index: 2;
+                                    height: 100%;
+                                    background: rgba(#6B61C4,.4);
+                                    opacity: 0;
+                                }
+                                .play{
+                                    position: absolute;
+                                    left: 0;
+                                    top: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                    z-index: 3;
+                                    .first{
+                                        margin-right: 15px;
+                                        display: inline-block;
+                                        width: 56px;
+                                    }
+                                    .second{
+                                        display: inline-block;
+                                        transition: .3s ease-out;
+                                        opacity: 0;
+                                        max-width: 0;
+                                    }
+                                }
+                                > img{
+                                    width: 100%;
+                                    transition: .3s ease-out;
+                                    height: 100%;
+                                    object-fit: cover;
+                                    object-position: center;
+                                }
+                            }
+                            h5{
+                                font-size: 20px;
+                                @include wordrow(2);
+                                position: relative;
+                                z-index: 1;
+                                &::before,
+                                &::after{
+                                    position: absolute;
+                                    transition: .3s ease-out;
+                                    left: 0;
+                                    top: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                    z-index: -1;
+                                    content: '';
+                                }
+                                &::before{
+                                    opacity: 0;
+                                    background: linear-gradient(90.57deg, #FFEB00 0%, #00B8AE 100.15%);
+                                }
+                                &::after{
+                                    opacity: 1;
+                                    background: linear-gradient(90.57deg, #00B8AE 0%, #FFEB00 100.15%);
+                                }
+                            }
+                            span{
+                                transition: .3s ease-out;
+                                font-size: 14px;
+                                background: $orange;
+                                border-top: 7px solid #F80000;
+                                color: $black;
+                                padding: 0 10px;
+                                display: inline-block;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // 第三屏 燈光裝置
+        .section3{
+            width: 100%;
+            margin-top: 415px;
+            position: relative;
+            @media screen and (max-width:1919px){
+                margin-top: 280px;
+            }
+            @include rwd($lg - 1px){
+                margin-top: 10px;
+            }
+            @include rwd($md - 1px){
+                margin-top: -5px;
+                background: $yellow;
+            }
+            .title-img{
+                display: none;
+                @include rwd($lg - 1px){
+                    display: block;
+                    width: 353px;
+                    margin: 0 auto 16px;
+                }
+                @include rwd($sm - 1px){
+                    display: none;
+                }
+            }
+            .xinyi-img{
+                display: none;
+                @include rwd($sm - 1px){
+                    display: block;
+                    margin: 0 auto 20px;
+                }
+            }
+            #light-device{
+                opacity: 0;
+                z-index: -1;
+                position: absolute;
+                top: -250px;
+            }
+            // 星星背景
+            .star3,
+            .star4,
+            .star5{
+                position: absolute;
+                z-index: -1;
+                @include rwd($xl - 1px){
+                    display: none;
+                }
+            }
+            .star3{
+                width: 141px;
+                right: 0;
+                top: 50px;
+            }
+            .star4{
+                width: 160px;
+                left: 0;
+                top: 0;
+            }
+            .star5{
+                width: 113px;
+                left: 0;
+                top: 700px;
+            }
+            .inner{
+                margin: 0 auto;
+                width: 1156px;
+                @include rwd($xl - 1px){
+                    width: 100%;
+                }
+                // 未來樹
+                .first{
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    position: relative;
+                    z-index: 5;
+                    @include rwd($xl - 1px){
+                        padding: 0 ;
+                        width: 975px;
+                        margin: 0 auto;
+                        justify-content: center;
+                    }
+                    @include rwd($lg - 1px){
+                        width: 697px;
+                        flex-wrap: wrap;
+                    }
+                    @include rwd($md - 1px){
+                        width: 353px;
+                    }
+                    @include rwd($sm - 1px){
+                        width: 250px;
+                    }
+                    .img-box{
+                        width: 685px;
+                        height:545px;
+                        overflow: hidden;
+                        margin-right: 20px;
+                        flex-shrink: 0;
+                        @include rwd($xl - 1px){
+                            width: 488px;
+                            height: 388px;
+                            margin-right: 38px;
+                        }
+                        @include rwd($lg - 1px){
+                            width: 100%;
+                            height: 555px;
+                            margin-right: 0;
+                            margin-bottom: 45px;
+                        }
+                        @include rwd($md - 1px){
+                            height: 280px;
+                            margin-bottom: 25px;
+                        }
+                        @include rwd($sm - 1px){
+                            height: 200px;
+                        }
+                        img{
+                            transition: .3s ease-out;
+                            width: 100%;
+                            &:hover{
+                                transform: scale(1.2);
+                            }
+                        }
+                    }
+                    .right{
+                        padding-top: 30px;
+                        @include rwd($xl - 1px){
+                            padding: 0;
+                            width: 450px;
+                        }
+                        @include rwd($lg - 1px){
+                            width: 100%;
+                        }
+                        > img{
+                            width: 155px;
+                        }
+                        // 內容
+                        p{
+                            margin: 22px 0 42px;
+                            font-size: 18px;
+                            @include wordrow(7);
+                            @include rwd($md - 1px){
+                                margin-bottom: 22px;
+                            }
+                        }
+                        // 體驗連結
+                        div{
+                            position: relative;
+                            overflow: hidden;
+                            width: 306px !important;
+                            @include rwd($md - 1px){
+                                width: 210px !important;
+                            }
+                            &:hover{
+                                span{
+                                    &::before{
+                                        opacity: 1;
+                                    }
+                                    &::after{
+                                        opacity: 0;
+                                    }
+                                }
+                                .yellow{
+                                    opacity: 0;
+                                }
+                                .orange{
+                                    opacity: 1;
+                                }
+                            }
+                            span{
+                                height: 48px;
+                                display: flex;
+                                align-items: center;
+                                color: $black;
+                                padding-right: 18px;
+                                position: relative;
+                                font-size: 40px;
+                                z-index: 1;
+                                &::before,
+                                &::after{
+                                    position: absolute;
+                                    content: '';
+                                    z-index: -1;
+                                    transition: .3s ease-out;
+                                    width: 100%;
+                                    left: 0;
+                                    top:0;
+                                    height: 100%;
+                                }
+                                &::before{
+                                    opacity: 0;
+                                    background: linear-gradient(92.01deg, #F653C2 0%, #FC5F54 37.78%, #FF7C00 73.92%, #0EB4A5 105.13%);
+                                }
+                                &::after{
+                                    opacity: 1;
+                                    background: linear-gradient(92.01deg, #0EB4A5 0%, #FF7C00 36.14%, #FC5F54 66.25%, #F653C2 105.13%);
+                                }
+                            }
+                            .span2{
+                                display: none;
+                            }
+                            @include rwd($md - 1px){
+                                .span1{
+                                    display: none;
+                                }
+                                .span2{
+                                    display: flex;
+                                    margin-right: 2px;
+                                }
+                            }
+                            img{
+                                width: 48px;
+                                transition: .3s ease-out;
+                            }
+                            .yellow{
+                                position: absolute;
+                                right: 0;
+                                z-index: 1;
+                            }
+                            .orange{
+                                position: absolute;
+                                right: 0;
+                                opacity: 0;
+                                z-index: 0;
+                            }
+                        }
+                    }
+                    @keyframes marquee {
+                        0% {
+                            transform: translateX(0);
+                        }
+                        100% {
+                            transform: translateX(-100%);
+                        }
+                    }
+
+                    // 跑馬燈
+                    .marquee-box{
+                        position: absolute;
+                        width: 100vw;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        padding: 50px 0;
+                        bottom: -210px;
+                        z-index: -1;
+                        @include rwd($xl - 1px){
+                            display: none;
+                        }
+                        .block{
+                            position: absolute;
+                            right: 0;
+                            bottom: -250px;
+                            z-index: -2;
+                        }
+                        .view{
+                            overflow: hidden;
+                            width: 100%;
+                            background: $yellow;
+                            .view-wrapper{
+                                display: flex;
+                                align-items: center;
+                                justify-self: center;
+                                div{
+                                    flex-basis: 50%;
+                                    flex-shrink: 0;
+                                }
+                            }
+                            .one{
+                                animation: marquee 30s infinite linear;
+                            }
+                            .two{
+                                animation: marquee 30s infinite linear;
+                            }
+                        }
+                    }
+                }
+                //大兔襲
+                .second{
+                    margin: 72px 0 87px;
+                    position: relative;
+                    z-index: 5;
+                    @media screen and (max-width:1919px){
+                        margin: 72px auto ;
+                        justify-content: center !important;
+                    }
+                    @include rwd($xl - 1px){
+                        width: 975px;
+                        margin: 70px auto 37px;
+                    }
+                    @include rwd($lg - 1px){
+                        width: 697px;
+                        flex-wrap: wrap;
+                        margin: 114px auto 50px;
+                    }
+                    @include rwd($md - 1px){
+                        margin-top: 70px;
+                        width: 353px;
+                    }
+                    @include rwd($sm - 1px){
+                        width: 250px;
+                    }
+                    .left{
+                        width: 450px;
+                        margin-right: 61px;
+                        @include rwd($lg - 1px){
+                            margin-right: 0;
+                            width: 100%;
+                        }
+                        // 嵌入地圖
+                        .map-box{
+                            width: 100%;
+                            height: 307px;
+                            overflow: hidden;
+                            @include rwd($xl - 1px){
+                                width: 382px;
+                                height: 261px;
+                            }
+                            @include rwd($lg - 1px){
+                                display: none;
+                            }
+                        }
+                        > img{
+                            width: 237px;
+                            margin: 28px 0 32px;
+                        }
+                        p{
+                            @include wordrow(3);
+                        }
+                    }
+                    // 輪播
+                    .swiper-box{
+                        width: 645px;
+                        height: 545px;
+                        flex-shrink: 0;
+                        position: relative;
+                        @include rwd($xl - 1px){
+                            width: 464px;
+                            height: 486px;
+                        }
+                        @include rwd($lg - 1px){
+                            margin-top: 20px;
+                            width: 697px;
+                            height: 650px;
+                            margin-bottom: 30px;
+                        }
+                        @include rwd($md - 1px){
+                            width: 353px;
+                            height: 335px;
+                        }
+                        @include rwd($sm - 1px){
+                            width: 250px;
+                            height: 270px;
+                        }
+                        .flower{
+                            position: absolute;
+                            z-index: 1;
+                            width: 484px;
+                            right: -420px;
+                            top: 250px;
+                            @include rwd($xl - 1px){
+                                display: none;
+                            }
+                        }
+                    }
+                    // 嵌入地圖
+                    .map-box2{
+                        width: 100%;
+                        height: 554px;
+                        display: none;
+                        overflow: hidden;
+                        iframe{
+                            width: 100%;
+                            height:100%;
+                        }
+                        @include rwd($lg - 1px){
+                            display: block;
+                        }
+                        @include rwd($md - 1px){
+                            height: 281px;
+                        }
+                        @include rwd($sm - 1px){
+                            height: 200px;
+                        }
+                    }
+                }
+                // 仁愛路燈飾
+                .third{
+                    position: relative;
+                    @include rwd($xl - 1px){
+                        width: 975px;
+                        padding: 0;
+                        margin: 0 auto;
+                    }
+                    @include rwd($lg - 1px){
+                        width: 697px;
+                        flex-wrap: wrap;
+                    }
+                    @include rwd($md - 1px){
+                        width: 353px;
+                        padding-bottom: 50px;
+                    }
+                    @include rwd($sm - 1px){
+                        width: 250px;
+                        padding-bottom: 10px;
+                    }
+                    .block{
+                        position: absolute;
+                        left: -400px;
+                        bottom: 100px;
+                        @include rwd($xl - 1px){
+                            display: none;
+                        }
+                    }
+                    // 輪播
+                    .swiper-box{
+                        width: 645px;
+                        height: 545px;
+                        flex-shrink: 0;
+                        @include rwd($xl - 1px){
+                            width: 511px;
+                            height: 344px;
+                        }
+                        @include rwd($lg - 1px){
+                            width: 697px;
+                            height: 500px;
+                        }
+                        @include rwd($md - 1px){
+                            width: 353px;
+                            height: 335px;
+                        }
+                        @include rwd($sm - 1px){
+                            width: 250px;
+                            height: 270px;
+                        }
+                    }
+                    .right{
+                        margin-left: 41px;
+                        padding-top: 40px;
+                        @include rwd($xl - 1px){
+                            padding-top: 0;
+                        }
+                        @include rwd($lg - 1px){
+                            margin-left: 0;
+                            order: -1;
+                            margin-bottom: 35px;
+                        }
+                        @include rwd($md - 1px){
+                            margin-left: 0;
+                        }
+                        img{
+                            width: 238px;
+                            margin-bottom: 31px;
+                        }
+                        p{
+                            @include wordrow(7);
+                        }
+                    }
+                }
+                    
+            }
+        }
+
+        //第四屏 周邊活動
+        .section4{
+            width: 100%;
+            margin-top: 100px;
+            margin-bottom: 140px;
+            position: relative;
+            @media screen and (max-width:1919px){
+                margin: 50px 0 ;
+            }
+            @include rwd($lg - 1px){
+                margin-top: 100px;
+            }
+            @include rwd($md - 1px){
+                background: $yellow;
+                margin-top: -2px;
+                padding-top: 40px;
+                padding-bottom: 40px;
+                margin-bottom: 0;
+            }
+            @include rwd($sm - 1px){
+                padding-bottom: 55px;
+            }
+            #events{
+                opacity: 0;
+                position: absolute;
+                z-index: -1;
+                top: -100px;
+            }
+            .img-box{
+                margin: 0 auto;
+                text-align: center;
+            }
+            .swiper-box{
+                overflow: hidden;
+                width: 1444px;
+                padding: 0 20px;
+                margin: 20px auto 0;
+                @include rwd($xl - 1px){
+                    width: 669px;
+                    padding: 0 15px;
+                }
+                @include rwd($md - 1px){
+                    width: 353px;
+                    padding: 0 10px;
+                }
+                @include rwd($sm - 1px){
+                    width: 250px;
+                }
+            }
+        }
+
+        // 跨年晚會
+        .section5{
+            width: 100%;
+            margin: 0 auto;
+            position: relative;
+            padding-top: 110px;
+            background: linear-gradient(180deg, #9845C4 11.98%, #FF61C4 35.42%, #9845C4 73.44%, #FDEB01 94.79%);
+            @include rwd($md - 1px){
+                background: linear-gradient(180deg, #9845C4 4.98%, #FF61C4 20.42%, #9845C4 15.44%, #FDEB01 43.79%);
+            }
+            @include rwd($sm - 1px){
+                padding-top: 70px;
+            }
+            #party{
+                opacity: 0;
+                position: absolute;
+                z-index: -1;
+                top: 0;
+            }
+            // 浪圖片
+            .wave{
+                position: absolute;
+                top: 0;
+                width: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+                @include rwd($md - 1px){
+                    top: -3px;
+                    width: 200%;
+                    z-index: 5;
+                }
+            }
+            // 煙火
+            .fire{
+                position: absolute;
+                left: -100px;
+                z-index: 3;
+                top: -100px;
+                @include rwd($xl - 1px){
+                    width: 419px;
+                    left: -210px;
+
+                }
+                @include rwd($lg - 1px){
+                    width: 245px;
+                    left: -50px;
+                    top: 0;
+                }
+                @include rwd($md - 1px){
+                    width: 165px;
+                    z-index: 6;
+                    left: -100px;
+                    top:80px
+                }
+                @include rwd($sm - 1px){
+                    top: -40px;
+                    width: 123px;
+                    left: -50px;
+                }
+            }
+            // 球
+            .ball{
+                position: absolute;
+                right: -100px;
+                top: 70px;
+                width: 410px;
+                @include rwd($xl - 1px){
+                    width: 300px;
+                    z-index: 3;
+                    top: 0;
+                }
+                @include rwd($lg - 1px){
+                    width: 200px;
+                    right: -30px;
+                    top: 50px;
+                }
+                @include rwd($md - 1px){
+                    width: 112px;
+                    top: 0;
+                    z-index: 6;
+                }
+                @include rwd($sm - 1px){
+                    width: 100px;
+                    top:-30px;
+                }
+            }
+            // 廟
+            .temple{
+                position: absolute;
+                top: 120px;
+                width: 1440px;
+                left: 50%;
+                transform: translateX(-50%);
+                @include rwd($xl - 1px){
+                    width: 1390px;
+                }
+                @include rwd($md - 1px){
+                    display: none;
+                }
+            }
+            // 蛇
+            .snake{
+                position: absolute;
+                right: -400px;
+                top:500px;
+                @include rwd($xl - 1px){
+                    display: none;
+                }
+            }
+            // 星星
+            .star{
+                position: absolute;     
+                right: 100px;
+                top: 200px;
+                z-index: -1;
+            }
+            // 跨年
+            .eve-party{
+                margin: 0 auto ;
+                width: 693px;
+                text-align: center;
+                position: relative;
+                z-index: 2;
+                @include rwd($md - 1px){
+                    width: 100%;
+                }
+                img{
+                    position: relative;
+                    top: 10px;
+                }
+                .content{
+                    width: 100%;
+                    background: $yellow;
+                    padding: 41px 56px 22px;
+                    text-align: left;
+                    h2{
+                       @include rwd($sm - 1px){
+                           flex-wrap: wrap;
+                           margin-top: 10px;
+                           margin-bottom: 22px;
+                       }
+                    }
+                    span{
+                       @include sprfs('h4') ;
+                       @include rwd($sm - 1px){
+                           display: block;
+                       }
+                    }
+                    @include rwd($md - 1px){
+                        padding: 40px 20px 25px;
+
+                    }
+                }
+            }
+            // 卡司
+            .cast{
+                margin-top: 210px;
+                position: relative;
+                z-index: 1;
+                width: 100%;
+                text-align: center;
+                @include rwd($xl - 1px){
+                    margin-top: 140px;
+                }
+                @include rwd($md - 1px){
+                    margin-top: 50px;
+                }
+                > img{
+                    margin: 0 auto;
+                    @include rwd($md - 1px){
+                        margin-bottom: 20px;
+                    }
+                }
+                @keyframes run {
+                    0% {
+                        transform: translateX(0);
+                    }
+                    100% {
+                        transform: translateX(-(300px * 7));
+                    }
+                }
+                @keyframes run2 {
+                    0% {
+                        transform: translateX(-300px * 7);
+                    }
+                    100% {
+                        transform: translateX(0);
+                    }
+                }
+                // 圖片跑馬燈
+                .top-wrapper,
+                .bot-wrapper{
+                    width: 100%;
+                    .view {
+                        overflow: hidden;
+                        width: 2100px;
+                        .pic-container {
+                            display: flex;
+                            // &:hover{
+                            //     animation-play-state: paused;
+                            // }
+                            .pic {
+                                padding-right: 8px;
+                                width: 300px;
+                                height: 364px;
+                                flex-shrink: 0;
+                                overflow: hidden;
+                                cursor: pointer;
+                                img {
+                                    width: 100%;
+                                    height: 100%;
+                                    object-position: center;
+                                    object-fit: cover;
+                                }
+                            }
+                        }
+                    }
+                }
+                .top-wrapper{
+                    .pic-container{
+                        animation: run 30s infinite linear;
+                    }
+                }
+                .bot-wrapper{
+                    margin-top: 13px;
+                    .pic-container {
+                        display: flex;
+                        animation: run2 30s infinite linear;
+                    }
+                }
+            }
+        }
+
+        // 交通資訊
+        .section6{
+            background: $yellow;
+            width: 100%;
+            padding: 100px 0 0;
+            @include rwd($sm - 1px){
+                padding-top: 30px;
+            }
+            .traffic-box{
+                margin: 0 auto;
+                text-align: center;
+                .title1{
+                    @include rwd($md - 1px){
+                        width: 349px;
+                    }
+                    @include rwd($sm - 1px){
+                        display: none;
+                    }
+                }
+                .title2{
+                    display: none;
+                    @include rwd($sm - 1px){
+                        display: block;
+                        margin: 0 auto;
+                    }
+                }
+                .swiper-box{
+                    margin: 30px auto 0;
+                    width: 1440px;
+                    height:400px;
+                    @include rwd($xl - 1px){
+                        width: 669px;
+                        padding: 0 15px;
+                        margin-bottom: 50px;
+                    }
+                    @include rwd($lg - 1px){
+                        margin-bottom: 10px;
+                    }
+                    @include rwd($md - 1px){
+                        width: 353px;
+                        padding: 0 10px;
+                    }
+                    @include rwd($sm - 1px){
+                        width: 250px;
+                        height: 280px;
+                    }
+                }
+            }
+            // 貼心提醒
+            .notify-box{
+                padding: 120px 0;
+                background: $purple;
+                width: 100%;
+                position: relative;
+                text-align: center;
+                @include rwd($md - 1px){
+                    padding: 100px 0 60px;
+                }
+                .y-wave,
+                .p-wave{
+                    position: absolute;
+                    left: 50%;
+                    width: 100%;
+                    transform: translateX(-50%);
+                    z-index: 0;
+                    @include rwd($md - 1px){
+                        width: 200%;
+                    }
+                    @include rwd($sm - 1px){
+                        width: 300%;
+                    }
+                }
+                .y-wave{
+                    top: 0;
+                }
+                .p-wave{
+                    bottom: -20px;
+                    z-index: 3;
+                }
+                // QA
+                .question-box{
+                    margin: 50px auto 0;
+                    width: 753px;
+                    @include rwd($md - 1px){
+                        width: 353px;
+                    }
+                    @include rwd($sm - 1px){
+                        width: 250px;
+                    }
+                    .qa-box{
+                        cursor: pointer;
+                        transition: .3s linear;
+                        padding: 18px 0 ;
+                        max-height: 95px;
+                        border-bottom: 1px solid rgba($white,.3);
+                        @include rwd($sm - 1px){
+                            max-height: 130px;
+                        }
+                        &.act{
+                            max-height: 300px;
+                            p{
+                                opacity: 1;
+                                z-index: 1;
+                            }
+                        }
+                        &:last-of-type{
+                            border: none;
+                        }
+                        h2{
+                            color: $white;
+                            position: relative;
+                            text-align: left;
+                            z-index: 1;
+                            img{
+                                width: 68px;
+                                margin-right: 34px;
+                                @include rwd($sm - 1px){
+                                    margin-right: 20px;
+                                    width: 50px;
+                                }
+                            }
+                        }
+                        p{
+                            color: $white;
+                            margin-left: 95px;
+                            font-weight: 300;
+                            text-align: left;
+                            padding: 15px 0;
+                            opacity: 0;
+                            transition: .3s linear;
+                            z-index: -10;
+                            @include rwd($md - 1px){
+                                margin-left: 0;
+                            }
+                        }
+                    }
+                }
+            }
+            .swiper-box{
+                overflow: hidden;
+                width: 1444px;
+                padding: 0 20px;
+                margin: 20px auto 0;
+            }
+        }
+
+        // 台北必遊
+        .section7{
+            width: 100%;
+            padding-top: 50px;
+            position: relative;
+            padding-bottom: 240px;
+            @include rwd($lg - 1px){
+                padding-bottom: 150px;
+            }
+            @include rwd($md - 1px){
+                background: $yellow;
+            }
+            #party{
+                opacity: 0;
+                position: absolute;
+                z-index: -1;
+                top: -100px;
+            }
+            .star7{
+                position: absolute;
+                top: 70px;
+                left: 0;
+                @include rwd($md - 1px){
+                    display: none;
+                }
+            }
+            .star8{
+                position: absolute;
+                top: 70px;
+                right: 0;
+                @include rwd($md - 1px){
+                    display: none;
+                }
+            }
+            .inner{
+                width: 1156px;
+                margin: 120px auto 0;
+                text-align: center;
+                @include rwd($xl - 1px){
+                    width: 568px;
+                    margin-top: 50px;
+                }
+                @include rwd($lg - 1px){
+                    width: 648px;
+                }
+                @include rwd($md - 1px){
+                    width: 353px;
+                }
+                @include rwd($sm - 1px){
+                    width: 253px;
+                }
+                > .title{
+                    margin-bottom: 90px;
+                    @include rwd($md - 1px){
+                        margin-bottom: 40px;
+                    }
+                }
+                .attractions{
+                    // 第二三則
+                    @include rwd($xl - 1px){
+                        flex-wrap: wrap;
+                        justify-content: center;
+                    }
+                    .left{
+                        margin-right: 65px;
+                        @include rwd($xl - 1px){
+                            margin-right: 0;
+                            order: 1;
+                        }
+                        > .title{
+                            font-size: 40px;
+                            position: relative;
+                            align-items: flex-end !important;
+                            padding-bottom: 18px;
+                            border-bottom: 1px solid $black;
+                            @include rwd($xl - 1px){
+                                display: none !important;
+                            }
+                            span{
+                                margin-left: 18px;
+                                @include sprfs('h4');
+                            }
+                            a{
+                                position: relative;
+                                float: right;
+                                @include sprfs('bd4-b');
+                                right: 0;
+                                display: flex;
+                                align-items: center;
+                                padding: 5px 7px;
+                                transition: .2s ease-out;
+                                &:hover{
+                                    background: $orange;
+                                    .first{
+                                        opacity: 0;
+                                    }
+                                    .second{
+                                        opacity: 1;
+                                    }
+                                }
+                                img{
+                                    width: 16px;
+                                    margin-right: 6px;
+                                    transition: .2s ease-out;
+                                }
+                                .second{
+                                    position: absolute;
+                                    left: 7px;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                    opacity: 0;
+                                }
+                            }
+                        }
+                        .travel2,
+                        .travel3,
+                        .place2,
+                        .place3{
+                            margin-top: 23px;
+                            display: flex;
+                            align-items: flex-end;
+                            justify-content: space-between;
+                            @include rwd($lg - 1px){
+                                width: 100%;
+                                flex-wrap: wrap;
+                                margin-bottom: 40px;
+                            }
+                            img{
+                                width: 214px;
+                                height: 158px;
+                                object-fit: cover;
+                                object-position: center;
+                                margin-right: 24px;
+                                @include rwd($lg - 1px){
+                                    width: 648px;
+                                    height: 479px;
+                                }
+                                @include rwd($md - 1px){
+                                    width: 353px;
+                                    height: 261px;
+                                }
+                                @include rwd($sm - 1px){
+                                    width: 253px;
+                                    height: 187px;
+                                }
+                            }
+                            div{
+                                text-align: left;
+                                @include rwd($lg - 1px){
+                                    display: flex;
+                                    flex-wrap: wrap;
+                                    width: 100%;
+                                }
+                                p{
+                                    margin-top: 30px;
+                                    @include rwd($lg - 1px){
+                                        order: -1;
+                                        margin: 15px auto 5px;
+                                        width: 100%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .title2{
+                        font-size: 40px;
+                        position: relative;
+                        align-items: flex-end !important;
+                        padding-bottom: 18px;
+                        border-bottom: 1px solid $black;
+                        display: none !important;
+                        @include rwd($xl - 1px){
+                            display: flex !important;
+                            width: 100%;
+                            padding-bottom: 15px;
+                            margin-bottom:40px;
+                        }
+                        @include rwd($md - 1px){
+                            margin-bottom: 30px;
+                        }
+                        h2{
+                            text-align: left;
+                        }
+                        span{
+                            margin-left: 18px;
+                            @include sprfs('h4');
+                            @include rwd($md - 1px){
+                                margin-left: 0;
+                                display: block;
+                            }
+                        }
+                        a{
+                            position: relative;
+                            float: right;
+                            @include sprfs('bd4-b');
+                            right: 0;
+                            display: flex;
+                            align-items: center;
+                            padding: 5px 7px;
+                            transition: .2s ease-out;
+                            &:hover{
+                                background: $orange;
+                                .first{
+                                    opacity: 0;
+                                }
+                                .second{
+                                    opacity: 1;
+                                }
+                            }
+                            img{
+                                width: 16px;
+                                margin-right: 6px;
+                                transition: .2s ease-out;
+                            }
+                            .second{
+                                position: absolute;
+                                left: 7px;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                opacity: 0;
+                            }
+                        }
+                    }
+                    // 第一則
+                    .travel1,
+                    .place1{
+                        text-align: left;
+                        @include rwd($xl - 1px){
+                            border-bottom: 1px solid $black;
+                            padding-bottom: 30px;
+                        }
+                        @include rwd($lg - 1px){
+                            border-bottom: 0;
+                        }
+                        img{
+                            width: 568px;
+                            height: 297px;
+                            object-fit: cover;
+                            object-position: center;
+                            @include rwd($lg - 1px){
+                                width: 648px;
+                                height: 479px;
+                            }
+                            @include rwd($md - 1px){
+                                width: 353px;
+                                height: 261px;
+                            }
+                            @include rwd($sm - 1px){
+                                width: 253px;
+                                height: 187px;
+                            }
+                        }
+                        p{
+                            margin: 14px 0 20px;
+                            text-align: left;
+                            @include rwd($lg - 1px){
+                                @include sprfs('bd2-b');
+                                margin: 15px auto 5px;
+                            }
+                        }
+                    }
+                }
+                .seperate{
+                    margin: 113px auto 93px;
+                    @include rwd($xl - 1px){
+                        width: 100%;
+                        margin: 90px auto;
+                    }
+                    @include rwd($lg - 1px){
+                        display: none;
+                    }
+                }
+                .travel-info{
+                    @include rwd($lg - 1px){
+                        margin-top: 70px;
+                    }
+                }
+            }
+            .g-wave{
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 100%;
+                @include rwd($md - 1px){
+                    width: 300%;
+                    z-index: 1;
+                }
+            }
+        }
+
+    }
+}
+
+// 藝人姓名彈窗
+#artist-pop{
+    width: 100vw;
+    height: 100vh;
+    background: rgba($black,.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .2s ease-out;
+    opacity: 0;
+    z-index: -10;
+    &.act{
+        opacity: 1;
+        z-index: 20;
+    }
+    > div{
+        width: 500px;
+        height: 614px;
+        position: relative;
+        @include rwd($md - 1px){
+            width: 90%;
+            height: 90%;
+        }
+        > img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
+        }
+        div{
+            position: absolute;
+            bottom: -20px;
+            left: -50px;
+            h1{
+                position: absolute;
+                left: 66px;
+                bottom: 55px;
+                white-space: nowrap;
+                font-size: 64px;
+                background: $yellow;
+            }
+        }
+        .close{
+            position: absolute;
+            bottom: -20px;
+            right: 0;
+            @include rwd($md - 1px){
+                bottom: unset;
+                top: 0;
+                right: -3px;
+            }
+        }
+    }   
+}
+
+// 公告彈窗
+#announce-pop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba($black,.7);
+    transition: .3s ease-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    z-index: -1;
+    @include rwd($md - 1px){
+        background: $yellow;
+    }
+    &.act{
+        opacity: 1;
+        z-index: 20;
+    }
+    .inner{
+        width: 990px;
+        position: relative;
+        text-align: center;
+        @include rwd($lg - 1px){
+            width: 100%;
+        }
+        @include rwd($md - 1px){
+            height: 100%;
+        }
+        .bg2{
+            display: none;
+            @include rwd($md - 1px){
+                display: block;
+                margin: 30px auto 0;
+            }
+        }
+        .bg{
+            @include rwd($lg - 1px){
+                width: 700px;
+                margin: 0 auto;
+            }
+            @include rwd($md - 1px){
+                display: none;
+            }
+        }
+        p{
+            position: absolute;
+            text-align: left;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            width: 568px;
+            margin-top: 30px;
+            margin-left: 10px;
+            height: 325px;
+            overflow-y: scroll;
+            @include rwd($lg - 1px){
+                width: 400px;
+                height: 265px;
+            }
+            @include rwd($md - 1px ){
+                position: unset;
+                left: unset;
+                top: unset;
+                width: 100%;
+                margin: 23px 0 0 ;
+                transform: unset;
+                padding: 0 20px;
+                height: 70%;
+            }
+        }
+        .close-announce{
+            cursor: pointer;
+            position: absolute;
+            bottom: 5px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}
+
+// 影片彈窗
+#yt-pop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba($black,.7);
+    transition: .3s ease-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    z-index: -1;
+    &.act{
+        opacity: 1;
+        z-index: 20;
+    }
+    .inner{
+        width: 990px;
+        height: 557px;
+        position: relative;
+        @include rwd($lg - 1px){
+            width: 100%;
+            height: 65%;
+        }
+        iframe{
+            width: 100%;
+            height: 100%;
+        }
+        .close-yt{
+            cursor: pointer;
+            position: absolute;
+            bottom: -65px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}
