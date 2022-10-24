@@ -5729,19 +5729,30 @@ body #index .section1 .bg-xs {
     top: -60px;
   }
 }
+@keyframes twinkle {
+  0% {
+    background-image: url(../images/index/bg-stars.svg);
+  }
+  50% {
+    background-image: url(../images/index/bg-stars-1.svg);
+  }
+  100% {
+    background-image: url(../images/index/bg-stars-2.svg);
+  }
+}
 body #index .section1 .stars {
   width: 100%;
   height: 100%;
   position: absolute;
   left: 0;
-  top: 0;
+  top: 120px;
   z-index: 0;
   background-size: contain;
   background-position: center;
-  background-image: url(../images/index/s1-bg.svg);
-  animation-name: stars;
+  background-image: url(../images/index/bg-stars.svg);
+  animation-name: twinkle;
   animation-timing-function: linear;
-  animation-duration: 5s;
+  animation-duration: 2s;
   animation-iteration-count: infinite;
   animation-fill-mode: backwards;
   animation-direction: alternate;
@@ -7106,6 +7117,7 @@ body #index .section5 .fire {
   position: absolute;
   left: -100px;
   z-index: 3;
+  width: 525px;
   top: -100px;
 }
 @media screen and (max-width: 1511px) {
@@ -7657,9 +7669,40 @@ body #index .section7 .inner .attractions .left .travel3,
 body #index .section7 .inner .attractions .left .place2,
 body #index .section7 .inner .attractions .left .place3 {
   margin-top: 23px;
+}
+body #index .section7 .inner .attractions .left .travel2 > a,
+body #index .section7 .inner .attractions .left .travel3 > a,
+body #index .section7 .inner .attractions .left .place2 > a,
+body #index .section7 .inner .attractions .left .place3 > a {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
+}
+@media screen and (max-width: 1023px) {
+  body #index .section7 .inner .attractions .left .travel2 > a,
+body #index .section7 .inner .attractions .left .travel3 > a,
+body #index .section7 .inner .attractions .left .place2 > a,
+body #index .section7 .inner .attractions .left .place3 > a {
+    flex-wrap: wrap;
+  }
+}
+body #index .section7 .inner .attractions .left .travel2:hover .img-box img,
+body #index .section7 .inner .attractions .left .travel3:hover .img-box img,
+body #index .section7 .inner .attractions .left .place2:hover .img-box img,
+body #index .section7 .inner .attractions .left .place3:hover .img-box img {
+  transform: scale(1.2);
+}
+body #index .section7 .inner .attractions .left .travel2:hover span,
+body #index .section7 .inner .attractions .left .travel3:hover span,
+body #index .section7 .inner .attractions .left .place2:hover span,
+body #index .section7 .inner .attractions .left .place3:hover span {
+  color: #FF50C8;
+}
+body #index .section7 .inner .attractions .left .travel2:hover p,
+body #index .section7 .inner .attractions .left .travel3:hover p,
+body #index .section7 .inner .attractions .left .place2:hover p,
+body #index .section7 .inner .attractions .left .place3:hover p {
+  color: #6B61C4;
 }
 @media screen and (max-width: 1023px) {
   body #index .section7 .inner .attractions .left .travel2,
@@ -7671,44 +7714,54 @@ body #index .section7 .inner .attractions .left .place3 {
     margin-bottom: 40px;
   }
 }
-body #index .section7 .inner .attractions .left .travel2 img,
-body #index .section7 .inner .attractions .left .travel3 img,
-body #index .section7 .inner .attractions .left .place2 img,
-body #index .section7 .inner .attractions .left .place3 img {
+body #index .section7 .inner .attractions .left .travel2 .img-box,
+body #index .section7 .inner .attractions .left .travel3 .img-box,
+body #index .section7 .inner .attractions .left .place2 .img-box,
+body #index .section7 .inner .attractions .left .place3 .img-box {
   width: 214px;
   height: 158px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
   margin-right: 24px;
+  overflow: hidden;
+  flex-shrink: 0;
 }
 @media screen and (max-width: 1023px) {
-  body #index .section7 .inner .attractions .left .travel2 img,
-body #index .section7 .inner .attractions .left .travel3 img,
-body #index .section7 .inner .attractions .left .place2 img,
-body #index .section7 .inner .attractions .left .place3 img {
+  body #index .section7 .inner .attractions .left .travel2 .img-box,
+body #index .section7 .inner .attractions .left .travel3 .img-box,
+body #index .section7 .inner .attractions .left .place2 .img-box,
+body #index .section7 .inner .attractions .left .place3 .img-box {
     width: 648px;
     height: 479px;
   }
 }
 @media screen and (max-width: 767px) {
-  body #index .section7 .inner .attractions .left .travel2 img,
-body #index .section7 .inner .attractions .left .travel3 img,
-body #index .section7 .inner .attractions .left .place2 img,
-body #index .section7 .inner .attractions .left .place3 img {
+  body #index .section7 .inner .attractions .left .travel2 .img-box,
+body #index .section7 .inner .attractions .left .travel3 .img-box,
+body #index .section7 .inner .attractions .left .place2 .img-box,
+body #index .section7 .inner .attractions .left .place3 .img-box {
     width: 353px;
     height: 261px;
   }
 }
 @media screen and (max-width: 397px) {
-  body #index .section7 .inner .attractions .left .travel2 img,
-body #index .section7 .inner .attractions .left .travel3 img,
-body #index .section7 .inner .attractions .left .place2 img,
-body #index .section7 .inner .attractions .left .place3 img {
+  body #index .section7 .inner .attractions .left .travel2 .img-box,
+body #index .section7 .inner .attractions .left .travel3 .img-box,
+body #index .section7 .inner .attractions .left .place2 .img-box,
+body #index .section7 .inner .attractions .left .place3 .img-box {
     width: 253px;
     height: 187px;
   }
+}
+body #index .section7 .inner .attractions .left .travel2 .img-box img,
+body #index .section7 .inner .attractions .left .travel3 .img-box img,
+body #index .section7 .inner .attractions .left .place2 .img-box img,
+body #index .section7 .inner .attractions .left .place3 .img-box img {
+  transition: 0.2s ease-out;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  width: 100%;
+  height: 100%;
 }
 body #index .section7 .inner .attractions .left .travel2 div,
 body #index .section7 .inner .attractions .left .travel3 div,
@@ -7726,11 +7779,20 @@ body #index .section7 .inner .attractions .left .place3 div {
     width: 100%;
   }
 }
+body #index .section7 .inner .attractions .left .travel2 div span,
+body #index .section7 .inner .attractions .left .travel3 div span,
+body #index .section7 .inner .attractions .left .place2 div span,
+body #index .section7 .inner .attractions .left .place3 div span {
+  transition: 0.2s ease-out;
+  color: #111111;
+}
 body #index .section7 .inner .attractions .left .travel2 div p,
 body #index .section7 .inner .attractions .left .travel3 div p,
 body #index .section7 .inner .attractions .left .place2 div p,
 body #index .section7 .inner .attractions .left .place3 div p {
+  transition: 0.2s ease-out;
   margin-top: 30px;
+  color: #111111;
 }
 @media screen and (max-width: 1023px) {
   body #index .section7 .inner .attractions .left .travel2 div p,
@@ -7765,6 +7827,9 @@ body #index .section7 .inner .attractions .title2 {
 }
 body #index .section7 .inner .attractions .title2 h2 {
   text-align: left;
+}
+body #index .section7 .inner .attractions .title2 a {
+  color: #111111;
 }
 body #index .section7 .inner .attractions .title2 span {
   margin-left: 18px;
@@ -7833,40 +7898,66 @@ body #index .section7 .inner .attractions .place1 {
     border-bottom: 0;
   }
 }
-body #index .section7 .inner .attractions .travel1 img,
-body #index .section7 .inner .attractions .place1 img {
+body #index .section7 .inner .attractions .travel1:hover .img-box img,
+body #index .section7 .inner .attractions .place1:hover .img-box img {
+  transform: scale(1.2);
+}
+body #index .section7 .inner .attractions .travel1:hover span,
+body #index .section7 .inner .attractions .place1:hover span {
+  color: #FF50C8;
+}
+body #index .section7 .inner .attractions .travel1:hover p,
+body #index .section7 .inner .attractions .place1:hover p {
+  color: #6B61C4;
+}
+body #index .section7 .inner .attractions .travel1 .img-box,
+body #index .section7 .inner .attractions .place1 .img-box {
   width: 568px;
   height: 297px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  overflow: hidden;
 }
 @media screen and (max-width: 1023px) {
-  body #index .section7 .inner .attractions .travel1 img,
-body #index .section7 .inner .attractions .place1 img {
+  body #index .section7 .inner .attractions .travel1 .img-box,
+body #index .section7 .inner .attractions .place1 .img-box {
     width: 648px;
     height: 479px;
   }
 }
 @media screen and (max-width: 767px) {
-  body #index .section7 .inner .attractions .travel1 img,
-body #index .section7 .inner .attractions .place1 img {
+  body #index .section7 .inner .attractions .travel1 .img-box,
+body #index .section7 .inner .attractions .place1 .img-box {
     width: 353px;
     height: 261px;
   }
 }
 @media screen and (max-width: 397px) {
-  body #index .section7 .inner .attractions .travel1 img,
-body #index .section7 .inner .attractions .place1 img {
+  body #index .section7 .inner .attractions .travel1 .img-box,
+body #index .section7 .inner .attractions .place1 .img-box {
     width: 253px;
     height: 187px;
   }
 }
+body #index .section7 .inner .attractions .travel1 .img-box img,
+body #index .section7 .inner .attractions .place1 .img-box img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  transition: 0.2s ease-out;
+}
+body #index .section7 .inner .attractions .travel1 span,
+body #index .section7 .inner .attractions .place1 span {
+  transition: 0.2s ease-out;
+  color: #111111;
+}
 body #index .section7 .inner .attractions .travel1 p,
 body #index .section7 .inner .attractions .place1 p {
+  transition: 0.2s ease-out;
   margin: 14px 0 20px;
   text-align: left;
+  color: #111111;
 }
 @media screen and (max-width: 1023px) {
   body #index .section7 .inner .attractions .travel1 p,

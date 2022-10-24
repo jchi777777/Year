@@ -69,23 +69,33 @@ body{
                     top: -60px;
                 }
             }
+            @keyframes twinkle {
+                0%{
+                    background-image: url(../images/index/bg-stars.svg);
+                }
+                50%{
+                    background-image: url(../images/index/bg-stars-1.svg);
+                }
+                100%{
+                    background-image: url(../images/index/bg-stars-2.svg);
+                }
+            }
             .stars{
                 width: 100%;
                 height: 100%;
                 position: absolute;
                 left: 0;
-                top: 0;
+                top: 120px;
                 z-index:0;
                 background-size: contain;
                 background-position: center;
-                background-image: url(../images/index/s1-bg.svg);
-                animation-name: stars;
+                background-image: url(../images/index/bg-stars.svg);
+                animation-name: twinkle;
                 animation-timing-function: linear;
-                animation-duration: 5s;
+                animation-duration: 2s;
                 animation-iteration-count: infinite;
                 animation-fill-mode: backwards;
                 animation-direction: alternate;
-                
             }
         }
         
@@ -1275,6 +1285,7 @@ body{
                 position: absolute;
                 left: -100px;
                 z-index: 3;
+                width: 525px;
                 top: -100px;
                 @include rwd($xl - 1px){
                     width: 419px;
@@ -1736,20 +1747,38 @@ body{
                         .place2,
                         .place3{
                             margin-top: 23px;
-                            display: flex;
-                            align-items: flex-end;
-                            justify-content: space-between;
+                            > a{
+                                display: flex;
+                                align-items: flex-end;
+                                justify-content: space-between;
+                                @include rwd($lg - 1px){
+                                    flex-wrap: wrap;
+                                }
+                            }
+                            &:hover{
+                                .img-box{
+                                    img{
+                                        transform: scale(1.2);
+                                    }
+                                }
+                                span{
+                                    color: $rose;
+                                }
+                                p{
+                                    color: $purple;
+                                }
+                            }
                             @include rwd($lg - 1px){
                                 width: 100%;
                                 flex-wrap: wrap;
                                 margin-bottom: 40px;
                             }
-                            img{
+                            .img-box{
                                 width: 214px;
                                 height: 158px;
-                                object-fit: cover;
-                                object-position: center;
                                 margin-right: 24px;
+                                overflow: hidden;
+                                flex-shrink: 0;
                                 @include rwd($lg - 1px){
                                     width: 648px;
                                     height: 479px;
@@ -1762,6 +1791,13 @@ body{
                                     width: 253px;
                                     height: 187px;
                                 }
+                                img{
+                                    transition: .2s ease-out;
+                                    object-fit: cover;
+                                    object-position: center;
+                                    width: 100%;
+                                    height: 100%;
+                                }
                             }
                             div{
                                 text-align: left;
@@ -1770,8 +1806,14 @@ body{
                                     flex-wrap: wrap;
                                     width: 100%;
                                 }
+                                span{
+                                    transition: .2s ease-out;
+                                    color: $black;
+                                }
                                 p{
+                                    transition: .2s ease-out;
                                     margin-top: 30px;
+                                    color: $black;
                                     @include rwd($lg - 1px){
                                         order: -1;
                                         margin: 15px auto 5px;
@@ -1799,6 +1841,9 @@ body{
                         }
                         h2{
                             text-align: left;
+                        }
+                        a{
+                            color: $black;
                         }
                         span{
                             margin-left: 18px;
@@ -1851,11 +1896,23 @@ body{
                         @include rwd($lg - 1px){
                             border-bottom: 0;
                         }
-                        img{
+                        &:hover{
+                            .img-box{
+                                img{
+                                    transform: scale(1.2);
+                                }
+                            }
+                            span{
+                                color: $rose;
+                            }
+                            p{
+                                color: $purple;
+                            }
+                        }
+                        .img-box{
                             width: 568px;
                             height: 297px;
-                            object-fit: cover;
-                            object-position: center;
+                            overflow: hidden;
                             @include rwd($lg - 1px){
                                 width: 648px;
                                 height: 479px;
@@ -1868,10 +1925,23 @@ body{
                                 width: 253px;
                                 height: 187px;
                             }
+                            img{
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                object-position: center;
+                                transition: .2s ease-out;
+                            }
+                        }
+                        span{
+                            transition: .2s ease-out;
+                            color: $black;
                         }
                         p{
+                            transition: .2s ease-out;
                             margin: 14px 0 20px;
                             text-align: left;
+                            color: $black;
                             @include rwd($lg - 1px){
                                 @include sprfs('bd2-b');
                                 margin: 15px auto 5px;
