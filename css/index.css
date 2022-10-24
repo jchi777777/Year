@@ -5749,7 +5749,6 @@ body #index .section1 .stars {
   z-index: 0;
   background-size: contain;
   background-position: center;
-  background-image: url(../images/index/bg-stars.svg);
   animation-name: twinkle;
   animation-timing-function: linear;
   animation-duration: 2s;
