@@ -1405,13 +1405,13 @@ body{
             }
             // 卡司
             .cast{
-                margin-top: 210px;
+                margin-top: 175px;
                 position: relative;
                 z-index: 1;
                 width: 100%;
                 text-align: center;
                 @include rwd($xl - 1px){
-                    margin-top: 140px;
+                    margin-top: 147px;
                 }
                 @include rwd($md - 1px){
                     margin-top: 50px;

@@ -7261,7 +7261,7 @@ body #index .section5 .eve-party .content span {
   }
 }
 body #index .section5 .cast {
-  margin-top: 210px;
+  margin-top: 175px;
   position: relative;
   z-index: 1;
   width: 100%;
@@ -7269,7 +7269,7 @@ body #index .section5 .cast {
 }
 @media screen and (max-width: 1511px) {
   body #index .section5 .cast {
-    margin-top: 140px;
+    margin-top: 147px;
   }
 }
 @media screen and (max-width: 767px) {
