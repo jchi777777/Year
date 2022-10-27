@@ -5673,6 +5673,7 @@ body #index .section1 .bg {
   margin: 0 auto;
   position: relative;
   z-index: 1;
+  bottom: 30px;
 }
 @media screen and (max-width: 1919px) {
   body #index .section1 .bg {
@@ -7211,7 +7212,23 @@ body #index .section5 .star {
   position: absolute;
   right: 100px;
   top: 200px;
-  z-index: -1;
+  z-index: 0;
+}
+@media screen and (max-width: 1511px) {
+  body #index .section5 .star {
+    display: none;
+  }
+}
+body #index .section5 .star2 {
+  position: absolute;
+  left: 0;
+  top: 600px;
+  z-index: 0;
+}
+@media screen and (max-width: 1511px) {
+  body #index .section5 .star2 {
+    display: none;
+  }
 }
 body #index .section5 .eve-party {
   margin: 0 auto;

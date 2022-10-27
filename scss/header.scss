@@ -109,12 +109,19 @@ header{
                         color: $white;
                         margin: 0;
                         @include sprfs('h6');
+                        transition: .2s ease-out;
                     }
                     .zh{
                         background: #FF50C8;
+                        &:hover{
+                            background: $purple;
+                        }
                     }
                     .en{
                         background: #00B9AF;
+                        &:hover{
+                            background: $orange;
+                        }
                     }
                 }
             }
@@ -191,6 +198,7 @@ header{
                 height: 34px;
                 color: $white;
                 margin: 0;
+                transition: .2s ease-out;
                 @include sprfs('h6');
                 @include rwd($lg - 1px){
                     height: 100%;
@@ -201,9 +209,15 @@ header{
             }
             .zh{
                 background: #FF50C8;
+                &:hover{
+                    background: $purple;
+                }
             }
             .en{
                 background: #00B9AF;
+                &:hover{
+                    background: $orange;
+                }
             }
         }
         .hide{
@@ -374,12 +388,19 @@ header{
                     color: $white;
                     margin: 0;
                     @include sprfs('h6');
+                    transition: .2s ease-out;
                 }
                 .zh{
                     background: #FF50C8;
+                    &:hover{
+                        background: $purple;
+                    }
                 }
                 .en{
                     background: #00B9AF;
+                    &:hover{
+                        background: $orange;
+                    }
                 }
             }
         }

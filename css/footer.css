@@ -5721,7 +5721,12 @@ footer#f-index div .two {
 @media screen and (max-width: 767px) {
   footer#f-index div .two {
     width: 100%;
-    margin-top: 100px;
+    margin-top: 240px;
+  }
+}
+@media screen and (max-width: 397px) {
+  footer#f-index div .two {
+    margin-top: 120px;
   }
 }
 

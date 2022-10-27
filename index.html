@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/swiper.css">
     <link rel="stylesheet" href="./css/swiperAll.css">
+    <link rel="stylesheet" href="./css/aos.css">
     <link rel="stylesheet" href="./css/footer.css">
 
 </head>
@@ -378,6 +379,7 @@
 
         <!-- 燈光裝置介紹 -->
         <section class="section3">
+
             <hr id="light-device"/>
             <img class="star3" src="./images/index/stars-3.svg" />
             <img class="star4" src="./images/index/stars-4.svg" />
@@ -387,7 +389,10 @@
 
             <div class="inner">
                 <!-- 未來樹 -->
-                <div class="first">
+                <div class="first"  
+                    data-aos="fade-up" 
+                    data-aos-anchor-placement="top-bottom"
+                    data-aos-duration="1000">
                     <div class="img-box">
                         <img src="./images/index/light.png" alt="light-info" />
                     </div>
@@ -424,7 +429,10 @@
                 </div>
                 
                 <!-- 台北大兔襲 -->
-                <div class="second d-flex ai-start jc-between">
+                <div class="second d-flex ai-start jc-between"
+                    data-aos="fade-up" 
+                    data-aos-anchor-placement="top-bottom"
+                    data-aos-duration="1000">
                     <div class="left">
                         <!-- 嵌入地圖 -->
                         <div class="map-box">
@@ -469,7 +477,11 @@
                 </div>
                 
                 <!-- 仁愛路燈飾 -->
-                <div class="third d-flex ai-start jc-between">
+                <div class="third d-flex ai-start jc-between"
+                    data-aos="fade-up" 
+                    data-aos-anchor-placement="top-bottom"
+                    data-aos-duration="1000">
+
                     <img class="block" src="./images/index/BGY.svg" />
                     <!-- 圖片輪播 -->
                     <div class="swiper-box">
@@ -594,11 +606,18 @@
         <section class="section5">
             <hr id="party"/>
             <img class="wave" src="./images/index/wave-yellow.png" />
-            <img class="fire" src="./images/index/firework.svg" />
+            <img class="fire" 
+                data-aos="zoom-in" 
+                data-aos-duration="1000" 
+                data-aos-offset="150"
+                data-aos-anchor-placement="bottom-bottom"
+                src="./images/index/firework.svg" />
             <img class="ball" src="./images/index/ball.svg" />
             <img class="snake" src="./images/index/snake.png" />
             <img class="temple" src="./images/index/temple.png" />
             <img class="star" src="./images/index/star6.png" />
+            <img class="star2" src="./images/index/eve-star.svg" />
+
             
             <!-- 跨年晚會 -->
             <div class="eve-party">
@@ -728,9 +747,11 @@
         </section>
 
         
-        <section class="section6" id="traffic">
+        <section class="section6" id="traffic" >
             <!-- 交通資訊 -->
-            <div class="traffic-box">
+            <div class="traffic-box" data-aos="fade-up" 
+            data-aos-anchor-placement="center-bottom"
+            data-aos-duration="1000">
                 <img class="title1" src="./images/index/traffic-title.svg" />
                 <img class="title2" src="./images/index/traffic-title2.svg" />
                 
@@ -882,10 +903,13 @@
             <img class="star7" src="./images/index/stars7.svg" />
             <img class="star8" src="./images/index/stars8.svg" />
             <div class="inner">
-                <img class="title" src="./images/index/tour-title.svg"/>
+                <img id="ti" class="title" src="./images/index/tour-title.svg"/>
                 
                 <!-- 景點分享 -->
-                <div class="attractions d-flex jc-between ai-center">
+                <div id="att" class="attractions d-flex jc-between ai-center"
+                    data-aos="fade-up"
+                    data-aos-offset="500" 
+                    data-aos-duration="1000">
 
                     <!-- 第二三則 -->
                     <div class="left">
@@ -962,11 +986,13 @@
 
                 </div>
 
-                <div>
-                <img class="seperate" src="./images/index/stars.svg" />
+                <img id="sep" class="seperate" src="./images/index/stars.svg" />
 
                 <!-- 旅遊資訊 -->
-                <div class="travel-info attractions d-flex jc-between ai-center">
+                <div class="travel-info attractions d-flex jc-between ai-center"
+                    data-aos="fade-up" 
+                    data-aos-offset="500" 
+                    data-aos-duration="1000">
 
                     <!-- 第二三則 -->
                     <div class="left">
@@ -1065,10 +1091,11 @@
     <script src="./JS/swiper.js"></script>
     <script src="./JS/swiperAll.js"></script>
     <script src="./JS/menu.js"></script>
+    <script src="./JS/aos.js"></script>
 
 
     <script>
-        
+        AOS.init();        
         // 貼心提醒展開
         const qaBox = document.querySelectorAll('.qa-box');
         qaBox.forEach(q => q.addEventListener('click',() => {

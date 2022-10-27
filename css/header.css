@@ -5779,12 +5779,19 @@ header nav ul .func-box .language-box button {
   font-weight: 500;
   line-height: 120%;
   font-size: 1rem;
+  transition: 0.2s ease-out;
 }
 header nav ul .func-box .language-box .zh {
   background: #FF50C8;
 }
+header nav ul .func-box .language-box .zh:hover {
+  background: #6B61C4;
+}
 header nav ul .func-box .language-box .en {
   background: #00B9AF;
+}
+header nav ul .func-box .language-box .en:hover {
+  background: #FF7E00;
 }
 header nav ul button {
   padding: 0;
@@ -5867,6 +5874,7 @@ header nav > .language-box button {
   height: 34px;
   color: #fff;
   margin: 0;
+  transition: 0.2s ease-out;
   margin-top: 0;
   margin-bottom: 0;
   font-weight: 500;
@@ -5886,8 +5894,14 @@ header nav > .language-box button {
 header nav > .language-box .zh {
   background: #FF50C8;
 }
+header nav > .language-box .zh:hover {
+  background: #6B61C4;
+}
 header nav > .language-box .en {
   background: #00B9AF;
+}
+header nav > .language-box .en:hover {
+  background: #FF7E00;
 }
 header nav .hide {
   transition: 0.2s ease-out;
@@ -6106,12 +6120,19 @@ header nav .hide.act {
   font-weight: 500;
   line-height: 120%;
   font-size: 1rem;
+  transition: 0.2s ease-out;
 }
 .mb-menu ul .func-box .language-box .zh {
   background: #FF50C8;
 }
+.mb-menu ul .func-box .language-box .zh:hover {
+  background: #6B61C4;
+}
 .mb-menu ul .func-box .language-box .en {
   background: #00B9AF;
+}
+.mb-menu ul .func-box .language-box .en:hover {
+  background: #FF7E00;
 }
 .mb-menu ul button {
   padding: 0;
