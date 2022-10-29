@@ -6133,6 +6133,7 @@ body #index .section2 .inner .news-wrapper .top-wrapper .left .img-box img {
      object-fit: cover;
 }
 body #index .section2 .inner .news-wrapper .top-wrapper .left h5 {
+  color: #111111;
   font-size: 20px;
   overflow: hidden;
   text-overflow: ellipsis;

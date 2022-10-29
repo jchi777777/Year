@@ -432,6 +432,7 @@ body{
                                 }
                             }
                             h5{
+                                color: $black;
                                 font-size: 20px;
                                 @include wordrow(2);
                                 position: relative;
