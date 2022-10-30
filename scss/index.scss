@@ -2091,6 +2091,7 @@ body{
             }
         }
         .bg{
+            width: 100%;
             @include rwd($lg - 1px){
                 width: 700px;
                 margin: 0 auto;

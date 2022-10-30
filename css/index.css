@@ -8132,6 +8132,9 @@ body #index .section7 .g-wave {
     margin: 30px auto 0;
   }
 }
+#announce-pop .inner .bg {
+  width: 100%;
+}
 @media screen and (max-width: 1023px) {
   #announce-pop .inner .bg {
     width: 700px;
