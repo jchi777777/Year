@@ -6137,6 +6137,8 @@ header nav .hide.act {
 .mb-menu ul button {
   padding: 0;
   display: none;
+  position: relative;
+  z-index: 1;
 }
 @media screen and (max-width: 1023px) {
   .mb-menu ul button {
@@ -6171,7 +6173,7 @@ header nav .hide.act {
   top: 0;
 }
 .mb-menu ul .bot {
-  bottom: 0;
+  bottom: -20px;
 }
 .mb-menu ul .logo {
   display: none;
