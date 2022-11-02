@@ -44,8 +44,11 @@ body{
         }
         .news-box{
             width: 1156px;
-            margin:  auto ;
+            margin: auto;
             @include rwd($xl - 1px){
+                width: 1120px;
+            }
+            @media screen and (max-width: 1199px) {
                 width: 753px;
             }
             @include rwd($lg - 1px){
@@ -101,7 +104,7 @@ body{
                 background: #FFFFFF;
                 backdrop-filter: blur(11px);
                 border-radius: 4px;
-                padding: 56px 188px 30px;
+                padding: 56px 118px 30px;
                 @include rwd($xl - 1px){
                     padding: 56px 50px 30px;
                 }
@@ -110,6 +113,7 @@ body{
                 }
                 @include rwd($md - 1px){
                     padding: 20px 20px 220px ;
+                    border-radius: 0;
                 }
                 @include rwd($sm - 1px){
                     padding: 20px 15px 100px;

@@ -5693,6 +5693,11 @@ body main .news-box {
 }
 @media screen and (max-width: 1511px) {
   body main .news-box {
+    width: 1120px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  body main .news-box {
     width: 753px;
   }
 }
@@ -5755,7 +5760,7 @@ body main .news-box .news {
   -webkit-backdrop-filter: blur(11px);
           backdrop-filter: blur(11px);
   border-radius: 4px;
-  padding: 56px 188px 30px;
+  padding: 56px 118px 30px;
 }
 @media screen and (max-width: 1511px) {
   body main .news-box .news {
@@ -5770,6 +5775,7 @@ body main .news-box .news {
 @media screen and (max-width: 767px) {
   body main .news-box .news {
     padding: 20px 20px 220px;
+    border-radius: 0;
   }
 }
 @media screen and (max-width: 397px) {

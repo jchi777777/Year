@@ -5939,7 +5939,7 @@ body #index .section2 .inner .news-wrapper .top-wrapper {
     width: 353px;
   }
 }
-@media screen and (max-width: 397px) {
+@media screen and (max-width: 374px) {
   body #index .section2 .inner .news-wrapper .top-wrapper {
     width: 250px;
   }
@@ -6038,7 +6038,6 @@ body #index .section2 .inner .news-wrapper .top-wrapper .right .single-news span
   background: #FF50C8;
   padding: 0 10px;
   position: relative;
-  bottom: 4px;
   font-size: 14px;
 }
 body #index .section2 .inner .news-wrapper .top-wrapper .left {
@@ -6118,7 +6117,7 @@ body #index .section2 .inner .news-wrapper .top-wrapper .left .img-box {
     height: 215px;
   }
 }
-@media screen and (max-width: 397px) {
+@media screen and (max-width: 374px) {
   body #index .section2 .inner .news-wrapper .top-wrapper .left .img-box {
     height: 153px;
   }
@@ -6192,7 +6191,7 @@ body #index .section2 .inner .news-wrapper .bot-wrapper {
     width: 353px;
   }
 }
-@media screen and (max-width: 397px) {
+@media screen and (max-width: 374px) {
   body #index .section2 .inner .news-wrapper .bot-wrapper {
     width: 250px;
   }
@@ -6312,7 +6311,6 @@ body #index .section2 .inner .news-wrapper .bot-wrapper .right .single-news span
   background: #FF50C8;
   padding: 0 10px;
   position: relative;
-  bottom: 4px;
   font-size: 14px;
 }
 body #index .section2 .inner .news-wrapper .bot-wrapper .left {
@@ -6377,7 +6375,7 @@ body #index .section2 .inner .news-wrapper .bot-wrapper .left .video-box {
     height: 216px;
   }
 }
-@media screen and (max-width: 397px) {
+@media screen and (max-width: 374px) {
   body #index .section2 .inner .news-wrapper .bot-wrapper .left .video-box {
     width: 250px;
     height: 153px;
@@ -6476,7 +6474,7 @@ body #index .section3 {
 }
 @media screen and (max-width: 767px) {
   body #index .section3 {
-    margin-top: -5px;
+    margin-top: -1px;
     background: #FFEB00;
   }
 }
@@ -6573,7 +6571,7 @@ body #index .section3 .inner .first {
     width: 353px;
   }
 }
-@media screen and (max-width: 397px) {
+@media screen and (max-width: 374px) {
   body #index .section3 .inner .first {
     width: 250px;
   }
@@ -6676,7 +6674,7 @@ body #index .section3 .inner .first .right div span {
   display: flex;
   align-items: center;
   color: #111111;
-  padding-right: 18px;
+  padding-right: 3px;
   position: relative;
   font-size: 40px;
   z-index: 1;
@@ -6804,7 +6802,7 @@ body #index .section3 .inner .second {
     width: 353px;
   }
 }
-@media screen and (max-width: 397px) {
+@media screen and (max-width: 374px) {
   body #index .section3 .inner .second {
     width: 250px;
   }
@@ -6872,7 +6870,7 @@ body #index .section3 .inner .second .swiper-box {
     height: 335px;
   }
 }
-@media screen and (max-width: 397px) {
+@media screen and (max-width: 374px) {
   body #index .section3 .inner .second .swiper-box {
     width: 250px;
     height: 270px;
@@ -6934,13 +6932,13 @@ body #index .section3 .inner .third {
 @media screen and (max-width: 767px) {
   body #index .section3 .inner .third {
     width: 353px;
-    padding-bottom: 50px;
+    padding-bottom: 0;
   }
 }
-@media screen and (max-width: 397px) {
+@media screen and (max-width: 374px) {
   body #index .section3 .inner .third {
-    width: 250px;
     padding-bottom: 10px;
+    width: 250px;
   }
 }
 body #index .section3 .inner .third .block {
@@ -6976,10 +6974,10 @@ body #index .section3 .inner .third .swiper-box {
     height: 335px;
   }
 }
-@media screen and (max-width: 397px) {
+@media screen and (max-width: 374px) {
   body #index .section3 .inner .third .swiper-box {
-    width: 250px;
     height: 270px;
+    width: 250px;
   }
 }
 body #index .section3 .inner .third .right {
@@ -7062,8 +7060,13 @@ body #index .section4 .swiper-box {
 }
 @media screen and (max-width: 1511px) {
   body #index .section4 .swiper-box {
-    width: 669px;
+    width: 1000px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  body #index .section4 .swiper-box {
     padding: 0 15px;
+    width: 669px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -7072,7 +7075,7 @@ body #index .section4 .swiper-box {
     padding: 0 10px;
   }
 }
-@media screen and (max-width: 397px) {
+@media screen and (max-width: 374px) {
   body #index .section4 .swiper-box {
     width: 250px;
   }
@@ -7400,8 +7403,13 @@ body #index .section6 .traffic-box .swiper-box {
 }
 @media screen and (max-width: 1511px) {
   body #index .section6 .traffic-box .swiper-box {
-    width: 669px;
+    width: 1000px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  body #index .section6 .traffic-box .swiper-box {
     padding: 0 15px;
+    width: 669px;
     margin-bottom: 50px;
   }
 }
@@ -7414,12 +7422,13 @@ body #index .section6 .traffic-box .swiper-box {
   body #index .section6 .traffic-box .swiper-box {
     width: 353px;
     padding: 0 10px;
+    height: 300px;
   }
 }
-@media screen and (max-width: 397px) {
+@media screen and (max-width: 374px) {
   body #index .section6 .traffic-box .swiper-box {
-    width: 250px;
     height: 280px;
+    width: 250px;
   }
 }
 body #index .section6 .notify-box {
@@ -7427,6 +7436,7 @@ body #index .section6 .notify-box {
   background: #6B61C4;
   width: 100%;
   position: relative;
+  transition: 0.3s linear;
   text-align: center;
 }
 @media screen and (max-width: 767px) {
@@ -7465,12 +7475,17 @@ body #index .section6 .notify-box .question-box {
   margin: 50px auto 0;
   width: 753px;
 }
+@media screen and (max-width: 1023px) {
+  body #index .section6 .notify-box .question-box {
+    width: 650px;
+  }
+}
 @media screen and (max-width: 767px) {
   body #index .section6 .notify-box .question-box {
     width: 353px;
   }
 }
-@media screen and (max-width: 397px) {
+@media screen and (max-width: 374px) {
   body #index .section6 .notify-box .question-box {
     width: 250px;
   }
@@ -7479,12 +7494,15 @@ body #index .section6 .notify-box .question-box .qa-box {
   cursor: pointer;
   transition: 0.3s linear;
   padding: 18px 0;
-  max-height: 95px;
+  max-height: unset;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
-@media screen and (max-width: 397px) {
-  body #index .section6 .notify-box .question-box .qa-box {
-    max-height: 130px;
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 body #index .section6 .notify-box .question-box .qa-box.act {
@@ -7493,6 +7511,7 @@ body #index .section6 .notify-box .question-box .qa-box.act {
 body #index .section6 .notify-box .question-box .qa-box.act p {
   opacity: 1;
   z-index: 1;
+  display: block;
 }
 body #index .section6 .notify-box .question-box .qa-box:last-of-type {
   border: none;
@@ -7501,6 +7520,7 @@ body #index .section6 .notify-box .question-box .qa-box h2 {
   color: #fff;
   position: relative;
   text-align: left;
+  min-height: 64px;
   z-index: 1;
 }
 body #index .section6 .notify-box .question-box .qa-box h2 img {
@@ -7515,6 +7535,7 @@ body #index .section6 .notify-box .question-box .qa-box h2 img {
 }
 body #index .section6 .notify-box .question-box .qa-box p {
   color: #fff;
+  display: none;
   margin-left: 95px;
   font-weight: 300;
   text-align: left;
@@ -7522,6 +7543,7 @@ body #index .section6 .notify-box .question-box .qa-box p {
   opacity: 0;
   transition: 0.3s linear;
   z-index: -10;
+  animation: show 0.3s ease-out;
 }
 @media screen and (max-width: 767px) {
   body #index .section6 .notify-box .question-box .qa-box p {
@@ -7583,8 +7605,13 @@ body #index .section7 .inner {
 }
 @media screen and (max-width: 1511px) {
   body #index .section7 .inner {
-    width: 568px;
+    width: 975px;
     margin-top: 50px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  body #index .section7 .inner {
+    width: 568px;
   }
 }
 @media screen and (max-width: 1023px) {
@@ -7597,7 +7624,7 @@ body #index .section7 .inner {
     width: 353px;
   }
 }
-@media screen and (max-width: 397px) {
+@media screen and (max-width: 374px) {
   body #index .section7 .inner {
     width: 253px;
   }
@@ -7610,7 +7637,7 @@ body #index .section7 .inner > .title {
     margin-bottom: 40px;
   }
 }
-@media screen and (max-width: 1511px) {
+@media screen and (max-width: 1199px) {
   body #index .section7 .inner .attractions {
     flex-wrap: wrap;
     justify-content: center;
@@ -7619,7 +7646,7 @@ body #index .section7 .inner > .title {
 body #index .section7 .inner .attractions .left {
   margin-right: 65px;
 }
-@media screen and (max-width: 1511px) {
+@media screen and (max-width: 1199px) {
   body #index .section7 .inner .attractions .left {
     margin-right: 0;
     order: 1;
@@ -7632,7 +7659,7 @@ body #index .section7 .inner .attractions .left > .title {
   padding-bottom: 18px;
   border-bottom: 1px solid #111111;
 }
-@media screen and (max-width: 1511px) {
+@media screen and (max-width: 1199px) {
   body #index .section7 .inner .attractions .left > .title {
     display: none !important;
   }
@@ -7649,6 +7676,7 @@ body #index .section7 .inner .attractions .left > .title span {
 body #index .section7 .inner .attractions .left > .title a {
   position: relative;
   float: right;
+  color: #111111 !important;
   line-height: 120%;
   font-weight: 700;
   font-size: 14px;
@@ -7721,14 +7749,23 @@ body #index .section7 .inner .attractions .left .place2:hover p,
 body #index .section7 .inner .attractions .left .place3:hover p {
   color: #6B61C4;
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1199px) {
   body #index .section7 .inner .attractions .left .travel2,
 body #index .section7 .inner .attractions .left .travel3,
 body #index .section7 .inner .attractions .left .place2,
 body #index .section7 .inner .attractions .left .place3 {
     width: 100%;
     flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  body #index .section7 .inner .attractions .left .travel2,
+body #index .section7 .inner .attractions .left .travel3,
+body #index .section7 .inner .attractions .left .place2,
+body #index .section7 .inner .attractions .left .place3 {
     margin-bottom: 40px;
+    margin-top: 0;
   }
 }
 body #index .section7 .inner .attractions .left .travel2 .img-box,
@@ -7748,6 +7785,7 @@ body #index .section7 .inner .attractions .left .place2 .img-box,
 body #index .section7 .inner .attractions .left .place3 .img-box {
     width: 648px;
     height: 479px;
+    margin-right: 0;
   }
 }
 @media screen and (max-width: 767px) {
@@ -7759,7 +7797,7 @@ body #index .section7 .inner .attractions .left .place3 .img-box {
     height: 261px;
   }
 }
-@media screen and (max-width: 397px) {
+@media screen and (max-width: 374px) {
   body #index .section7 .inner .attractions .left .travel2 .img-box,
 body #index .section7 .inner .attractions .left .travel3 .img-box,
 body #index .section7 .inner .attractions .left .place2 .img-box,
@@ -7786,7 +7824,7 @@ body #index .section7 .inner .attractions .left .place2 div,
 body #index .section7 .inner .attractions .left .place3 div {
   text-align: left;
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1199px) {
   body #index .section7 .inner .attractions .left .travel2 div,
 body #index .section7 .inner .attractions .left .travel3 div,
 body #index .section7 .inner .attractions .left .place2 div,
@@ -7807,6 +7845,11 @@ body #index .section7 .inner .attractions .left .travel2 div p,
 body #index .section7 .inner .attractions .left .travel3 div p,
 body #index .section7 .inner .attractions .left .place2 div p,
 body #index .section7 .inner .attractions .left .place3 div p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
   transition: 0.2s ease-out;
   margin-top: 30px;
   color: #111111;
@@ -7825,28 +7868,30 @@ body #index .section7 .inner .attractions .title2 {
   font-size: 40px;
   position: relative;
   align-items: flex-end !important;
-  padding-bottom: 18px;
-  border-bottom: 1px solid #111111;
   display: none !important;
 }
-@media screen and (max-width: 1511px) {
+@media screen and (max-width: 1199px) {
   body #index .section7 .inner .attractions .title2 {
     display: flex !important;
     width: 100%;
-    padding-bottom: 15px;
+    margin-bottom: 15px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  body #index .section7 .inner .attractions .title2 {
+    border-bottom: 1px solid #111111;
+    padding-bottom: 20px;
     margin-bottom: 40px;
   }
 }
 @media screen and (max-width: 767px) {
   body #index .section7 .inner .attractions .title2 {
-    margin-bottom: 30px;
+    padding-bottom: 17px;
+    margin-bottom: 25px;
   }
 }
 body #index .section7 .inner .attractions .title2 h2 {
   text-align: left;
-}
-body #index .section7 .inner .attractions .title2 a {
-  color: #111111;
 }
 body #index .section7 .inner .attractions .title2 span {
   margin-left: 18px;
@@ -7866,6 +7911,7 @@ body #index .section7 .inner .attractions .title2 span {
 body #index .section7 .inner .attractions .title2 a {
   position: relative;
   float: right;
+  color: #111111 !important;
   line-height: 120%;
   font-weight: 700;
   font-size: 14px;
@@ -7902,7 +7948,7 @@ body #index .section7 .inner .attractions .travel1,
 body #index .section7 .inner .attractions .place1 {
   text-align: left;
 }
-@media screen and (max-width: 1511px) {
+@media screen and (max-width: 1199px) {
   body #index .section7 .inner .attractions .travel1,
 body #index .section7 .inner .attractions .place1 {
     border-bottom: 1px solid #111111;
@@ -7912,7 +7958,8 @@ body #index .section7 .inner .attractions .place1 {
 @media screen and (max-width: 1023px) {
   body #index .section7 .inner .attractions .travel1,
 body #index .section7 .inner .attractions .place1 {
-    border-bottom: 0;
+    border-bottom: none;
+    padding-bottom: 40px;
   }
 }
 body #index .section7 .inner .attractions .travel1:hover .img-box img,
@@ -7933,6 +7980,19 @@ body #index .section7 .inner .attractions .place1 .img-box {
   height: 297px;
   overflow: hidden;
 }
+@media screen and (max-width: 1511px) {
+  body #index .section7 .inner .attractions .travel1 .img-box,
+body #index .section7 .inner .attractions .place1 .img-box {
+    width: 450px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  body #index .section7 .inner .attractions .travel1 .img-box,
+body #index .section7 .inner .attractions .place1 .img-box {
+    width: 568px;
+    height: 297px;
+  }
+}
 @media screen and (max-width: 1023px) {
   body #index .section7 .inner .attractions .travel1 .img-box,
 body #index .section7 .inner .attractions .place1 .img-box {
@@ -7947,7 +8007,7 @@ body #index .section7 .inner .attractions .place1 .img-box {
     height: 261px;
   }
 }
-@media screen and (max-width: 397px) {
+@media screen and (max-width: 374px) {
   body #index .section7 .inner .attractions .travel1 .img-box,
 body #index .section7 .inner .attractions .place1 .img-box {
     width: 253px;
@@ -7972,6 +8032,11 @@ body #index .section7 .inner .attractions .place1 span {
 body #index .section7 .inner .attractions .travel1 p,
 body #index .section7 .inner .attractions .place1 p {
   transition: 0.2s ease-out;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
   margin: 14px 0 20px;
   text-align: left;
   color: #111111;
@@ -7993,7 +8058,7 @@ body #index .section7 .inner .seperate {
 @media screen and (max-width: 1511px) {
   body #index .section7 .inner .seperate {
     width: 100%;
-    margin: 90px auto;
+    margin: 80px auto;
   }
 }
 @media screen and (max-width: 1023px) {
@@ -8004,6 +8069,11 @@ body #index .section7 .inner .seperate {
 @media screen and (max-width: 1023px) {
   body #index .section7 .inner .travel-info {
     margin-top: 70px;
+  }
+}
+@media screen and (max-width: 767px) {
+  body #index .section7 .inner .travel-info {
+    margin-top: 55px;
   }
 }
 body #index .section7 .g-wave {

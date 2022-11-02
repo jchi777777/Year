@@ -81,6 +81,9 @@ footer#f-list{
         display: flex;
         justify-content: space-between;
         @include rwd($xl - 1px){
+            width: 1120px;
+        }
+        @media screen and (max-width:1199px) {
             width: 753px;
         }
         @include rwd($lg - 1px){
@@ -148,6 +151,9 @@ footer#f-news{
         justify-content: space-between;
         margin: 0 auto;
         @include rwd($xl - 1px){
+            width: 1120px;
+        }
+        @media screen and (max-width: 1199px) {
             width: 753px;
         }
         @include rwd($lg - 1px){
@@ -155,11 +161,11 @@ footer#f-news{
             flex-wrap: wrap;
         }
         @include rwd($md - 1px){
-            width: 352px;
-        }
-        @include rwd($sm - 1px){
             width: 100%;
-            padding: 0 13px;
+            padding: 0 50px;
+        }
+        @media screen and (max-width: 599px) {
+            padding: 0 15px;
         }
         div{
             bottom: 80px;

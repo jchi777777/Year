@@ -254,7 +254,7 @@ body{
                         @include rwd($md - 1px){
                             width: 353px;
                         }
-                        @include rwd($sm - 1px){
+                        @media screen and (max-width:374px) {
                             width: 250px;
                         }
                         .right{
@@ -345,7 +345,6 @@ body{
                                     background: $rose;
                                     padding: 0 10px;
                                     position: relative;
-                                    bottom: 4px;
                                     font-size: 14px;
                                 }
                             }
@@ -420,7 +419,7 @@ body{
                                 @include rwd($md - 1px){
                                     height: 215px;
                                 }
-                                @include rwd($sm - 1px){
+                                @media screen and (max-width:374px) {
                                     height: 153px;
                                 }
                                 img{
@@ -485,7 +484,7 @@ body{
                         @include rwd($md - 1px){
                             width: 353px;
                         }
-                        @include rwd($sm - 1px){
+                        @media screen and (max-width:374px) {
                             width: 250px;
                         }
                         .fire2{
@@ -593,7 +592,6 @@ body{
                                     background: $rose;
                                     padding: 0 10px;
                                     position: relative;
-                                    bottom: 4px;
                                     font-size: 14px;
                                 }
                             }
@@ -654,7 +652,7 @@ body{
                                 @include rwd($md - 1px){
                                     height: 216px;
                                 }
-                                @include rwd($sm - 1px){
+                                @media screen and (max-width:374px) {
                                     width: 250px;
                                     height: 153px;
                                 }
@@ -748,7 +746,7 @@ body{
                 margin-top: 10px;
             }
             @include rwd($md - 1px){
-                margin-top: -5px;
+                margin-top: -1px;
                 background: $yellow;
             }
             .title-img{
@@ -826,7 +824,7 @@ body{
                     @include rwd($md - 1px){
                         width: 353px;
                     }
-                    @include rwd($sm - 1px){
+                    @media screen and (max-width:374px) {
                         width: 250px;
                     }
                     .img-box{
@@ -911,7 +909,7 @@ body{
                                 display: flex;
                                 align-items: center;
                                 color: $black;
-                                padding-right: 18px;
+                                padding-right: 3px;
                                 position: relative;
                                 font-size: 40px;
                                 z-index: 1;
@@ -1035,7 +1033,7 @@ body{
                         margin-top: 70px;
                         width: 353px;
                     }
-                    @include rwd($sm - 1px){
+                    @media screen and (max-width:374px) {
                         width: 250px;
                     }
                     .left{
@@ -1086,7 +1084,7 @@ body{
                             width: 353px;
                             height: 335px;
                         }
-                        @include rwd($sm - 1px){
+                        @media screen and (max-width:374px) {
                             width: 250px;
                             height: 270px;
                         }
@@ -1136,11 +1134,11 @@ body{
                     }
                     @include rwd($md - 1px){
                         width: 353px;
-                        padding-bottom: 50px;
+                        padding-bottom: 0;
                     }
-                    @include rwd($sm - 1px){
-                        width: 250px;
+                    @media screen and (max-width:374px) {
                         padding-bottom: 10px;
+                        width: 250px;
                     }
                     .block{
                         position: absolute;
@@ -1167,9 +1165,9 @@ body{
                             width: 353px;
                             height: 335px;
                         }
-                        @include rwd($sm - 1px){
-                            width: 250px;
+                        @media screen and (max-width:374px) {
                             height: 270px;
+                            width: 250px;
                         }
                     }
                     .right{
@@ -1237,14 +1235,17 @@ body{
                 padding: 0 20px;
                 margin: 20px auto 0;
                 @include rwd($xl - 1px){
-                    width: 669px;
+                    width: 1000px;
+                }
+                @media screen and (max-width:1199px) {
                     padding: 0 15px;
+                    width: 669px;
                 }
                 @include rwd($md - 1px){
                     width: 353px;
                     padding: 0 10px;
                 }
-                @include rwd($sm - 1px){
+                @media screen and (max-width:374px) {
                     width: 250px;
                 }
             }
@@ -1525,8 +1526,11 @@ body{
                     width: 1440px;
                     height:400px;
                     @include rwd($xl - 1px){
-                        width: 669px;
+                        width: 1000px;
+                    }
+                    @media screen and (max-width:1199px) {
                         padding: 0 15px;
+                        width: 669px;
                         margin-bottom: 50px;
                     }
                     @include rwd($lg - 1px){
@@ -1535,10 +1539,11 @@ body{
                     @include rwd($md - 1px){
                         width: 353px;
                         padding: 0 10px;
+                        height: 300px;
                     }
-                    @include rwd($sm - 1px){
-                        width: 250px;
+                    @media screen and (max-width:374px) {
                         height: 280px;
+                        width: 250px;
                     }
                 }
             }
@@ -1548,6 +1553,7 @@ body{
                 background: $purple;
                 width: 100%;
                 position: relative;
+                transition: .3s linear;
                 text-align: center;
                 @include rwd($md - 1px){
                     padding: 100px 0 60px;
@@ -1577,26 +1583,35 @@ body{
                 .question-box{
                     margin: 50px auto 0;
                     width: 753px;
+                    @include rwd($lg - 1px){
+                        width: 650px;
+                    }
                     @include rwd($md - 1px){
                         width: 353px;
                     }
-                    @include rwd($sm - 1px){
+                    @media screen and (max-width:374px) {
                         width: 250px;
                     }
                     .qa-box{
                         cursor: pointer;
                         transition: .3s linear;
                         padding: 18px 0 ;
-                        max-height: 95px;
+                        max-height: unset;
                         border-bottom: 1px solid rgba($white,.3);
-                        @include rwd($sm - 1px){
-                            max-height: 130px;
+                        @keyframes show {
+                            0%{
+                                opacity: 0;
+                            }
+                            100%{
+                                opacity: 1;
+                            }
                         }
                         &.act{
                             max-height: 300px;
                             p{
                                 opacity: 1;
                                 z-index: 1;
+                                display: block;
                             }
                         }
                         &:last-of-type{
@@ -1606,6 +1621,7 @@ body{
                             color: $white;
                             position: relative;
                             text-align: left;
+                            min-height: 64px;
                             z-index: 1;
                             img{
                                 width: 68px;
@@ -1618,6 +1634,7 @@ body{
                         }
                         p{
                             color: $white;
+                            display: none;
                             margin-left: 95px;
                             font-weight: 300;
                             text-align: left;
@@ -1625,6 +1642,7 @@ body{
                             opacity: 0;
                             transition: .3s linear;
                             z-index: -10;
+                            animation: show .3s ease-out ;
                             @include rwd($md - 1px){
                                 margin-left: 0;
                             }
@@ -1679,8 +1697,11 @@ body{
                 margin: 120px auto 0;
                 text-align: center;
                 @include rwd($xl - 1px){
-                    width: 568px;
+                    width: 975px;
                     margin-top: 50px;
+                }
+                @media screen and (max-width:1199px) {
+                    width: 568px;
                 }
                 @include rwd($lg - 1px){
                     width: 648px;
@@ -1688,7 +1709,7 @@ body{
                 @include rwd($md - 1px){
                     width: 353px;
                 }
-                @include rwd($sm - 1px){
+                @media screen and (max-width: 374px){
                     width: 253px;
                 }
                 > .title{
@@ -1699,13 +1720,13 @@ body{
                 }
                 .attractions{
                     // 第二三則
-                    @include rwd($xl - 1px){
+                    @media screen and (max-width:1199px) {
                         flex-wrap: wrap;
                         justify-content: center;
                     }
                     .left{
                         margin-right: 65px;
-                        @include rwd($xl - 1px){
+                        @media screen and (max-width:1199px) {
                             margin-right: 0;
                             order: 1;
                         }
@@ -1715,7 +1736,7 @@ body{
                             align-items: flex-end !important;
                             padding-bottom: 18px;
                             border-bottom: 1px solid $black;
-                            @include rwd($xl - 1px){
+                            @media screen and (max-width:1199px) {
                                 display: none !important;
                             }
                             span{
@@ -1725,6 +1746,7 @@ body{
                             a{
                                 position: relative;
                                 float: right;
+                                color: $black !important;
                                 @include sprfs('bd4-b');
                                 right: 0;
                                 display: flex;
@@ -1780,10 +1802,14 @@ body{
                                     color: $purple;
                                 }
                             }
-                            @include rwd($lg - 1px){
+                            @media screen and (max-width:1199px) {
                                 width: 100%;
                                 flex-wrap: wrap;
+                                margin-bottom: 20px;
+                            }
+                            @include rwd($lg - 1px){
                                 margin-bottom: 40px;
+                                margin-top: 0;
                             }
                             .img-box{
                                 width: 214px;
@@ -1794,12 +1820,13 @@ body{
                                 @include rwd($lg - 1px){
                                     width: 648px;
                                     height: 479px;
+                                    margin-right: 0;
                                 }
                                 @include rwd($md - 1px){
                                     width: 353px;
                                     height: 261px;
                                 }
-                                @include rwd($sm - 1px){
+                                @media screen and (max-width: 374px){
                                     width: 253px;
                                     height: 187px;
                                 }
@@ -1813,7 +1840,7 @@ body{
                             }
                             div{
                                 text-align: left;
-                                @include rwd($lg - 1px){
+                                @media screen and (max-width:1199px) {
                                     display: flex;
                                     flex-wrap: wrap;
                                     width: 100%;
@@ -1823,6 +1850,7 @@ body{
                                     color: $black;
                                 }
                                 p{
+                                    @include wordrow(3);
                                     transition: .2s ease-out;
                                     margin-top: 30px;
                                     color: $black;
@@ -1839,23 +1867,23 @@ body{
                         font-size: 40px;
                         position: relative;
                         align-items: flex-end !important;
-                        padding-bottom: 18px;
-                        border-bottom: 1px solid $black;
                         display: none !important;
-                        @include rwd($xl - 1px){
+                        @media screen and (max-width:1199px) {
                             display: flex !important;
                             width: 100%;
-                            padding-bottom: 15px;
-                            margin-bottom:40px;
+                            margin-bottom:15px;
+                        }
+                        @include rwd($lg - 1px){
+                            border-bottom: 1px solid $black;
+                            padding-bottom: 20px;
+                            margin-bottom: 40px;
                         }
                         @include rwd($md - 1px){
-                            margin-bottom: 30px;
+                            padding-bottom: 17px;
+                            margin-bottom: 25px;
                         }
                         h2{
                             text-align: left;
-                        }
-                        a{
-                            color: $black;
                         }
                         span{
                             margin-left: 18px;
@@ -1868,6 +1896,7 @@ body{
                         a{
                             position: relative;
                             float: right;
+                            color: $black !important;
                             @include sprfs('bd4-b');
                             right: 0;
                             display: flex;
@@ -1901,12 +1930,13 @@ body{
                     .travel1,
                     .place1{
                         text-align: left;
-                        @include rwd($xl - 1px){
+                        @media screen and (max-width:1199px){
                             border-bottom: 1px solid $black;
-                            padding-bottom: 30px;
+                            padding-bottom: 30px;                            
                         }
                         @include rwd($lg - 1px){
-                            border-bottom: 0;
+                            border-bottom: none;
+                            padding-bottom: 40px;                            
                         }
                         &:hover{
                             .img-box{
@@ -1925,6 +1955,13 @@ body{
                             width: 568px;
                             height: 297px;
                             overflow: hidden;
+                            @include rwd($xl - 1px){
+                                width: 450px;
+                            }
+                            @media screen and (max-width:1199px){
+                                width: 568px;
+                                height: 297px;
+                            }
                             @include rwd($lg - 1px){
                                 width: 648px;
                                 height: 479px;
@@ -1933,7 +1970,7 @@ body{
                                 width: 353px;
                                 height: 261px;
                             }
-                            @include rwd($sm - 1px){
+                            @media screen and (max-width: 374px){
                                 width: 253px;
                                 height: 187px;
                             }
@@ -1951,6 +1988,7 @@ body{
                         }
                         p{
                             transition: .2s ease-out;
+                            @include wordrow(3);
                             margin: 14px 0 20px;
                             text-align: left;
                             color: $black;
@@ -1965,7 +2003,7 @@ body{
                     margin: 113px auto 93px;
                     @include rwd($xl - 1px){
                         width: 100%;
-                        margin: 90px auto;
+                        margin: 80px auto;
                     }
                     @include rwd($lg - 1px){
                         display: none;
@@ -1974,6 +2012,9 @@ body{
                 .travel-info{
                     @include rwd($lg - 1px){
                         margin-top: 70px;
+                    }
+                    @include rwd($md - 1px){
+                        margin-top: 55px;
                     }
                 }
             }

@@ -5742,6 +5742,11 @@ footer#f-list > div {
 }
 @media screen and (max-width: 1511px) {
   footer#f-list > div {
+    width: 1120px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  footer#f-list > div {
     width: 753px;
   }
 }
@@ -5829,6 +5834,11 @@ footer#f-news > div {
 }
 @media screen and (max-width: 1511px) {
   footer#f-news > div {
+    width: 1120px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  footer#f-news > div {
     width: 753px;
   }
 }
@@ -5840,13 +5850,13 @@ footer#f-news > div {
 }
 @media screen and (max-width: 767px) {
   footer#f-news > div {
-    width: 352px;
+    width: 100%;
+    padding: 0 50px;
   }
 }
-@media screen and (max-width: 397px) {
+@media screen and (max-width: 599px) {
   footer#f-news > div {
-    width: 100%;
-    padding: 0 13px;
+    padding: 0 15px;
   }
 }
 footer#f-news > div div {
