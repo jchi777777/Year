@@ -2130,6 +2130,9 @@ body{
                 display: block;
                 margin: 30px auto 0;
             }
+            @media screen and (max-width:599px){
+                margin-top: 20px;
+            }
         }
         .bg{
             width: 100%;
@@ -2161,10 +2164,11 @@ body{
                 left: unset;
                 top: unset;
                 width: 100%;
-                margin: 23px 0 0 ;
+                margin: 0;
                 transform: unset;
                 padding: 0 20px;
-                height: 70%;
+                margin-top: 25px;
+                height: calc(100vh - 170px);
             }
         }
         .close-announce{
@@ -2173,6 +2177,10 @@ body{
             bottom: 5px;
             left: 50%;
             transform: translateX(-50%);
+            @include rwd($md - 1px){
+                position: fixed;
+                bottom: 2px;
+            }
         }
     }
 }

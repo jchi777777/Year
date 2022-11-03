@@ -8202,6 +8202,11 @@ body #index .section7 .g-wave {
     margin: 30px auto 0;
   }
 }
+@media screen and (max-width: 599px) {
+  #announce-pop .inner .bg2 {
+    margin-top: 20px;
+  }
+}
 #announce-pop .inner .bg {
   width: 100%;
 }
@@ -8240,10 +8245,11 @@ body #index .section7 .g-wave {
     left: unset;
     top: unset;
     width: 100%;
-    margin: 23px 0 0;
+    margin: 0;
     transform: unset;
     padding: 0 20px;
-    height: 70%;
+    margin-top: 25px;
+    height: calc(100vh - 170px);
   }
 }
 #announce-pop .inner .close-announce {
@@ -8252,6 +8258,12 @@ body #index .section7 .g-wave {
   bottom: 5px;
   left: 50%;
   transform: translateX(-50%);
+}
+@media screen and (max-width: 767px) {
+  #announce-pop .inner .close-announce {
+    position: fixed;
+    bottom: 2px;
+  }
 }
 
 #yt-pop {
