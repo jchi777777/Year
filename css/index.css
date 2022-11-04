@@ -8129,12 +8129,12 @@ body #index .section7 .g-wave {
   -webkit-clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
           clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
 }
-#artist-pop > div div {
+#artist-pop > div div:first-of-type {
   position: absolute;
   bottom: -20px;
   left: -50px;
 }
-#artist-pop > div div h1 {
+#artist-pop > div div:first-of-type h1 {
   position: absolute;
   left: 66px;
   bottom: 55px;
@@ -8143,9 +8143,18 @@ body #index .section7 .g-wave {
   background: #FFEB00;
 }
 #artist-pop > div .close {
+  cursor: pointer;
   position: absolute;
+  width: 142px;
+  height: 51px;
   bottom: -20px;
   right: 0;
+}
+#artist-pop > div .close img {
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media screen and (max-width: 767px) {
   #artist-pop > div .close {

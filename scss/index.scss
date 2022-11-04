@@ -2067,7 +2067,7 @@ body{
             object-position: center;
             clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
         }
-        div{
+        div:first-of-type{
             position: absolute;
             bottom: -20px;
             left: -50px;
@@ -2081,9 +2081,16 @@ body{
             }
         }
         .close{
+            cursor: pointer;
             position: absolute;
+            width: 142px;
+            height: 51px;
             bottom: -20px;
             right: 0;
+            img{
+                object-position: center;
+                object-fit: cover;
+            }
             @include rwd($md - 1px){
                 bottom: unset;
                 top: 0;
