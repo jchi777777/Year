@@ -7403,69 +7403,27 @@ body #index .section5 .cast > img {
     margin-bottom: 20px;
   }
 }
-@keyframes run {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-2500px);
-  }
+body #index .section5 .cast #swiper-marquee .swiper-wrapper,
+body #index .section5 .cast #swiper-marquee2 .swiper-wrapper {
+  transition-timing-function: linear !important;
+  position: relative;
 }
-@keyframes run2 {
-  0% {
-    transform: translateX(-2100px);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-body #index .section5 .cast .top-wrapper,
-body #index .section5 .cast .bot-wrapper {
-  width: 100%;
-}
-body #index .section5 .cast .top-wrapper .view,
-body #index .section5 .cast .bot-wrapper .view {
-  overflow: hidden;
-  width: 2500px;
-}
-body #index .section5 .cast .top-wrapper .view .pic-container,
-body #index .section5 .cast .bot-wrapper .view .pic-container {
-  display: flex;
-}
-body #index .section5 .cast .top-wrapper .view .pic-container .pic,
-body #index .section5 .cast .bot-wrapper .view .pic-container .pic {
-  padding-right: 8px;
-  width: 300px;
+body #index .section5 .cast #swiper-marquee .swiper-wrapper > div,
+body #index .section5 .cast #swiper-marquee2 .swiper-wrapper > div {
+  width: unset !important;
   height: 364px;
-  flex-shrink: 0;
-  overflow: hidden;
-  cursor: pointer;
 }
-body #index .section5 .cast .top-wrapper .view .pic-container .pic img,
-body #index .section5 .cast .bot-wrapper .view .pic-container .pic img {
-  width: 100%;
+body #index .section5 .cast #swiper-marquee .swiper-wrapper > div img,
+body #index .section5 .cast #swiper-marquee2 .swiper-wrapper > div img {
+  cursor: pointer;
   height: 100%;
-  -o-object-position: center;
-     object-position: center;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
-body #index .section5 .cast .top-wrapper .view .pic-container .pic:nth-of-type(6), body #index .section5 .cast .top-wrapper .view .pic-container .pic:nth-of-type(7), body #index .section5 .cast .top-wrapper .view .pic-container .pic:nth-of-type(13), body #index .section5 .cast .top-wrapper .view .pic-container .pic:nth-of-type(14),
-body #index .section5 .cast .bot-wrapper .view .pic-container .pic:nth-of-type(6),
-body #index .section5 .cast .bot-wrapper .view .pic-container .pic:nth-of-type(7),
-body #index .section5 .cast .bot-wrapper .view .pic-container .pic:nth-of-type(13),
-body #index .section5 .cast .bot-wrapper .view .pic-container .pic:nth-of-type(14) {
-  width: 500px;
-}
-body #index .section5 .cast .top-wrapper .pic-container {
-  animation: run 30s infinite linear;
-}
-body #index .section5 .cast .bot-wrapper {
-  margin-top: 13px;
-}
-body #index .section5 .cast .bot-wrapper .pic-container {
-  display: flex;
-  animation: run2 30s infinite linear;
+body #index .section5 .cast #swiper-marquee {
+  margin-bottom: 10px;
 }
 body #index .section6 {
   background: #E7D71D;
@@ -8234,6 +8192,11 @@ body #index .section7 .g-wave {
   #artist-pop > div {
     width: 90%;
     height: 70%;
+  }
+}
+@media screen and (max-width: 599px) {
+  #artist-pop > div {
+    width: 95%;
   }
 }
 #artist-pop > div > img {

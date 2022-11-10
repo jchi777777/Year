@@ -77,3 +77,30 @@ const swiperFour = new Swiper('#mySwiper-four', {
         },
     },
 });
+
+const marquee = new Swiper('#swiper-marquee', {
+    spaceBetween: 8,
+    centeredSlides: true,
+    speed: 9000,
+    autoplay: {
+        delay: 1,
+    },
+    loop: true,
+    slidesPerView: 'auto',
+    allowTouchMove: false,
+    disableOnInteraction: true,
+});
+
+const marquee2 = new Swiper('#swiper-marquee2', {
+    spaceBetween: 8,
+    centeredSlides: true,
+    speed: 9000,
+    autoplay: {
+        delay: 1,
+        reverseDirection: true,
+    },
+    loop: true,
+    slidesPerView: 'auto',
+    allowTouchMove: false,
+    disableOnInteraction: true,
+});

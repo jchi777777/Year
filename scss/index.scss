@@ -1551,65 +1551,28 @@ body{
                         margin-bottom: 20px;
                     }
                 }
-                @keyframes run {
-                    0% {
-                        transform: translateX(0);
+                #swiper-marquee,
+                #swiper-marquee2{
+                    .swiper-wrapper{
+                        -webkit-transition-timing-function:linear!important;    
+                        transition-timing-function:linear!important; 
+                        position: relative;
                     }
-                    100% {
-                        transform: translateX(-(2500px));
-                    }
-                }
-                @keyframes run2 {
-                    0% {
-                        transform: translateX(-300px * 7);
-                    }
-                    100% {
-                        transform: translateX(0);
-                    }
-                }
-                // 圖片跑馬燈
-                .top-wrapper,
-                .bot-wrapper{
-                    width: 100%;
-                    .view {
-                        overflow: hidden;
-                        width: 2500px;
-                        .pic-container {
-                            display: flex;
-                            .pic {
-                                padding-right: 8px;
-                                width: 300px;
-                                height: 364px;
-                                flex-shrink: 0;
-                                overflow: hidden;
+                    .swiper-wrapper{
+                        > div {
+                            width: unset !important;
+                            height: 364px;
+                            img{
                                 cursor: pointer;
-                                img {
-                                    width: 100%;
-                                    height: 100%;
-                                    object-position: center;
-                                    object-fit: cover;
-                                }
-                                &:nth-of-type(6),    
-                                &:nth-of-type(7),    
-                                &:nth-of-type(13),    
-                                &:nth-of-type(14){
-                                    width: 500px;
-                                }
+                                height: 100%;
+                                object-fit: cover;
+                                object-position: center;
                             }
                         }
-                    }
+                    } 
                 }
-                .top-wrapper{
-                    .pic-container{
-                        animation: run 30s infinite linear;
-                    }
-                }
-                .bot-wrapper{
-                    margin-top: 13px;
-                    .pic-container {
-                        display: flex;
-                        animation: run2 30s infinite linear;
-                    }
+                #swiper-marquee{
+                    margin-bottom: 10px;
                 }
             }
         }
@@ -2189,6 +2152,9 @@ body{
         @include rwd($md - 1px){
             width: 90%;
             height: 70%;
+        }
+        @media screen and (max-width:599px){
+            width: 95%;
         }
         > img{
             width: 100%;
