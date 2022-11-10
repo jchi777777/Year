@@ -5653,7 +5653,7 @@ header {
     left: 0;
     width: 100%;
     height: 60px;
-    background: #FFEB00;
+    background: #E7D71D;
   }
 }
 header nav {
@@ -5682,7 +5682,7 @@ header nav ul {
   display: flex;
   align-items: center;
   padding: 8px 40px 7px 26px;
-  background-color: #FFEB00;
+  background-color: #E7D71D;
 }
 @media screen and (max-width: 1511px) {
   header nav ul {
@@ -5985,7 +5985,7 @@ header nav .hide.act {
   display: flex;
   align-items: flex-start;
   padding: 8px 40px 7px 26px;
-  background-color: #FFEB00;
+  background-color: #E7D71D;
 }
 @media screen and (max-width: 1511px) {
   .mb-menu ul {

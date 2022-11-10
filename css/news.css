@@ -5719,7 +5719,7 @@ body main .news-box {
   }
 }
 body main .news-box > .title a {
-  background: #FFEB00;
+  background: #E7D71D;
   transition: 0.2s ease-out;
   padding-right: 7px;
   overflow: hidden;
@@ -5796,7 +5796,7 @@ body main .news-box .news > h5 {
   }
 }
 body main .news-box .news .tags > h5 span {
-  background: #FFEB00;
+  background: #E7D71D;
   margin-right: 6px;
 }
 @media screen and (max-width: 767px) {
@@ -5837,7 +5837,7 @@ body main .news-box .news .back {
   }
 }
 body main .news-box .news .back a {
-  background: #FFEB00;
+  background: #E7D71D;
   transition: 0.2s ease-out;
   padding-right: 7px;
   overflow: hidden;

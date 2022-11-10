@@ -5642,7 +5642,7 @@ h6,
 body {
   width: 100%;
   overflow-x: hidden;
-  background: #FFEB00;
+  background: #E7D71D;
 }
 @media screen and (max-width: 767px) {
   body {
@@ -5760,7 +5760,7 @@ body #index .section1 .stars {
 body #index .section2 {
   padding-top: 166px;
   position: relative;
-  background: linear-gradient(to bottom, #00B9AF 50%, #FFEB00 50%);
+  background: linear-gradient(to bottom, #00B9AF 50%, #E7D71D 50%);
 }
 @media screen and (max-width: 1919px) {
   body #index .section2 {
@@ -5858,7 +5858,7 @@ body #index .section2 .inner {
     width: 100%;
     padding-top: 30px;
     margin-top: 100px;
-    background: #FFEB00;
+    background: #E7D71D;
   }
 }
 @media screen and (max-width: 1023px) {
@@ -5885,7 +5885,7 @@ body #index .section2 .inner .title-box span:first-of-type::after {
   top: 50%;
   transform: translateY(-50%) translateX(-50%);
   z-index: -1;
-  background: #FFEB00;
+  background: #E7D71D;
 }
 body #index .section2 .inner .title-box span:last-of-type {
   display: inline-block;
@@ -5947,7 +5947,7 @@ body #index .section2 .inner .news-wrapper .top-wrapper {
 body #index .section2 .inner .news-wrapper .top-wrapper .right {
   width: 686px;
   height: 520px;
-  background: #FFEB00;
+  background: #E7D71D;
   padding: 58px 42px 64px 76px;
 }
 @media screen and (max-width: 1511px) {
@@ -6066,7 +6066,7 @@ body #index .section2 .inner .news-wrapper .top-wrapper .left {
     z-index: -1;
     transform: translateX(-50%);
     height: 200%;
-    background: #FFEB00;
+    background: #E7D71D;
     top: 250px;
   }
 }
@@ -6218,7 +6218,7 @@ body #index .section2 .inner .news-wrapper .bot-wrapper .fire2 {
 body #index .section2 .inner .news-wrapper .bot-wrapper .right {
   width: 686px;
   height: 513px;
-  background: #FFEB00;
+  background: #E7D71D;
   padding: 41px 83px 50px 42px;
 }
 @media screen and (max-width: 1511px) {
@@ -6475,7 +6475,7 @@ body #index .section3 {
 @media screen and (max-width: 767px) {
   body #index .section3 {
     margin-top: -1px;
-    background: #FFEB00;
+    background: #E7D71D;
   }
 }
 body #index .section3 .title-img {
@@ -6543,6 +6543,7 @@ body #index .section3 .inner {
 @media screen and (max-width: 1511px) {
   body #index .section3 .inner {
     width: 100%;
+    padding-bottom: 20px;
   }
 }
 body #index .section3 .inner .first {
@@ -6712,15 +6713,19 @@ body #index .section3 .inner .first .right div .span2 {
 body #index .section3 .inner .first .right div img {
   width: 48px;
   transition: 0.3s ease-out;
+  right: 15px;
+}
+@media screen and (max-width: 767px) {
+  body #index .section3 .inner .first .right div img {
+    right: 0;
+  }
 }
 body #index .section3 .inner .first .right div .yellow {
   position: absolute;
-  right: 0;
   z-index: 1;
 }
 body #index .section3 .inner .first .right div .orange {
   position: absolute;
-  right: 0;
   opacity: 0;
   z-index: 0;
 }
@@ -6752,32 +6757,12 @@ body #index .section3 .inner .first .marquee-box .block {
   bottom: -250px;
   z-index: -2;
 }
-body #index .section3 .inner .first .marquee-box .view {
-  overflow: hidden;
-  width: 100%;
-  background: #FFEB00;
-}
-body #index .section3 .inner .first .marquee-box .view .view-wrapper {
-  display: flex;
-  align-items: center;
-  justify-self: center;
-}
-body #index .section3 .inner .first .marquee-box .view .view-wrapper div {
-  flex-basis: 50%;
-  flex-shrink: 0;
-}
-body #index .section3 .inner .first .marquee-box .view .one {
-  animation: marquee 30s infinite linear;
-}
-body #index .section3 .inner .first .marquee-box .view .two {
-  animation: marquee 30s infinite linear;
-}
 body #index .section3 .inner .second {
   margin: 72px 0 87px;
   position: relative;
   z-index: 5;
 }
-@media screen and (max-width: 1919px) {
+@media screen and (max-width: 1199px) {
   body #index .section3 .inner .second {
     margin: 72px auto;
     justify-content: center !important;
@@ -6842,7 +6827,7 @@ body #index .section3 .inner .second .left p {
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 7;
 }
 body #index .section3 .inner .second .swiper-box {
   width: 645px;
@@ -6860,20 +6845,26 @@ body #index .section3 .inner .second .swiper-box {
   body #index .section3 .inner .second .swiper-box {
     margin-top: 20px;
     width: 697px;
-    height: 650px;
+    height: 780px;
+    display: flex;
+    flex-wrap: wrap;
     margin-bottom: 30px;
   }
 }
 @media screen and (max-width: 767px) {
   body #index .section3 .inner .second .swiper-box {
     width: 353px;
-    height: 335px;
+    height: 455px;
+  }
+}
+@media screen and (max-width: 397px) {
+  body #index .section3 .inner .second .swiper-box {
+    height: 380px;
   }
 }
 @media screen and (max-width: 374px) {
   body #index .section3 .inner .second .swiper-box {
     width: 250px;
-    height: 270px;
   }
 }
 body #index .section3 .inner .second .swiper-box .flower {
@@ -6888,6 +6879,94 @@ body #index .section3 .inner .second .swiper-box .flower {
     display: none;
   }
 }
+@media screen and (max-width: 1023px) {
+  body #index .section3 .inner .second .swiper-box a {
+    order: -1;
+    display: block;
+    margin: 25px 0;
+  }
+}
+body #index .section3 .inner .second .swiper-box a div {
+  position: relative;
+  overflow: hidden;
+  width: 284px !important;
+}
+@media screen and (max-width: 767px) {
+  body #index .section3 .inner .second .swiper-box a div {
+    width: 188px !important;
+  }
+}
+body #index .section3 .inner .second .swiper-box a div:hover span::before {
+  opacity: 1;
+}
+body #index .section3 .inner .second .swiper-box a div:hover span::after {
+  opacity: 0;
+}
+body #index .section3 .inner .second .swiper-box a div:hover .yellow {
+  opacity: 0;
+}
+body #index .section3 .inner .second .swiper-box a div:hover .orange {
+  opacity: 1;
+}
+body #index .section3 .inner .second .swiper-box a div span {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  color: #111111;
+  padding-right: 3px;
+  position: relative;
+  font-size: 40px;
+  z-index: 1;
+}
+body #index .section3 .inner .second .swiper-box a div span::before, body #index .section3 .inner .second .swiper-box a div span::after {
+  position: absolute;
+  content: "";
+  z-index: -1;
+  transition: 0.3s ease-out;
+  width: 100%;
+  left: 0;
+  top: 0;
+  height: 100%;
+}
+body #index .section3 .inner .second .swiper-box a div span::before {
+  opacity: 0;
+  background: linear-gradient(92.01deg, #F653C2 0%, #FC5F54 37.78%, #FF7C00 73.92%, #0EB4A5 105.13%);
+}
+body #index .section3 .inner .second .swiper-box a div span::after {
+  opacity: 1;
+  background: linear-gradient(92.01deg, #0EB4A5 0%, #FF7C00 36.14%, #FC5F54 66.25%, #F653C2 105.13%);
+}
+body #index .section3 .inner .second .swiper-box a div .span2 {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  body #index .section3 .inner .second .swiper-box a div .span1 {
+    display: none;
+  }
+  body #index .section3 .inner .second .swiper-box a div .span2 {
+    display: flex;
+    margin-right: 2px;
+  }
+}
+body #index .section3 .inner .second .swiper-box a div img {
+  width: 48px;
+  transition: 0.3s ease-out;
+  right: 15px;
+}
+@media screen and (max-width: 767px) {
+  body #index .section3 .inner .second .swiper-box a div img {
+    right: 0;
+  }
+}
+body #index .section3 .inner .second .swiper-box a div .yellow {
+  position: absolute;
+  z-index: 1;
+}
+body #index .section3 .inner .second .swiper-box a div .orange {
+  position: absolute;
+  opacity: 0;
+  z-index: 0;
+}
 body #index .section3 .inner .second .map-box2 {
   width: 100%;
   height: 554px;
@@ -6901,6 +6980,7 @@ body #index .section3 .inner .second .map-box2 iframe {
 @media screen and (max-width: 1023px) {
   body #index .section3 .inner .second .map-box2 {
     display: block;
+    margin-bottom: 30px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -6915,12 +6995,13 @@ body #index .section3 .inner .second .map-box2 iframe {
 }
 body #index .section3 .inner .third {
   position: relative;
+  margin-bottom: 70px;
 }
 @media screen and (max-width: 1511px) {
   body #index .section3 .inner .third {
     width: 975px;
     padding: 0;
-    margin: 0 auto;
+    margin: 0 auto 60px;
   }
 }
 @media screen and (max-width: 1023px) {
@@ -7030,7 +7111,7 @@ body #index .section4 {
 }
 @media screen and (max-width: 767px) {
   body #index .section4 {
-    background: #FFEB00;
+    background: #E7D71D;
     margin-top: -2px;
     padding-top: 40px;
     padding-bottom: 40px;
@@ -7246,15 +7327,17 @@ body #index .section5 .eve-party {
     width: 100%;
   }
 }
-body #index .section5 .eve-party img {
+body #index .section5 .eve-party > img {
   position: relative;
   top: 10px;
 }
 body #index .section5 .eve-party .content {
   width: 100%;
-  background: #FFEB00;
-  padding: 41px 56px 22px;
-  text-align: left;
+  background: #E7D71D;
+  padding: 30px;
+}
+body #index .section5 .eve-party .content img {
+  width: 100%;
 }
 @media screen and (max-width: 397px) {
   body #index .section5 .eve-party .content h2 {
@@ -7311,7 +7394,7 @@ body #index .section5 .cast > img {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-2100px);
+    transform: translateX(-1500px);
   }
 }
 @keyframes run2 {
@@ -7329,7 +7412,7 @@ body #index .section5 .cast .bot-wrapper {
 body #index .section5 .cast .top-wrapper .view,
 body #index .section5 .cast .bot-wrapper .view {
   overflow: hidden;
-  width: 2100px;
+  width: 4500px;
 }
 body #index .section5 .cast .top-wrapper .view .pic-container,
 body #index .section5 .cast .bot-wrapper .view .pic-container {
@@ -7364,7 +7447,7 @@ body #index .section5 .cast .bot-wrapper .pic-container {
   animation: run2 30s infinite linear;
 }
 body #index .section6 {
-  background: #FFEB00;
+  background: #E7D71D;
   width: 100%;
   padding: 100px 0 0;
 }
@@ -7569,7 +7652,7 @@ body #index .section7 {
 }
 @media screen and (max-width: 767px) {
   body #index .section7 {
-    background: #FFEB00;
+    background: #E7D71D;
   }
 }
 body #index .section7 #party {
@@ -8052,6 +8135,16 @@ body #index .section7 .inner .attractions .place1 p {
     margin: 15px auto 5px;
   }
 }
+body #index .section7 .inner .attractions .travel1 {
+  order: -1;
+  margin-right: 65px;
+}
+@media screen and (max-width: 1199px) {
+  body #index .section7 .inner .attractions .travel1 {
+    order: unset;
+    margin: 0;
+  }
+}
 body #index .section7 .inner .seperate {
   margin: 113px auto 93px;
 }
@@ -8075,6 +8168,9 @@ body #index .section7 .inner .seperate {
   body #index .section7 .inner .travel-info {
     margin-top: 55px;
   }
+}
+body #index .section7 .inner .travel-info .left {
+  margin-right: 0;
 }
 body #index .section7 .g-wave {
   position: absolute;
@@ -8140,7 +8236,7 @@ body #index .section7 .g-wave {
   bottom: 55px;
   white-space: nowrap;
   font-size: 64px;
-  background: #FFEB00;
+  background: #E7D71D;
 }
 #artist-pop > div .close {
   cursor: pointer;
@@ -8180,7 +8276,7 @@ body #index .section7 .g-wave {
 }
 @media screen and (max-width: 767px) {
   #announce-pop {
-    background: #FFEB00;
+    background: #E7D71D;
   }
 }
 #announce-pop.act {

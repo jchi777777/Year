@@ -36,7 +36,7 @@ header{
             display: flex;
             align-items: center;
             padding: 8px 40px 7px 26px;
-            background-color: #FFEB00;
+            background-color: $yellow;
             @include rwd($xl - 1px){
                 padding: 8px 10px 7px;
             }
@@ -292,7 +292,7 @@ header{
         display: flex;
         align-items: flex-start;
         padding: 8px 40px 7px 26px;
-        background-color: #FFEB00;
+        background-color: $yellow;
         @include rwd($xl - 1px){
             padding: 8px 10px 7px;
         }

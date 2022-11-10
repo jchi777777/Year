@@ -803,6 +803,7 @@ body{
                 width: 1156px;
                 @include rwd($xl - 1px){
                     width: 100%;
+                    padding-bottom: 20px;
                 }
                 // 未來樹
                 .first{
@@ -948,15 +949,17 @@ body{
                             img{
                                 width: 48px;
                                 transition: .3s ease-out;
+                                right: 15px;
+                                @include rwd($md - 1px){
+                                    right: 0;
+                                }
                             }
                             .yellow{
                                 position: absolute;
-                                right: 0;
                                 z-index: 1;
                             }
                             .orange{
                                 position: absolute;
-                                right: 0;
                                 opacity: 0;
                                 z-index: 0;
                             }
@@ -989,26 +992,26 @@ body{
                             bottom: -250px;
                             z-index: -2;
                         }
-                        .view{
-                            overflow: hidden;
-                            width: 100%;
-                            background: $yellow;
-                            .view-wrapper{
-                                display: flex;
-                                align-items: center;
-                                justify-self: center;
-                                div{
-                                    flex-basis: 50%;
-                                    flex-shrink: 0;
-                                }
-                            }
-                            .one{
-                                animation: marquee 30s infinite linear;
-                            }
-                            .two{
-                                animation: marquee 30s infinite linear;
-                            }
-                        }
+                        // .view{
+                        //     overflow: hidden;
+                        //     width: 100%;
+                        //     background: $yellow;
+                        //     .view-wrapper{
+                        //         display: flex;
+                        //         align-items: center;
+                        //         justify-self: center;
+                        //         div{
+                        //             flex-basis: 50%;
+                        //             flex-shrink: 0;
+                        //         }
+                        //     }
+                        //     .one{
+                        //         animation: marquee 30s infinite linear;
+                        //     }
+                        //     .two{
+                        //         animation: marquee 30s infinite linear;
+                        //     }
+                        // }
                     }
                 }
                 //大兔襲
@@ -1016,7 +1019,7 @@ body{
                     margin: 72px 0 87px;
                     position: relative;
                     z-index: 5;
-                    @media screen and (max-width:1919px){
+                    @media screen and (max-width:1199px){
                         margin: 72px auto ;
                         justify-content: center !important;
                     }
@@ -1061,7 +1064,7 @@ body{
                             margin: 28px 0 32px;
                         }
                         p{
-                            @include wordrow(3);
+                            @include wordrow(7);
                         }
                     }
                     // 輪播
@@ -1077,16 +1080,20 @@ body{
                         @include rwd($lg - 1px){
                             margin-top: 20px;
                             width: 697px;
-                            height: 650px;
+                            height: 780px;
+                            display: flex;
+                            flex-wrap: wrap;
                             margin-bottom: 30px;
                         }
                         @include rwd($md - 1px){
                             width: 353px;
-                            height: 335px;
+                            height: 455px;
+                        }
+                        @include rwd($sm - 1px){
+                            height: 380px;
                         }
                         @media screen and (max-width:374px) {
                             width: 250px;
-                            height: 270px;
                         }
                         .flower{
                             position: absolute;
@@ -1096,6 +1103,95 @@ body{
                             top: 250px;
                             @include rwd($xl - 1px){
                                 display: none;
+                            }
+                        }
+                        a{
+                            @include rwd($lg - 1px){
+                                order: -1;
+                                display: block;
+                                margin: 25px 0;
+                            }
+                            div{
+                                position: relative;
+                                overflow: hidden;
+                                width: 284px !important;
+                                @include rwd($md - 1px){
+                                    width: 188px !important;
+                                }
+                                &:hover{
+                                    span{
+                                        &::before{
+                                            opacity: 1;
+                                        }
+                                        &::after{
+                                            opacity: 0;
+                                        }
+                                    }
+                                    .yellow{
+                                        opacity: 0;
+                                    }
+                                    .orange{
+                                        opacity: 1;
+                                    }
+                                }
+                                span{
+                                    height: 48px;
+                                    display: flex;
+                                    align-items: center;
+                                    color: $black;
+                                    padding-right: 3px;
+                                    position: relative;
+                                    font-size: 40px;
+                                    z-index: 1;
+                                    &::before,
+                                    &::after{
+                                        position: absolute;
+                                        content: '';
+                                        z-index: -1;
+                                        transition: .3s ease-out;
+                                        width: 100%;
+                                        left: 0;
+                                        top:0;
+                                        height: 100%;
+                                    }
+                                    &::before{
+                                        opacity: 0;
+                                        background: linear-gradient(92.01deg, #F653C2 0%, #FC5F54 37.78%, #FF7C00 73.92%, #0EB4A5 105.13%);
+                                    }
+                                    &::after{
+                                        opacity: 1;
+                                        background: linear-gradient(92.01deg, #0EB4A5 0%, #FF7C00 36.14%, #FC5F54 66.25%, #F653C2 105.13%);
+                                    }
+                                }
+                                .span2{
+                                    display: none;
+                                }
+                                @include rwd($md - 1px){
+                                    .span1{
+                                        display: none;
+                                    }
+                                    .span2{
+                                        display: flex;
+                                        margin-right: 2px;
+                                    }
+                                }
+                                img{
+                                    width: 48px;
+                                    transition: .3s ease-out;
+                                    right: 15px;
+                                    @include rwd($md - 1px){
+                                        right: 0;
+                                    }
+                                }
+                                .yellow{
+                                    position: absolute;
+                                    z-index: 1;
+                                }
+                                .orange{
+                                    position: absolute;
+                                    opacity: 0;
+                                    z-index: 0;
+                                }
                             }
                         }
                     }
@@ -1111,6 +1207,7 @@ body{
                         }
                         @include rwd($lg - 1px){
                             display: block;
+                            margin-bottom: 30px;
                         }
                         @include rwd($md - 1px){
                             height: 281px;
@@ -1123,10 +1220,11 @@ body{
                 // 仁愛路燈飾
                 .third{
                     position: relative;
+                    margin-bottom: 70px;
                     @include rwd($xl - 1px){
                         width: 975px;
                         padding: 0;
-                        margin: 0 auto;
+                        margin: 0 auto 60px;
                     }
                     @include rwd($lg - 1px){
                         width: 697px;
@@ -1193,7 +1291,6 @@ body{
                         }
                     }
                 }
-                    
             }
         }
 
@@ -1391,15 +1488,17 @@ body{
                 @include rwd($md - 1px){
                     width: 100%;
                 }
-                img{
+                > img{
                     position: relative;
                     top: 10px;
                 }
                 .content{
                     width: 100%;
                     background: $yellow;
-                    padding: 41px 56px 22px;
-                    text-align: left;
+                    padding: 30px ;
+                    img{
+                        width: 100%;
+                    }
                     h2{
                        @include rwd($sm - 1px){
                            flex-wrap: wrap;
@@ -1443,7 +1542,7 @@ body{
                         transform: translateX(0);
                     }
                     100% {
-                        transform: translateX(-(300px * 7));
+                        transform: translateX(-(300px * 5));
                     }
                 }
                 @keyframes run2 {
@@ -1460,7 +1559,7 @@ body{
                     width: 100%;
                     .view {
                         overflow: hidden;
-                        width: 2100px;
+                        width: 4500px;
                         .pic-container {
                             display: flex;
                             .pic {
@@ -1998,6 +2097,14 @@ body{
                             }
                         }
                     }
+                    .travel1{
+                        order: -1;
+                        margin-right: 65px;
+                        @media screen and (max-width:1199px) {
+                            order: unset;
+                            margin: 0;
+                        }
+                    }
                 }
                 .seperate{
                     margin: 113px auto 93px;
@@ -2015,6 +2122,9 @@ body{
                     }
                     @include rwd($md - 1px){
                         margin-top: 55px;
+                    }
+                    .left{
+                        margin-right: 0;
                     }
                 }
             }
