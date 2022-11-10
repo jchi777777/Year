@@ -5644,14 +5644,14 @@ footer#f-index {
   position: relative;
   z-index: 1;
 }
-footer#f-index div {
+footer#f-index > div:first-of-type {
   width: 1156px;
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
 }
 @media screen and (max-width: 1511px) {
-  footer#f-index div {
+  footer#f-index > div:first-of-type {
     position: relative;
     width: 833px;
     height: 230px;
@@ -5659,81 +5659,126 @@ footer#f-index div {
   }
 }
 @media screen and (max-width: 1023px) {
-  footer#f-index div {
+  footer#f-index > div:first-of-type {
     width: 636px;
     flex-wrap: wrap;
     height: unset;
   }
 }
 @media screen and (max-width: 767px) {
-  footer#f-index div {
+  footer#f-index > div:first-of-type {
     width: 100%;
     padding: 0 20px;
   }
 }
-footer#f-index div a {
+footer#f-index > div:first-of-type a {
   position: relative;
   bottom: 150px;
 }
 @media screen and (max-width: 1511px) {
-  footer#f-index div a {
+  footer#f-index > div:first-of-type a {
     position: absolute;
     left: 0;
     top: -130px;
   }
 }
 @media screen and (max-width: 767px) {
-  footer#f-index div a {
+  footer#f-index > div:first-of-type a {
     left: 20px;
   }
 }
 @media screen and (max-width: 397px) {
-  footer#f-index div a {
+  footer#f-index > div:first-of-type a {
     top: -80px;
     height: 144px;
   }
-  footer#f-index div a img {
+  footer#f-index > div:first-of-type a img {
     width: 163px;
   }
 }
 @media screen and (max-width: 1511px) {
-  footer#f-index div .one {
+  footer#f-index > div:first-of-type .one {
     width: 522px;
     right: 20px;
     bottom: 100px;
   }
 }
 @media screen and (max-width: 1023px) {
-  footer#f-index div .one {
+  footer#f-index > div:first-of-type .one {
     display: none;
   }
 }
-footer#f-index div .two {
+footer#f-index > div:first-of-type .two {
   display: none;
 }
 @media screen and (max-width: 1023px) {
-  footer#f-index div .two {
+  footer#f-index > div:first-of-type .two {
     display: block;
     width: 636px;
     margin: 230px auto 50px;
   }
 }
 @media screen and (max-width: 767px) {
-  footer#f-index div .two {
+  footer#f-index > div:first-of-type .two {
     width: 100%;
     margin-top: 240px;
   }
 }
 @media screen and (max-width: 397px) {
-  footer#f-index div .two {
+  footer#f-index > div:first-of-type .two {
     margin-top: 120px;
+  }
+}
+footer#f-index .bot {
+  text-align: center;
+  padding-bottom: 80px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1511px) {
+  footer#f-index .bot {
+    width: 833px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  footer#f-index .bot {
+    width: 636px;
+  }
+}
+@media screen and (max-width: 767px) {
+  footer#f-index .bot {
+    width: 100%;
+    padding: 0 20px;
+  }
+}
+@media screen and (max-width: 1511px) {
+  footer#f-index .bot img {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1023px) {
+  footer#f-index .bot .img1 {
+    display: none;
+  }
+}
+footer#f-index .bot .img2 {
+  display: none;
+}
+@media screen and (max-width: 1023px) {
+  footer#f-index .bot .img2 {
+    display: block;
+    margin: 30px auto 60px;
+  }
+}
+@media screen and (max-width: 599px) {
+  footer#f-index .bot .img2 {
+    margin-top: 0;
   }
 }
 
 footer#f-list {
   width: 100%;
 }
-footer#f-list > div {
+footer#f-list > div:first-of-type {
   width: 1156px;
   margin: 0 auto;
   position: relative;
@@ -5741,51 +5786,51 @@ footer#f-list > div {
   justify-content: space-between;
 }
 @media screen and (max-width: 1511px) {
-  footer#f-list > div {
+  footer#f-list > div:first-of-type {
     width: 1120px;
   }
 }
 @media screen and (max-width: 1199px) {
-  footer#f-list > div {
+  footer#f-list > div:first-of-type {
     width: 753px;
   }
 }
 @media screen and (max-width: 1023px) {
-  footer#f-list > div {
+  footer#f-list > div:first-of-type {
     width: 700px;
     flex-wrap: wrap;
   }
 }
 @media screen and (max-width: 767px) {
-  footer#f-list > div {
+  footer#f-list > div:first-of-type {
     width: 352px;
   }
 }
 @media screen and (max-width: 397px) {
-  footer#f-list > div {
+  footer#f-list > div:first-of-type {
     width: 100%;
     padding: 0 13px;
   }
 }
-footer#f-list > div div {
+footer#f-list > div:first-of-type div {
   bottom: 80px;
   position: relative;
 }
 @media screen and (max-width: 767px) {
-  footer#f-list > div div {
+  footer#f-list > div:first-of-type div {
     bottom: 200px;
   }
 }
 @media screen and (max-width: 397px) {
-  footer#f-list > div div {
+  footer#f-list > div:first-of-type div {
     bottom: 100px;
   }
-  footer#f-list > div div img {
+  footer#f-list > div:first-of-type div img {
     width: 163px;
   }
 }
 @media screen and (max-width: 1511px) {
-  footer#f-list > div .img1 {
+  footer#f-list > div:first-of-type .img1 {
     width: 446px;
     position: absolute;
     right: 0;
@@ -5793,22 +5838,22 @@ footer#f-list > div div {
   }
 }
 @media screen and (max-width: 1023px) {
-  footer#f-list > div .img1 {
+  footer#f-list > div:first-of-type .img1 {
     display: none;
   }
 }
-footer#f-list > div .img2 {
+footer#f-list > div:first-of-type .img2 {
   display: none;
 }
 @media screen and (max-width: 1023px) {
-  footer#f-list > div .img2 {
+  footer#f-list > div:first-of-type .img2 {
     width: 636px;
     display: block;
     margin-bottom: 80px;
   }
 }
 @media screen and (max-width: 767px) {
-  footer#f-list > div .img2 {
+  footer#f-list > div:first-of-type .img2 {
     width: 100%;
     margin-bottom: 0;
     position: relative;
@@ -5816,15 +5861,72 @@ footer#f-list > div .img2 {
   }
 }
 @media screen and (max-width: 397px) {
-  footer#f-list > div .img2 {
+  footer#f-list > div:first-of-type .img2 {
     bottom: 60px;
+  }
+}
+footer#f-list .bot {
+  text-align: center;
+  padding-bottom: 80px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1511px) {
+  footer#f-list .bot {
+    width: 1120px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  footer#f-list .bot {
+    width: 753px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  footer#f-list .bot {
+    width: 700px;
+  }
+}
+@media screen and (max-width: 767px) {
+  footer#f-list .bot {
+    width: 352px;
+    margin-top: -130px;
+  }
+}
+@media screen and (max-width: 397px) {
+  footer#f-list .bot {
+    margin-top: -30px;
+    padding: 0 15px;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1511px) {
+  footer#f-list .bot img {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1023px) {
+  footer#f-list .bot .img1 {
+    display: none;
+  }
+}
+footer#f-list .bot .img2 {
+  display: none;
+}
+@media screen and (max-width: 1023px) {
+  footer#f-list .bot .img2 {
+    display: block;
+    margin: 30px auto 60px;
+  }
+}
+@media screen and (max-width: 397px) {
+  footer#f-list .bot .img2 {
+    margin-top: 0;
   }
 }
 
 footer#f-news {
   width: 100%;
 }
-footer#f-news > div {
+footer#f-news > div:first-of-type {
   position: relative;
   z-index: 1;
   width: 1156px;
@@ -5833,33 +5935,33 @@ footer#f-news > div {
   margin: 0 auto;
 }
 @media screen and (max-width: 1511px) {
-  footer#f-news > div {
+  footer#f-news > div:first-of-type {
     width: 1120px;
   }
 }
 @media screen and (max-width: 1199px) {
-  footer#f-news > div {
+  footer#f-news > div:first-of-type {
     width: 753px;
   }
 }
 @media screen and (max-width: 1023px) {
-  footer#f-news > div {
+  footer#f-news > div:first-of-type {
     width: 700px;
     flex-wrap: wrap;
   }
 }
 @media screen and (max-width: 767px) {
-  footer#f-news > div {
+  footer#f-news > div:first-of-type {
     width: 100%;
     padding: 0 50px;
   }
 }
 @media screen and (max-width: 599px) {
-  footer#f-news > div {
+  footer#f-news > div:first-of-type {
     padding: 0 15px;
   }
 }
-footer#f-news > div div {
+footer#f-news > div:first-of-type div {
   bottom: 80px;
   position: relative;
   width: -moz-fit-content;
@@ -5868,20 +5970,20 @@ footer#f-news > div div {
   z-index: -1;
 }
 @media screen and (max-width: 767px) {
-  footer#f-news > div div {
+  footer#f-news > div:first-of-type div {
     bottom: 200px;
   }
 }
 @media screen and (max-width: 397px) {
-  footer#f-news > div div {
+  footer#f-news > div:first-of-type div {
     bottom: 100px;
   }
-  footer#f-news > div div img {
+  footer#f-news > div:first-of-type div img {
     width: 163px;
   }
 }
 @media screen and (max-width: 1511px) {
-  footer#f-news > div .img1 {
+  footer#f-news > div:first-of-type .img1 {
     width: 446px;
     position: absolute;
     right: 0;
@@ -5889,22 +5991,22 @@ footer#f-news > div div {
   }
 }
 @media screen and (max-width: 1023px) {
-  footer#f-news > div .img1 {
+  footer#f-news > div:first-of-type .img1 {
     display: none;
   }
 }
-footer#f-news > div .img2 {
+footer#f-news > div:first-of-type .img2 {
   display: none;
 }
 @media screen and (max-width: 1023px) {
-  footer#f-news > div .img2 {
+  footer#f-news > div:first-of-type .img2 {
     width: 636px;
     display: block;
     margin-bottom: 80px;
   }
 }
 @media screen and (max-width: 767px) {
-  footer#f-news > div .img2 {
+  footer#f-news > div:first-of-type .img2 {
     width: 100%;
     margin-bottom: 0;
     position: relative;
@@ -5912,7 +6014,68 @@ footer#f-news > div .img2 {
   }
 }
 @media screen and (max-width: 397px) {
-  footer#f-news > div .img2 {
+  footer#f-news > div:first-of-type .img2 {
     bottom: 60px;
+  }
+}
+footer#f-news .bot {
+  text-align: center;
+  padding-bottom: 80px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1511px) {
+  footer#f-news .bot {
+    width: 1120px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  footer#f-news .bot {
+    width: 753px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  footer#f-news .bot {
+    width: 700px;
+  }
+}
+@media screen and (max-width: 767px) {
+  footer#f-news .bot {
+    width: 100%;
+    padding: 0 50px;
+    margin-top: -130px;
+  }
+}
+@media screen and (max-width: 397px) {
+  footer#f-news .bot {
+    margin-top: -30px;
+  }
+}
+@media screen and (max-width: 599px) {
+  footer#f-news .bot {
+    padding: 0 15px;
+  }
+}
+@media screen and (max-width: 1511px) {
+  footer#f-news .bot img {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1023px) {
+  footer#f-news .bot .img1 {
+    display: none;
+  }
+}
+footer#f-news .bot .img2 {
+  display: none;
+}
+@media screen and (max-width: 1023px) {
+  footer#f-news .bot .img2 {
+    display: block;
+    margin: 30px auto 60px;
+  }
+}
+@media screen and (max-width: 397px) {
+  footer#f-news .bot .img2 {
+    margin-top: 0;
   }
 }

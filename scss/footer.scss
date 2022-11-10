@@ -4,7 +4,7 @@ footer#f-index{
     background: $citron;
     position: relative;
     z-index: 1;
-    div{
+    > div:first-of-type{
         width: 1156px;
         display: flex;
         justify-content: space-between;
@@ -70,11 +70,46 @@ footer#f-index{
             }
         }
     }
+    .bot{
+        text-align: center;
+        padding-bottom: 80px;
+        margin: 0 auto;
+        @include rwd($xl - 1px){
+            width: 833px;
+        }
+        @include rwd($lg - 1px){
+            width: 636px;
+        }
+        @include rwd($md - 1px){
+            width: 100%;
+            padding: 0 20px;
+        }
+        img{
+            @include rwd($xl - 1px){
+                width: 100%;
+            }
+        }
+        .img1{
+            @include rwd($lg - 1px){
+                display: none;
+            }
+        }
+        .img2{
+            display: none;
+            @include rwd($lg - 1px){
+                display: block;
+                margin: 30px auto 60px;
+            }
+            @media screen and (max-width:599px) {
+                margin-top: 0;
+            }
+        }
+    }
 }
 
 footer#f-list{
     width: 100%;
-    > div {
+    > div:first-of-type {
         width: 1156px;
         margin: 0 auto;
         position: relative;
@@ -139,11 +174,54 @@ footer#f-list{
             }
         }
     }
+    .bot{
+        text-align: center;
+        padding-bottom: 80px;
+        margin: 0 auto;
+        @include rwd($xl - 1px){
+            width: 1120px;
+        }
+        @media screen and (max-width:1199px) {
+            width: 753px;   
+        }
+        @include rwd($lg - 1px){
+            width: 700px;
+        }
+        @include rwd($md - 1px){
+            width: 352px;
+            margin-top: -130px;
+        }
+        @include rwd($sm - 1px){
+            margin-top: -30px;
+            padding: 0 15px;
+            width: 100%;
+        }
+        img{
+            @include rwd($xl - 1px){
+                width: 100%;
+            }
+        }
+        .img1{
+            @include rwd($lg - 1px){
+                display: none;
+            }
+        }
+        .img2{
+            display: none;
+            @include rwd($lg - 1px){
+                display: block;
+                margin: 30px auto 60px;
+            }
+            @include rwd($sm - 1px){
+                margin-top: 0;
+            }
+        }
+    }
 }
 
 footer#f-news{
     width: 100%;
-    > div {
+    > div:first-of-type{
         position: relative;
         z-index: 1;
         width: 1156px;
@@ -209,6 +287,51 @@ footer#f-news{
             }
             @include rwd($sm - 1px){
                 bottom: 60px;
+            }
+        }
+    }
+    .bot{
+        text-align: center;
+        padding-bottom: 80px;
+        margin: 0 auto;
+        @include rwd($xl - 1px){
+            width: 1120px;
+        }
+        @media screen and (max-width:1199px) {
+            width: 753px;   
+        }
+        @include rwd($lg - 1px){
+            width: 700px;
+        }
+        @include rwd($md - 1px){
+            width: 100%;
+            padding: 0 50px;
+            margin-top: -130px;
+        }
+        @include rwd($sm - 1px){
+            margin-top: -30px;
+        }
+        @media screen and (max-width:599px) {
+            padding: 0 15px;
+        }
+        img{
+            @include rwd($xl - 1px){
+                width: 100%;
+            }
+        }
+        .img1{
+            @include rwd($lg - 1px){
+                display: none;
+            }
+        }
+        .img2{
+            display: none;
+            @include rwd($lg - 1px){
+                display: block;
+                margin: 30px auto 60px;
+            }
+            @include rwd($sm - 1px){
+                margin-top: 0;
             }
         }
     }
