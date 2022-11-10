@@ -7266,7 +7266,7 @@ body #index .section5 .ball {
     top: -30px;
   }
 }
-body #index .section5 .temple {
+body #index .section5 .temple-box {
   position: absolute;
   top: 120px;
   width: 1440px;
@@ -7274,14 +7274,28 @@ body #index .section5 .temple {
   transform: translateX(-50%);
 }
 @media screen and (max-width: 1511px) {
-  body #index .section5 .temple {
+  body #index .section5 .temple-box {
     width: 1390px;
   }
 }
 @media screen and (max-width: 767px) {
-  body #index .section5 .temple {
+  body #index .section5 .temple-box {
     display: none;
   }
+}
+body #index .section5 .temple-box .temple {
+  width: 100%;
+}
+body #index .section5 .temple-box::after {
+  position: absolute;
+  content: "";
+  width: 100vw;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  bottom: -50px;
+  height: 150px;
+  background: linear-gradient(180deg, rgba(227, 90, 197, 0.67) 0%, #C251C5 94.79%);
 }
 body #index .section5 .snake {
   position: absolute;
@@ -7394,7 +7408,7 @@ body #index .section5 .cast > img {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-1500px);
+    transform: translateX(-2500px);
   }
 }
 @keyframes run2 {
@@ -7412,7 +7426,7 @@ body #index .section5 .cast .bot-wrapper {
 body #index .section5 .cast .top-wrapper .view,
 body #index .section5 .cast .bot-wrapper .view {
   overflow: hidden;
-  width: 4500px;
+  width: 2500px;
 }
 body #index .section5 .cast .top-wrapper .view .pic-container,
 body #index .section5 .cast .bot-wrapper .view .pic-container {
@@ -7435,6 +7449,13 @@ body #index .section5 .cast .bot-wrapper .view .pic-container .pic img {
      object-position: center;
   -o-object-fit: cover;
      object-fit: cover;
+}
+body #index .section5 .cast .top-wrapper .view .pic-container .pic:nth-of-type(6), body #index .section5 .cast .top-wrapper .view .pic-container .pic:nth-of-type(7), body #index .section5 .cast .top-wrapper .view .pic-container .pic:nth-of-type(13), body #index .section5 .cast .top-wrapper .view .pic-container .pic:nth-of-type(14),
+body #index .section5 .cast .bot-wrapper .view .pic-container .pic:nth-of-type(6),
+body #index .section5 .cast .bot-wrapper .view .pic-container .pic:nth-of-type(7),
+body #index .section5 .cast .bot-wrapper .view .pic-container .pic:nth-of-type(13),
+body #index .section5 .cast .bot-wrapper .view .pic-container .pic:nth-of-type(14) {
+  width: 500px;
 }
 body #index .section5 .cast .top-wrapper .pic-container {
   animation: run 30s infinite linear;
@@ -8205,14 +8226,14 @@ body #index .section7 .g-wave {
   z-index: 20;
 }
 #artist-pop > div {
-  width: 500px;
+  max-width: 800px;
   height: 614px;
   position: relative;
 }
 @media screen and (max-width: 767px) {
   #artist-pop > div {
     width: 90%;
-    height: 90%;
+    height: 70%;
   }
 }
 #artist-pop > div > img {
@@ -8222,8 +8243,6 @@ body #index .section7 .g-wave {
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
-  -webkit-clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
-          clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
 }
 #artist-pop > div div:first-of-type {
   position: absolute;
