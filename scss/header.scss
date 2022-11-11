@@ -111,6 +111,9 @@ header{
                         margin: 0;
                         @include sprfs('h6');
                         transition: .2s ease-out;
+                        > a{
+                            color: $white;
+                        }
                     }
                     .zh{
                         background: #FF50C8;
@@ -396,6 +399,9 @@ header{
                     margin: 0;
                     @include sprfs('h6');
                     transition: .2s ease-out;
+                    a{
+                        color: $white !important;
+                    }
                 }
                 .zh{
                     background: #FF50C8;
