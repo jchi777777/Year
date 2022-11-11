@@ -5768,6 +5768,7 @@ header nav ul .func-box .share-box a img:nth-of-type(2), header nav ul .func-box
 header nav ul .func-box .language-box {
   display: flex;
   justify-content: flex-start;
+  align-items: center;
 }
 header nav ul .func-box .language-box button {
   width: 71px;
@@ -5868,6 +5869,7 @@ header nav > .share-box a img:nth-of-type(2), header nav > .share-box a img:nth-
 header nav > .language-box {
   display: flex;
   justify-content: flex-start;
+  align-items: center;
 }
 @media screen and (max-width: 1023px) {
   header nav > .language-box {
@@ -6118,6 +6120,7 @@ header nav .hide.act {
 .mb-menu ul .func-box .language-box {
   display: flex;
   justify-content: flex-start;
+  align-items: center;
 }
 .mb-menu ul .func-box .language-box button {
   width: 71px;

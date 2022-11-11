@@ -103,6 +103,7 @@ header{
                 .language-box{
                     display: flex;
                     justify-content: flex-start;
+                    align-items: center;
                     button{
                         width: 71px;
                         flex-shrink: 0;
@@ -195,6 +196,7 @@ header{
         > .language-box{
             display: flex;
             justify-content: flex-start;
+            align-items: center;
             @include rwd($lg - 1px){
                 height: 100%;
             }
@@ -391,6 +393,7 @@ header{
             .language-box{
                 display: flex;
                 justify-content: flex-start;
+                align-items: center;
                 button{
                     width: 71px;
                     height: 34px;
