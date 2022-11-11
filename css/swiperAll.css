@@ -5679,6 +5679,7 @@ h6,
 #mySwiper-one > div > div,
 #mySwiper-two > div > div {
   overflow: hidden;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
 }
 #mySwiper-one > div > div:hover img,
 #mySwiper-two > div > div:hover img {

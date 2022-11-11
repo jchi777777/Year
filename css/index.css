@@ -6583,6 +6583,7 @@ body #index .section3 .inner .first .img-box {
   overflow: hidden;
   margin-right: 20px;
   flex-shrink: 0;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
 }
 @media screen and (max-width: 1511px) {
   body #index .section3 .inner .first .img-box {
@@ -6613,6 +6614,11 @@ body #index .section3 .inner .first .img-box {
 body #index .section3 .inner .first .img-box img {
   transition: 0.3s ease-out;
   width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 body #index .section3 .inner .first .img-box img:hover {
   transform: scale(1.2);
@@ -7568,7 +7574,7 @@ body #index .section6 .notify-box .question-box .qa-box {
   }
 }
 body #index .section6 .notify-box .question-box .qa-box.act {
-  max-height: 300px;
+  max-height: 3000px;
 }
 body #index .section6 .notify-box .question-box .qa-box.act p {
   opacity: 1;
@@ -7839,6 +7845,7 @@ body #index .section7 .inner .attractions .left .place3 .img-box {
   margin-right: 24px;
   overflow: hidden;
   flex-shrink: 0;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
 }
 @media screen and (max-width: 1023px) {
   body #index .section7 .inner .attractions .left .travel2 .img-box,
@@ -8041,6 +8048,7 @@ body #index .section7 .inner .attractions .place1 .img-box {
   width: 568px;
   height: 297px;
   overflow: hidden;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
 }
 @media screen and (max-width: 1511px) {
   body #index .section7 .inner .attractions .travel1 .img-box,
@@ -8099,19 +8107,45 @@ body #index .section7 .inner .attractions .place1 p {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
+  width: 568px;
   margin: 14px 0 20px;
   text-align: left;
   color: #111111;
 }
+@media screen and (max-width: 1511px) {
+  body #index .section7 .inner .attractions .travel1 p,
+body #index .section7 .inner .attractions .place1 p {
+    width: 450px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  body #index .section7 .inner .attractions .travel1 p,
+body #index .section7 .inner .attractions .place1 p {
+    width: 568px;
+  }
+}
 @media screen and (max-width: 1023px) {
   body #index .section7 .inner .attractions .travel1 p,
 body #index .section7 .inner .attractions .place1 p {
+    width: 648px;
     line-height: 120%;
     font-weight: 700;
     font-size: 18px;
     line-height: 180%;
     letter-spacing: 0.8px;
     margin: 15px auto 5px;
+  }
+}
+@media screen and (max-width: 767px) {
+  body #index .section7 .inner .attractions .travel1 p,
+body #index .section7 .inner .attractions .place1 p {
+    width: 353px;
+  }
+}
+@media screen and (max-width: 374px) {
+  body #index .section7 .inner .attractions .travel1 p,
+body #index .section7 .inner .attractions .place1 p {
+    width: 253px;
   }
 }
 body #index .section7 .inner .attractions .travel1 {

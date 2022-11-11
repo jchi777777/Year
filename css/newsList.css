@@ -5835,6 +5835,7 @@ body main .news-list .list-box .single .img-box {
   width: 333px;
   height: 208px;
   overflow: hidden;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
 }
 @media screen and (max-width: 397px) {
   body main .news-list .list-box .single .img-box {

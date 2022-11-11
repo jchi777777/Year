@@ -25,6 +25,7 @@
         }
         > div{
             overflow: hidden;
+            -webkit-mask-image: -webkit-radial-gradient(white, black);
             &:hover{
                 img{
                     transform: scale(1.2);

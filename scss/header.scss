@@ -166,6 +166,7 @@ header{
         > .share-box{
             width: 166px;
             display: flex;
+            height: 34px;
             align-items: center;
             justify-content: center;
             background: linear-gradient(92.01deg, #0EB4A5 0%, #FF7C00 36.14%, #FC5F54 66.25%, #F653C2 105.13%);
@@ -207,6 +208,9 @@ header{
                 }
                 @include rwd($sm - 1px){
                     width: 51px;
+                }
+                > a{
+                    color: $white !important;
                 }
             }
             .zh{
