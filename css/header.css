@@ -5782,6 +5782,9 @@ header nav ul .func-box .language-box button {
   font-size: 1rem;
   transition: 0.2s ease-out;
 }
+header nav ul .func-box .language-box button > a {
+  color: #fff;
+}
 header nav ul .func-box .language-box .zh {
   background: #FF50C8;
 }
@@ -6128,6 +6131,9 @@ header nav .hide.act {
   line-height: 120%;
   font-size: 1rem;
   transition: 0.2s ease-out;
+}
+.mb-menu ul .func-box .language-box button a {
+  color: #fff !important;
 }
 .mb-menu ul .func-box .language-box .zh {
   background: #FF50C8;
